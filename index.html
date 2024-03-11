@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="vendor/slick-carousel/css/slick.css">
+    <link rel="stylesheet" href="vendor/slick-carousel/css/slick-theme.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home | Ooh Rent</title>
+
+
+</head>
+
+
+
+
+<body class="overflow-x-hidden">
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <!-- logo -->
+                <a class="navbar-brand" href="index.html"><img src="images/logo.webp" alt="logo"></a>
+                <!-- toggle btn -->
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fas fa-bars toggle-icon"></i>
+                </button>
+
+                <!-- sidebar -->
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+                    <!-- sidebar header -->
+                    <div class="offcanvas-header border-bottom">
+                        <img class="sidebar-logo" src="images/logo.webp" alt="logo">
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- sidebar body -->
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                        <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-lg-3">
+                            <li class="nav-item">
+                                <a class="nav-link active-nav" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="properties.html">Properties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <!-- login / sign-up -->
+                        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
+                            <div class="login-container">
+                                <a href="login.html" class="login-link transition white-color">Login</a>
+                            </div>
+                            <a href="sign-up.html" class="sign-up-btn white-color">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="home">
+        <section class="hero-slider">
+            <div class="container-fluid p-0">
+                <div>
+                    <img src="images/hero-slider-1.png" alt="Ooh-Rent">
+                </div>
+            </div>
+        </section>
+
+        <section class="filtration">
+            <div class="container section-padding position-relative">
+                <div class="search-buttons d-flex gap-4 align-items-center justify-content-center">
+                    <div class="btn-holder">
+                        <a class="d-flex align-items-center gap-2" href="#">Search Rentals<i
+                                class="fa-solid fa-arrow-right"></i></a>
+
+                    </div>
+                    <div class="btn-holder ">
+                        <a class="d-flex align-items-center gap-2" href="#">Manage your properties <i
+                                class="fa-solid fa-arrow-right"></i></a>
+
+                    </div>
+                    <div class="btn-holder ">
+                        <a class="d-flex align-items-center gap-2" href="#">Find Maintenance Provider<i
+                                class="fa-solid fa-arrow-right"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="vendor/slick-carousel/js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+
+</body>
+
+</html>
