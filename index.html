@@ -13,14 +13,11 @@
     <link rel="stylesheet" href="vendor/slick-carousel/css/slick-theme.css">
     <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.webp">
     <link rel="stylesheet" href="css/style.css">
     <title>Home | Ooh Rent</title>
 
-
 </head>
-
-
-
 
 <body class="overflow-x-hidden">
     <header>
@@ -81,6 +78,8 @@
     </header>
 
     <main class="home">
+
+        <!-- hero-slider -->
         <section class="hero-slider">
             <div class="container-fluid p-0">
                 <div>
@@ -89,28 +88,496 @@
             </div>
         </section>
 
+        <!-- filtration-form -->
         <section class="filtration">
             <div class="container section-padding position-relative">
-                <div class="search-buttons d-flex gap-4 align-items-center justify-content-center">
-                    <div class="btn-holder">
-                        <a class="d-flex align-items-center gap-2" href="#">Search Rentals<i
-                                class="fa-solid fa-arrow-right"></i></a>
+                <div class="search-buttons d-flex gap-3 gap-lg-4 align-items-center scroll">
+                    <a href="#">
+                        <div class="btn-holder ">
+                            Search Rentals<i class="fa-solid fa-arrow-right ms-2"></i>
 
-                    </div>
-                    <div class="btn-holder ">
-                        <a class="d-flex align-items-center gap-2" href="#">Manage your properties <i
-                                class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="btn-holder">
+                            Manage your properties <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="btn-holder">
+                            Find Maintenance Provider<i class="fa-solid fa-arrow-right ms-2"></i>
 
-                    </div>
-                    <div class="btn-holder ">
-                        <a class="d-flex align-items-center gap-2" href="#">Find Maintenance Provider<i
-                                class="fa-solid fa-arrow-right"></i></a>
-
+                        </div>
+                    </a>
+                </div>
+                <div class="mt-5">
+                    <h2>Find Your New Home <span>...</span></h2>
+                    <p>Search & compare among 5000+ properties or list your property for rent.</p>
+                    <div class="filtration-form mt-4">
+                        <form action="#">
+                            <div class="d-flex align-items-center justify-content-center gap-3 gap-lg-4 flex-wrap">
+                                <div class="search-container">
+                                    <input type="text" placeholder="Area, Compound, Property">
+                                    <span class="fa fa-search"></span>
+                                </div>
+                                <select name="sources" id="sources" class="custom-select sources"
+                                    placeholder="Property Types">
+                                    <option value="categoryOne">type 1</option>
+                                    <option value="categoryTwo">type 2</option>
+                                    <option value="categoryThree">type 3</option>
+                                    <option value="categoryFour">type 4</option>
+                                </select>
+                                <select name="sources" id="sources" class="custom-select sources"
+                                    placeholder="Bedrooms">
+                                    <option value="categoryOne">type 1</option>
+                                    <option value="categoryTwo">type 2</option>
+                                    <option value="categoryThree">type 3</option>
+                                    <option value="categoryFour">type 4</option>
+                                </select>
+                                <select name="sources" id="sources" class="custom-select sources" placeholder="Price">
+                                    <option value="categoryOne">100$</option>
+                                    <option value="categoryTwo">100$</option>
+                                    <option value="categoryThree">100$</option>
+                                    <option value="categoryFour">100$</option>
+                                </select>
+                                <button type="submit" class="main-btn">Search</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- steps -->
+        <section class="steps">
+            <div class="container section-padding">
+                <h2 class="text-center">Simple Steps <span>...</span></h2>
+                <div class="row justify-content-center gy-3 mt-5">
+                    <div class="col-lg-4">
+                        <div class="step text-center">
+                            <figure><img src="images/step-1.webp" alt="step-1"></figure>
+                            <h3>Search for your home</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Eu enim ut enim ullamcorper.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="step text-center">
+                            <figure><img src="images/step-2.webp" alt="step-2"></figure>
+                            <h3>Select your favourite</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Eu enim ut enim ullamcorper.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="step text-center">
+                            <figure><img src="images/step-3.webp" alt="step-3"></figure>
+                            <h3>Take your key</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Eu enim ut enim ullamcorper.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- video -->
+        <section class="section-padding">
+            <div class="container">
+
+            </div>
+        </section>
+
+        <!-- main-states -->
+        <section class="main-states section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Find Your Property by State <span>...</span></h2>
+                    <p>Discover first-class properties in the most beautiful regions of Germany. Whether you're seeking
+                        a home in a vibrant <br>
+                        metropolis or the countryside, our experts are here to find your dream property.</p>
+                    <div class="row g-3">
+                        <div class="state col-lg-8">
+                            <a href="#">
+                                <div class="state-container">
+                                    <figure>
+                                        <img src="images/new-york.webp" alt="New York">
+                                        <figcaption class="white-color">
+                                            <h3 class="fw-700">New York</h3>
+                                            <div>16 Property</div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="state col-lg-4">
+                            <a href="#">
+                                <div class="state-container">
+                                    <figure>
+                                        <img src="images/san-fransisco.webp" alt="San Francisco">
+                                        <figcaption class="white-color">
+                                            <h3 class="fw-700">San Francisco</h3>
+                                            <div>28 Property</div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="state col-lg-4">
+                            <a href="#">
+                                <div class="state-container">
+                                    <figure>
+                                        <img src="images/chicago.webp" alt="Chicago">
+                                        <figcaption class="white-color">
+                                            <h3 class="fw-700">Chicago</h3>
+                                            <div>156 Property</div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="state col-lg-8">
+                            <a href="#">
+                                <div class="state-container">
+                                    <figure>
+                                        <img src="images/florida.webp" alt="Florida">
+                                        <figcaption class="white-color">
+                                            <h3 class="fw-700">Florida</h3>
+                                            <div>12 Property</div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- recommended secc -->
+        <section class="recommended-sec">
+            <div class="container">
+                <div class="title d-flex align-items-center justify-content-between mb-4">
+                    <h2>Recommended For You <span>...</span></h2>
+                    <a href="#" class="gray-high">Explore all<i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+                <div class="main-card">
+                    <div class="m-2">
+                        <a href="#">
+                            <div class="card position-relative">
+                                <img src="images/card-1-img.png" class="card-img-top" alt="Card title">
+                                <div class="actions d-flex gap-1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title d-flex align-items-center justify-content-between gap-3">
+                                        <h3>Twin-house</h3>
+                                        <!-- Rating Stars Box -->
+                                        <div class='rating-stars text-center'>
+                                            <ul id='stars'>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="location d-flex align-items-center gap-2 mt-2">
+                                        <i class="fa-solid fa-location-dot orange"></i>
+                                        <div class="gray-middle">123 St. New York, USA</div>
+                                    </div>
+                                    <div class="info d-flex justify-content-center flex-wrap gap-2">
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Rooms</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Bathroom</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Floors</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">200 m</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-4">
+                                        <div class="price green fw-700">3,200 $ / Monthly</div>
+                                        <button class="secondary-btn">More details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="m-2">
+                        <a href="#">
+                            <div class="card position-relative">
+                                <img src="images/card-1-img.png" class="card-img-top" alt="Card title">
+                                <div class="actions d-flex gap-1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title d-flex align-items-center justify-content-between gap-3">
+                                        <h3>Twin-house</h3>
+                                        <!-- Rating Stars Box -->
+                                        <div class='rating-stars text-center'>
+                                            <ul id='stars'>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="location d-flex align-items-center gap-2 mt-2">
+                                        <i class="fa-solid fa-location-dot orange"></i>
+                                        <div class="gray-middle">123 St. New York, USA</div>
+                                    </div>
+                                    <div class="info d-flex justify-content-center flex-wrap gap-2">
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Rooms</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Bathroom</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Floors</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">200 m</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-4">
+                                        <div class="price green fw-700">3,200 $ / Monthly</div>
+                                        <button class="secondary-btn">More details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="m-2">
+                        <a href="#">
+                            <div class="card position-relative">
+                                <img src="images/card-1-img.png" class="card-img-top" alt="Card title">
+                                <div class="actions d-flex gap-1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title d-flex align-items-center justify-content-between gap-3">
+                                        <h3>Twin-house</h3>
+                                        <!-- Rating Stars Box -->
+                                        <div class='rating-stars text-center'>
+                                            <ul id='stars'>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="location d-flex align-items-center gap-2 mt-2">
+                                        <i class="fa-solid fa-location-dot orange"></i>
+                                        <div class="gray-middle">123 St. New York, USA</div>
+                                    </div>
+                                    <div class="info d-flex justify-content-center flex-wrap gap-2">
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Rooms</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Bathroom</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Floors</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">200 m</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-4">
+                                        <div class="price green fw-700">3,200 $ / Monthly</div>
+                                        <button class="secondary-btn">More details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="m-2">
+                        <a href="#">
+                            <div class="card position-relative">
+                                <img src="images/card-1-img.png" class="card-img-top" alt="Card title">
+                                <div class="actions d-flex gap-1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title d-flex align-items-center justify-content-between gap-3">
+                                        <h3>Twin-house</h3>
+                                        <!-- Rating Stars Box -->
+                                        <div class='rating-stars text-center'>
+                                            <ul id='stars'>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="location d-flex align-items-center gap-2 mt-2">
+                                        <i class="fa-solid fa-location-dot orange"></i>
+                                        <div class="gray-middle">123 St. New York, USA</div>
+                                    </div>
+                                    <div class="info d-flex justify-content-center flex-wrap gap-2">
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Rooms</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Bathroom</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Floors</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">200 m</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-4">
+                                        <div class="price green fw-700">3,200 $ / Monthly</div>
+                                        <button class="secondary-btn">More details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="m-2">
+                        <a href="#">
+                            <div class="card position-relative">
+                                <img src="images/card-1-img.png" class="card-img-top" alt="Card title">
+                                <div class="actions d-flex gap-1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title d-flex align-items-center justify-content-between gap-3">
+                                        <h3>Twin-house</h3>
+                                        <!-- Rating Stars Box -->
+                                        <div class='rating-stars text-center'>
+                                            <ul id='stars'>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star active'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="location d-flex align-items-center gap-2 mt-2">
+                                        <i class="fa-solid fa-location-dot orange"></i>
+                                        <div class="gray-middle">123 St. New York, USA</div>
+                                    </div>
+                                    <div class="info d-flex justify-content-center flex-wrap gap-2">
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Rooms</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Bathroom</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">2 Floors</div>
+                                        </div>
+                                        <div class="item d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <div class="fs-14 gray-high">200 m</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-4">
+                                        <div class="price green fw-700">3,200 $ / Monthly</div>
+                                        <button class="secondary-btn">More details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
 
@@ -123,7 +590,53 @@
     <script src="vendor/slick-carousel/js/slick.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            // sustom-select
+            $(".custom-select").each(function () {
+                var classes = $(this).attr("class"),
+                    id = $(this).attr("id"),
+                    name = $(this).attr("name");
+                var template = '<div class="' + classes + '">';
+                template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+                template += '<div class="custom-options">';
+                $(this).find("option").each(function () {
+                    template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                });
+                template += '</div></div>';
 
+                $(this).wrap('<div class="custom-select-wrapper"></div>');
+                $(this).hide();
+                $(this).after(template);
+            });
+            $(".custom-option:first-of-type").hover(function () {
+                $(this).parents(".custom-options").addClass("option-hover");
+            }, function () {
+                $(this).parents(".custom-options").removeClass("option-hover");
+            });
+            $(".custom-select-trigger").on("click", function () {
+                $('html').one('click', function () {
+                    $(".custom-select").removeClass("opened");
+                });
+                $(this).parents(".custom-select").toggleClass("opened");
+                event.stopPropagation();
+            });
+            $(".custom-option").on("click", function () {
+                $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+                $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+                $(this).addClass("selection");
+                $(this).parents(".custom-select").removeClass("opened");
+                $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+            });
+
+            // slider
+            $('.main-card').slick({
+                slidesToShow: 3.5,
+                slidesToScroll: 1,
+                Infinity: false,
+            });
+        });
+    </script>
 
 
 </body>
