@@ -32,7 +32,6 @@
 }
 
 body {
-  height: 5000px;
   color: var(--basic);
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
@@ -40,7 +39,7 @@ body {
 }
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 a {
@@ -154,7 +153,7 @@ h2 span {
   .main-btn,
   .secondary-btn {
     font-size: 16px;
-    padding: 10px 30px;
+    padding: 9px 30px;
   }
 }
 
@@ -205,6 +204,10 @@ h2 span {
   font-size: 14px;
 }
 
+.top-sec {
+  margin-top: 85px;
+}
+
 .section-padding {
   padding-top: 65px;
   padding-bottom: 65px;
@@ -223,6 +226,12 @@ header .navbar {
   position: fixed;
   width: 100%;
   z-index: 100;
+  background-image: linear-gradient(
+    rgba(29, 27, 27, 0.52) 0%,
+    rgb(87 85 85 / 14%) 70%,
+    rgba(29, 27, 27, 0) 100%
+  );
+  transition: var(--transition);
 }
 
 header nav.white-background {
@@ -424,22 +433,24 @@ header nav .navbar-toggler .toggle-icon {
   /* Adjust icon color */
 }
 
-.home .filtration .filtration-form .custom-select-wrapper {
+/* custom-select */
+
+.custom-select-wrapper {
   position: relative;
   display: inline-block;
   user-select: none;
 }
 
-.home .filtration .filtration-form .custom-select-wrapper select {
+.custom-select-wrapper select {
   display: none;
 }
 
-.home .filtration .filtration-form .custom-select {
+.custom-select {
   position: relative;
   display: inline-block;
 }
 
-.home .filtration .filtration-form .custom-select-trigger {
+.custom-select-trigger {
   position: relative;
   display: block;
   min-width: 180px;
@@ -452,11 +463,11 @@ header nav .navbar-toggler .toggle-icon {
   transition: all 0.3s;
 }
 
-.home .filtration .filtration-form .custom-select-trigger:hover {
+.custom-select-trigger:hover {
   transition: all 0.3s;
 }
 
-.home .filtration .filtration-form .custom-select-trigger:after {
+.custom-select-trigger:after {
   position: absolute;
   display: block;
   content: "";
@@ -472,16 +483,12 @@ header nav .navbar-toggler .toggle-icon {
   transform-origin: 50% 0;
 }
 
-.home
-  .filtration
-  .filtration-form
-  .custom-select.opened
-  .custom-select-trigger:after {
+.custom-select.opened .custom-select-trigger:after {
   margin-top: 3px;
   transform: rotate(-135deg) translateY(-50%);
 }
 
-.home .filtration .filtration-form .custom-options {
+.custom-options {
   position: absolute;
   display: block;
   top: 90%;
@@ -501,7 +508,7 @@ header nav .navbar-toggler .toggle-icon {
   transform: translateY(-15px);
 }
 
-.home .filtration .filtration-form .custom-select.opened .custom-options {
+.custom-select.opened .custom-options {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
@@ -509,7 +516,7 @@ header nav .navbar-toggler .toggle-icon {
   z-index: 2;
 }
 
-.home .filtration .filtration-form .custom-options:before {
+.custom-options:before {
   position: absolute;
   display: block;
   content: "";
@@ -525,11 +532,11 @@ header nav .navbar-toggler .toggle-icon {
   transition: all 0.4s ease-in-out;
 }
 
-.home .filtration .filtration-form .option-hover:before {
+.option-hover:before {
   background: #f9f9f9;
 }
 
-.home .filtration .filtration-form .custom-option {
+.custom-option {
   position: relative;
   display: block;
   padding: 0 22px;
@@ -540,20 +547,28 @@ header nav .navbar-toggler .toggle-icon {
   padding: 10px 15px;
 }
 
-.home .filtration .filtration-form .custom-option:first-of-type {
+.custom-option:first-of-type {
   border-radius: 4px 4px 0 0;
 }
 
-.home .filtration .filtration-form .custom-option:last-of-type {
+.custom-option:last-of-type {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.home .filtration .filtration-form .custom-option:hover,
-.home .filtration .filtration-form .custom-option.selection {
+.custom-option:hover,
+.custom-option.selection {
   background: var(--gray-light-3);
   color: var(--gray-middle);
 }
+
+@media (max-width: 767px) {
+  .custom-select-trigger {
+    min-width: 155px;
+    font-size: 14px;
+  }
+}
+/* end-custom-select */
 
 @media (max-width: 1400px) {
   .home .filtration .search-buttons .btn-holder {
@@ -595,11 +610,6 @@ header nav .navbar-toggler .toggle-icon {
     font-size: 14px;
   }
 
-  .home .filtration .filtration-form .custom-select-trigger {
-    min-width: 155px;
-    font-size: 14px;
-  }
-
   .home .filtration .filtration-form {
     padding: 25px 15px;
   }
@@ -609,7 +619,10 @@ header nav .navbar-toggler .toggle-icon {
     padding: 15px 20px;
   }
 }
+/* end-filtration-form */
+/* ------------------------------------------------------- */
 
+/* steps */
 .home .steps .step img {
   max-height: 70px;
   object-fit: contain;
@@ -1178,7 +1191,7 @@ footer .social-links a:hover {
   }
   footer .download .download-btn .main-title {
     font-size: 16px;
-}
+  }
 }
 
 @media (max-width: 992px) {
@@ -1190,14 +1203,168 @@ footer .social-links a:hover {
   }
   footer .footer-logo {
     max-height: 120px;
+  }
+  footer .subscribe .sub-title {
+    font-size: 14px;
+  }
+  footer .subscribe input {
+    padding: 8px 14px;
+  }
+  footer .social-links a {
+    width: 30px;
+  }
 }
-footer .subscribe .sub-title {
-  font-size: 14px;
+/* end footer */
+
+/* end-home */
+/* --------------------------------------------------------------------- */
+
+/* faq-page */
+.faq .faq-top-sec img {
+  min-height: 60vh;
+  object-fit: cover;
+  margin: auto;
 }
-footer .subscribe input {
-  padding: 8px 14px;
+.faq .faq-top-sec .title,
+.services .top-sec .title {
+  position: absolute;
+  bottom: 12%;
 }
-footer .social-links a {
-  width: 30px;
+
+.faq .faq-top-sec .title .head,
+.services .faq-top-sec .title .head {
+  font-weight: 500;
+  font-size: 36px;
 }
+
+.faq .faq-top-sec .title .main,
+.services .faq-top-sec .title .main {
+  font-size: 70px;
+  margin-top: -8px;
+}
+
+.faq .questions .nav-pills .nav-link.active,
+.faq .questions .nav-pills .show > .nav-link {
+  color: var(--main-btn-hover);
+  background: none;
+}
+
+.faq .questions .nav-pills .nav-link {
+  color: var(--basic);
+  box-shadow: none;
+  font-size: 22px;
+}
+
+.faq .questions .nav-pills .nav-link:hover {
+  color: var(--main-btn-hover);
+}
+
+.faq .questions .question {
+  font-size: 20px;
+}
+
+.faq .questions .answer {
+  font-size: 18px;
+}
+
+@media (max-width: 1400px) {
+  .faq .faq-top-sec .title .main,
+  .services .faq-top-sec .title .main {
+    font-size: 66px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .faq .faq-top-sec .title .main,
+  .services .faq-top-sec .title .main {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .faq .faq-top-sec .title .main,
+  .services .faq-top-sec .title .main {
+    font-size: 46px;
+  }
+  .faq .faq-top-sec .title .head,
+  .services .tfaq-top-sec .title .head {
+    font-size: 28px;
+  }
+  .faq .faq-top-sec img {
+    min-height: 50vh;
+  }
+  .faq .questions .question {
+    font-size: 18px;
+  }
+
+  .faq .questions .answer {
+    font-size: 16px;
+  }
+  .faq .questions .nav-pills .nav-link {
+    font-size: 18px;
+  }
+}
+
+/* end-faq */
+/* ---------------------------------------------------------- */
+
+/* properies-sec */
+.properties .head .title {
+  font-size: 20px;
+}
+
+.properties aside .filter-container {
+  border: 1px solid var(--gray-light-2);
+  padding: 10px 15px;
+  background-color: #f5f4f480;
+  border-radius: 12px;
+}
+.properties aside .filter-container:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.properties aside .filter-container .filter-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.properties aside .filter-container .form-check-input:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+.properties aside .filter-container .accordion-button::after {
+  content: "\f061"; /* Unicode value for the desired Font Awesome icon */
+  font-family: "Font Awesome 6 pro"; /* Font family for Font Awesome */
+  font-size: 18px; /* Size of the icon */
+  background-image: none;
+}
+.accordion-button:focus  {
+  box-shadow: none !important;
+}
+.properties aside .filter-container .accordion-button:not(.collapsed)::after {
+  transform: none;
+}
+.properties aside .filter-container .accordion-body {
+  padding: 10px 0;
+} 
+
+.accordion-item {
+  background: transparent;
+}
+
+.properties aside .filter-container .accordion-button {
+  padding: 5px 0;
+  background-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+  background: none;
+  padding: 10px;
+}
+
+@media (max-width: 992px) {
+  .properties .head .title {
+    font-size: 16px;
+  }
 }

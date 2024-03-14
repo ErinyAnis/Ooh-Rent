@@ -119,25 +119,25 @@
                                     <input type="text" placeholder="Area, Compound, Property">
                                     <span class="fa fa-search"></span>
                                 </div>
-                                <select name="sources" id="sources" class="custom-select sources"
+                                <select name="property_types" id="property_types" class="custom-select sources"
                                     placeholder="Property Types">
-                                    <option value="categoryOne">type 1</option>
-                                    <option value="categoryTwo">type 2</option>
-                                    <option value="categoryThree">type 3</option>
-                                    <option value="categoryFour">type 4</option>
+                                    <option value="type 1">type 1</option>
+                                    <option value="type 2">type 2</option>
+                                    <option value="type 3">type 3</option>
+                                    <option value="type 4">type 4</option>
                                 </select>
-                                <select name="sources" id="sources" class="custom-select sources"
+                                <select name="bedrooms" id="bedrooms" class="custom-select sources"
                                     placeholder="Bedrooms">
-                                    <option value="categoryOne">type 1</option>
-                                    <option value="categoryTwo">type 2</option>
-                                    <option value="categoryThree">type 3</option>
-                                    <option value="categoryFour">type 4</option>
+                                    <option value="type 1">type 1</option>
+                                    <option value="type 2">type 2</option>
+                                    <option value="type 3">type 3</option>
+                                    <option value="type 4">type 4</option>
                                 </select>
-                                <select name="sources" id="sources" class="custom-select sources" placeholder="Price">
-                                    <option value="categoryOne">100$</option>
-                                    <option value="categoryTwo">100$</option>
-                                    <option value="categoryThree">100$</option>
-                                    <option value="categoryFour">100$</option>
+                                <select name="price" id="price" class="custom-select sources" placeholder="Price">
+                                    <option value="100$">100$</option>
+                                    <option value="100$">100$</option>
+                                    <option value="100$">100$</option>
+                                    <option value="100$">100$</option>
                                 </select>
                                 <button type="submit" class="main-btn fs-16">Search</button>
                             </div>
@@ -255,7 +255,7 @@
             <div class="container">
                 <div class="title d-flex align-items-center justify-content-between mb-3 mb-md-4">
                     <h2>Recommended For You <span>...</span></h2>
-                    <a href="#" class="gray-high d-none d-md-block">Explore all<i
+                    <a href="properties.html" class="gray-high d-none d-md-block">Explore all<i
                             class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
                 <div class="main-card">
@@ -576,7 +576,7 @@
                     </div>
                 </div>
                 <div class="title text-end mt-5">
-                    <a href="#" class="gray-high d-md-none">Explore all<i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    <a href="properties.html" class="gray-high d-md-none">Explore all<i class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </section>
@@ -769,15 +769,17 @@
             <div class="subscribe text-center">
                 <h2>Subscribe Now</h2>
                 <div class="sub-title green">Stay up to date with our latest news.</div>
-                <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your email address">
-                    <button type="submit" class="main-btn">Subscribe</button>
-                </div>
+                <form action="#">
+                    <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your email address">
+                        <button type="submit" class="main-btn">Subscribe</button>
+                    </div>
+                </form>
             </div>
             <div class="mt-5 links">
                 <div class="row g-3 row-cols-2 row-cols-lg-5">
                     <div class="col-3 col-lg">
-                        <img class="footer-logo" src="images/footer-logo.webp" alt="Ooh-Rent">
+                        <a href="index.html"><img class="footer-logo" src="images/footer-logo.webp" alt="Ooh-Rent"></a>
                     </div>
                     <div class="col-3 col-lg">
                         <h3 class="fw-700 green mb-2">Quick Links</h3>
