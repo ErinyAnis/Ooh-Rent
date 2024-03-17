@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.webp">
+    <link rel="stylesheet" href="vendor/range-slider/jquery.nstSlider.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Properties | Ooh Rent</title>
 
@@ -80,7 +81,7 @@
     <main class="properties">
         <section>
             <div class="container section-padding">
-                <div class="top-sec">
+                <div class="top-sec position-relative">
                     <form action="#">
                         <div class="head d-flex align-items-center justify-content-between">
                             <div class="title fw-500">Found 376 results for <span class="gray-middle">dji phantom</span>
@@ -93,12 +94,13 @@
                                 <option value="categoryFour">hgd</option>
                             </select>
                         </div>
-                        <div class="row mt-5 gy-3">
-                            <div class="col-lg-4 col-xl-3">
+                        <div class="mt-3 d-lg-none"><i class="fa-solid fa-bars toggle-aside"></i></div>
+                        <div class="row mt-4 mt-lg-5 gy-3">
+                            <div id="filter" class="col-lg-4 col-xl-3">
                                 <aside>
                                     <div class="filter-container">
                                         <div class="filter-title">Find</div>
-                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="find" id="property"
                                                     checked>
@@ -118,27 +120,420 @@
                                     <div class="filter-container">
                                         <div class="accordion accordion-flush" id="accordionFlushExample">
                                             <div class="accordion-item">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                                        aria-expanded="false" aria-controls="flush-collapseOne">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                                        aria-controls="flush-collapseOne">
                                                         State
                                                     </button>
-                                                </h2>
+                                                </div>
                                                 <div id="flush-collapseOne" class="accordion-collapse collapse"
                                                     data-bs-parent="#accordionFlushExample">
                                                     <div class="accordion-body">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="State" id="State">
+                                                            <input class="form-check-input" type="radio" name="State"
+                                                                id="prperty">
                                                             <label class="form-check-label" for="compound">
                                                                 Prperty
                                                             </label>
                                                         </div>
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="State" id="State">
+                                                            <input class="form-check-input" type="radio" name="State"
+                                                                id="compound">
                                                             <label class="form-check-label" for="compound">
                                                                 Compound
                                                             </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#property_type" aria-expanded="false"
+                                                        aria-controls="property_type">
+                                                        Property Type
+                                                    </button>
+                                                </div>
+                                                <div id="property_type" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="State"
+                                                                id="property">
+                                                            <label class="form-check-label" for="compound">
+                                                                Prperty
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="State"
+                                                                id="compound">
+                                                            <label class="form-check-label" for="compound">
+                                                                Compound
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse" data-bs-target="#level"
+                                                        aria-expanded="false" aria-controls="level">
+                                                        Level
+                                                    </button>
+                                                </div>
+                                                <div id="level" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div
+                                                        class="accordion-body d-flex align-items-center justify-content-between flex-wrap">
+
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="level"
+                                                                id="ground_floor">
+                                                            <label class="form-check-label" for="ground_floor">
+                                                                Ground Floor
+                                                            </label>
+                                                        </div>
+
+
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="level"
+                                                                id="1st_Floor">
+                                                            <label class="form-check-label" for="1st_Floor">
+                                                                1st Floor
+                                                            </label>
+                                                        </div>
+
+
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="level"
+                                                                id="2st_Floor">
+                                                            <label class="form-check-label" for="2st_Floor">
+                                                                2st Floor
+                                                            </label>
+                                                        </div>
+
+
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="level"
+                                                                id="3st_Floor">
+                                                            <label class="form-check-label" for="3st_Floor">
+                                                                3st Floor
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="level"
+                                                                id="+4">
+                                                            <label class="form-check-label" for="+4">
+                                                                +4
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#price_range" aria-expanded="false"
+                                                        aria-controls="price_range">
+                                                        Price Range <span>($)</span>
+                                                    </button>
+                                                </div>
+                                                <div id="price_range" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div class="nstSlider" data-range_min="0" data-range_max="500"
+                                                            data-cur_min="20" data-cur_max="80">
+                                                            <div class="bar"></div>
+                                                            <div class="leftGrip"></div>
+                                                            <div class="rightGrip"></div>
+                                                        </div>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mt-2">
+                                                            <div class="leftLabel"></div>
+                                                            <div class="rightLabel"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#square_feet" aria-expanded="false"
+                                                        aria-controls="square_feet">
+                                                        Square Feet
+                                                    </button>
+                                                </div>
+                                                <div id="square_feet" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <input type="text" id="fromInput" placeholder="From"
+                                                                class="form-control">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                            <input type="text" id="toInput" placeholder="To"
+                                                                class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse" data-bs-target="#rooms"
+                                                        aria-expanded="false" aria-controls="rooms">
+                                                        Rooms
+                                                    </button>
+                                                </div>
+                                                <div id="rooms" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div class="number-options">
+                                                            <div class="number-box selected">1</div>
+                                                            <div class="number-box">2</div>
+                                                            <div class="number-box">3</div>
+                                                            <div class="number-box">4</div>
+                                                            <div class="number-box">5</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#bathrooms" aria-expanded="false"
+                                                        aria-controls="bathrooms">
+                                                        Bathrooms
+                                                    </button>
+                                                </div>
+                                                <div id="bathrooms" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div class="bathroom-number">
+                                                            <div class="bath-num selected">1</div>
+                                                            <div class="bath-num">2</div>
+                                                            <div class="bath-num">3</div>
+                                                            <div class="bath-num">4</div>
+                                                            <div class="bath-num">5</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#rental_date" aria-expanded="false"
+                                                        aria-controls="rental_date">
+                                                        Rental Date
+                                                    </button>
+                                                </div>
+                                                <div id="rental_date" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <input type="date" id="fromInput" placeholder="MM.DD.YYYY"
+                                                                class="form-control">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                            <input type="date" id="toInput" placeholder="MM.DD.YYYY"
+                                                                class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#minimum_Lease_Term" aria-expanded="false"
+                                                        aria-controls="minimum_Lease_Term">
+                                                        Minimum Lease Term
+                                                    </button>
+                                                </div>
+                                                <div id="minimum_Lease_Term" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div
+                                                        class="accordion-body d-flex align-items-center justify-content-between flex-wrap">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="minimum_Lease_Term" id="weekly">
+                                                            <label class="form-check-label" for="weekly">
+                                                                Weekly
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="minimum_Lease_Term" id="monthly">
+                                                            <label class="form-check-label" for="monthly">
+                                                                Monthly
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="minimum_Lease_Term" id="3_months">
+                                                            <label class="form-check-label" for="3_months">
+                                                                3 Months
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="minimum_Lease_Term" id="6 months">
+                                                            <label class="form-check-label" for="6_months">
+                                                                6 Months
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="minimum_Lease_Term" id="annual">
+                                                            <label class="form-check-label" for="annual">
+                                                                Annual
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#garage_space" aria-expanded="false"
+                                                        aria-controls="garage_space">
+                                                        Garage Space
+                                                    </button>
+                                                </div>
+                                                <div id="garage_space" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div class="garage-space">
+                                                            <div class="garage-space-num selected">1</div>
+                                                            <div class="garage-space-num">2</div>
+                                                            <div class="garage-space-num">3</div>
+                                                            <div class="garage-space-num">+4</div>
+                                                            <div class="garage-space-num">None</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#required" aria-expanded="false"
+                                                        aria-controls="required">
+                                                        Required at signing
+                                                    </button>
+                                                </div>
+                                                <div id="required" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div
+                                                        class="accordion-body d-flex align-items-center justify-content-between flex-wrap">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="required"
+                                                                id="1st_month">
+                                                            <label class="form-check-label" for="1st_month">
+                                                                1st Month
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="required"
+                                                                id="1st_and_last">
+                                                            <label class="form-check-label" for="1st_and_last">
+                                                                1st and last
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="required"
+                                                                id="1st_last_and_last">
+                                                            <label class="form-check-label" for="1st_last_and_last">
+                                                                1st, Last and deposite
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="required"
+                                                                id="1st_and_deposite">
+                                                            <label class="form-check-label" for="1st_and_deposite">
+                                                                1st and deposite
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed filter-title mb-0"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#features" aria-expanded="false"
+                                                        aria-controls="features">
+                                                        Garage Space
+                                                    </button>
+                                                </div>
+                                                <div id="features" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div class="features">
+                                                            <div class="feature selected">1</div>
+                                                            <div class="feature">Elevator</div>
+                                                            <div class="feature">Electric car charger</div>
+                                                            <div class="feature">Pets</div>
+                                                            <div class="feature">Waterfront</div>
+                                                            <div class="feature">Pool</div>
+                                                            <div class="feature">Fenced yard</div>
+                                                            <div class="feature">55+</div>
+                                                            <div class="feature">Furnished</div>
+                                                            <div class="feature">Parking</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -418,7 +813,23 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr class="mt-5">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a class="page-link"><i class="fa-solid fa-arrow-left"></i> Previous</a>
+                                        </li>
+                                        <li class="page-item active ms-auto"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item ms-auto">
+                                            <a class="page-link" href="#">Next <i
+                                                    class="fa-solid fa-arrow-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
+
                         </div>
                     </form>
                 </div>
@@ -467,20 +878,20 @@
                     <div class="col-9 offset-3 offset-lg-0 col-lg">
                         <h3 class="fw-700 green mb-3">Download APP</h3>
                         <div class="download">
-                            <button class="download-btn d-flex align-items-center gap-2 mb-2">
+                            <a href="#" class="download-btn d-flex align-items-center gap-2 mb-2">
                                 <i class="fa-brands fa-google-play"></i>
                                 <div class="text-start">
                                     <div class="head-title">GET IT ON</div>
                                     <div class="main-title">Google Play</div>
                                 </div>
-                            </button>
-                            <button class="download-btn d-flex align-items-center gap-2">
+                            </a>
+                            <a href="#" class="download-btn d-flex align-items-center gap-2">
                                 <i class="fa-brands fa-apple"></i>
                                 <div class="text-start">
                                     <div class="head-title">Download on the</div>
                                     <div class="main-title">App Store</div>
                                 </div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -504,6 +915,7 @@
 
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="vendor/range-slider/jquery.nstSlider.min.js"></script>
     <script src="js/main.js"></script>
 
     <script>
@@ -564,6 +976,65 @@
             $(".heart-icon").click(function () {
                 $(this).toggleClass("far fas")
             });
+
+            // range-slider
+            $('.nstSlider').nstSlider({
+                "left_grip_selector": ".leftGrip",
+                "right_grip_selector": ".rightGrip",
+                "value_bar_selector": ".bar",
+                "value_changed_callback": function (cause, leftValue, rightValue) {
+                    $(this).parent().find('.leftLabel').text("$" + leftValue);
+                    $(this).parent().find('.rightLabel').text("$" + rightValue);
+                }
+            });
+
+            // select room
+            $('.number-box').click(function () {
+                // Remove 'selected' class from all boxes
+                $('.number-box').removeClass('selected');
+
+                // Add 'selected' class to the clicked box
+                $(this).addClass('selected');
+            });
+
+            // select bathroom
+            $('.bath-num').click(function () {
+                // Remove 'selected' class from all boxes
+                $('.bath-num').removeClass('selected');
+
+                // Add 'selected' class to the clicked box
+                $(this).addClass('selected');
+            });
+
+            // select garage space
+            $('.garage-space-num').click(function () {
+                // Remove 'selected' class from all boxes
+                $('.garage-space-num').removeClass('selected');
+
+                // Add 'selected' class to the clicked box
+                $(this).addClass('selected');
+            });
+
+            // select feature
+            $('.feature').click(function () {
+                // Remove 'selected' class from all boxes
+                $('.feature').removeClass('selected');
+
+                // Add 'selected' class to the clicked box
+                $(this).addClass('selected');
+            });
+
+            $('.toggle-aside').click(function () {
+                $('aside').toggleClass('left');
+                $(this).toggleClass('fa-xmark');
+            });
+
+
+
+
+
+
+
 
         });
     </script>
