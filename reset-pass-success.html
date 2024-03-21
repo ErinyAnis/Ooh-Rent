@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.webp">
     <link rel="stylesheet" href="css/style.css">
-    <title>Register | Ooh Rent</title>
+    <title>Success-reset-pass | Ooh Rent</title>
 
 </head>
 
@@ -77,89 +77,15 @@
         </nav>
     </header>
 
-    <main class="register">
+    <main class="register login">
         <div class="register-container">
             <div class="container section-padding white-color ">
-                <div class="top-sec">
-                    <div class="title">Create new account <span class="orange">.</span></div>
-                    <div class="login mt-1">Already have an account? <a class="orange" href="login.html">Log In</a>
+                <div class="top-sec text-center">
+                    <div class="title">Password Changed Successfully <span class="orange">.</span></div>
+                    <div class="login mt-1">Your password has been changed successfully, <br> We will let you know if
+                        there are more problems with your account .</a>
                     </div>
-                    <form action="#">
-                        <div class="mt-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3 mb-md-4">
-                                        <label for="first_name" class="form-label">First Name*</label>
-                                        <input type="text" class="form-control" name="first_name" id="first_name"
-                                            placeholder="First name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3 mb-md-4">
-                                        <label for="last_name" class="form-label">Last Name*</label>
-                                        <input type="text" class="form-control" name="last_name" id="last_name"
-                                            placeholder="Last name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3 mb-md-4">
-                                        <label for="email" class="form-label">Email*</label>
-                                        <input type="email" class="form-control" name="email" id="email"
-                                            placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3 mb-md-4">
-                                        <label for="phone" class="form-label">Phone Number*</label>
-                                        <input type="number" class="form-control" name="phone" id="phone"
-                                            placeholder="Phone Number">
-                                    </div>
-                                </div>
 
-                                <!-- select country -->
-                                <div class="col-md-6 mb-3 mb-md-4">
-                                    <label for="country" class="form-label">Country*</label>
-                                    <select name="country" id="country" class="custom-select"
-                                        placeholder="Select a country">
-                                        <option value="country-1">Country 1</option>
-                                        <option value="country-2">Country 1</option>
-                                        <option value="country-3">Country 1</option>
-                                        <option value="country-4">Country 1</option>
-                                    </select>
-                                </div>
-
-                                <!-- select -->
-                                <div class="col-md-6 mb-3 mb-md-4">
-                                    <label for="role" class="form-label">Role*</label>
-                                    <select name="role" id="role" class="custom-select role"
-                                        placeholder="Select a role">
-                                        <option value="Role-1">Role 1</option>
-                                        <option value="Role-2">Role 1</option>
-                                        <option value="Role-3">Role 1</option>
-                                        <option value="Role-4">Role 1</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="mb-3 mb-md-4">
-                                        <label for="password" class="form-label">Password*</label>
-                                        <input type="password" class="form-control" name="password" id="password"
-                                            placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3 mb-md-4">
-                                        <label for="confirm_password" class="form-label">Confirm Password*</label>
-                                        <input type="number" class="form-control" name="confirm_password"
-                                            id="confirm_password" placeholder="Confirm Password">
-                                    </div>
-                                </div>
-                                <div class="text-center mt-3"><button type="submit" class="main-btn">Register</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -248,45 +174,6 @@
     <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $(".custom-select").each(function () {
-                var classes = $(this).attr("class"),
-                    id = $(this).attr("id"),
-                    name = $(this).attr("name");
-                var template = '<div class="' + classes + '">';
-                template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
-                template += '<div class="custom-options">';
-                $(this).find("option").each(function () {
-                    template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
-                });
-                template += '</div></div>';
-
-                $(this).wrap('<div class="custom-select-wrapper"></div>');
-                $(this).hide();
-                $(this).after(template);
-            });
-            $(".custom-option:first-of-type").hover(function () {
-                $(this).parents(".custom-options").addClass("option-hover");
-            }, function () {
-                $(this).parents(".custom-options").removeClass("option-hover");
-            });
-            $(".custom-select-trigger").on("click", function () {
-                $('html').one('click', function () {
-                    $(".custom-select").removeClass("opened");
-                });
-                $(this).parents(".custom-select").toggleClass("opened");
-                event.stopPropagation();
-            });
-            $(".custom-option").on("click", function () {
-                $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
-                $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
-                $(this).addClass("selection");
-                $(this).parents(".custom-select").removeClass("opened");
-                $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
-            });
-        });
-    </script>
 
 </body>
 

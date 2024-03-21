@@ -1546,6 +1546,7 @@ footer .social-links a:hover {
   background-image: url(../images/register.webp);
   background-position: center;
   background-size: cover;
+  min-height: 40vh;
 }
 
 .register .register-container .title {
@@ -1561,9 +1562,6 @@ footer .social-links a:hover {
   font-size: 18px;
 }
 
-.register .register-container .top-sec {
-  width: 75%;
-}
 .register .register-container form label {
   font-weight: 500;
   font-size: 18px;
@@ -1583,7 +1581,23 @@ footer .social-links a:hover {
 }
 
 .login .register-container form {
-  width: 45%;
+  width: 40%;
+}
+
+/* select */
+.register .register-container .custom-select-wrapper {
+  display: block;
+  font-size: 14px;
+}
+.register .register-container .custom-options {
+  margin-left: 0;
+}
+.register .register-container .custom-select {
+  width: 100%;
+}
+
+.login .forgot-pass:hover {
+  color: var(--green);
 }
 
 @media (max-width: 1400px) {
@@ -1593,25 +1607,31 @@ footer .social-links a:hover {
   .register .register-container .login {
     font-size: 16px;
   }
+}
+
+@media (max-width: 1200px) {
   .login .register-container form {
     width: 50%;
   }
 }
 
-@media (max-width: 1200px) {
-  .login .register-container form {
-    width: 60%;
-  }
-}
-
 @media (max-width: 992px) {
-  .register .register-container .top-sec {
-    width: 100%;
+  .login .register-container form {
+    width: 65%;
   }
   .register .register-container .title {
     font-size: 28px;
   }
   .register .register-container .login {
     font-size: 14px;
+  }
+  .login .forgot-pass {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .login .register-container form {
+    width: 100%;
   }
 }
