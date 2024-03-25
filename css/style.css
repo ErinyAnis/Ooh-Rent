@@ -218,6 +218,9 @@ h2 span {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .top-sec {
+    margin-top: 70px;
+  }
 }
 
 /* --------------------------------------------------- */
@@ -918,6 +921,7 @@ header nav .navbar-toggler .toggle-icon {
   border-radius: 7px;
   background: none;
   color: var(--green);
+  max-width: 200px;
 }
 
 .download .download-btn i {
@@ -962,6 +966,9 @@ header nav .navbar-toggler .toggle-icon {
   }
   .home .download-app .mobile-img {
     max-height: 350px;
+  }
+  .download .download-btn {
+    max-width: 170px;
   }
 }
 /* end-download-app */
@@ -1633,5 +1640,210 @@ footer .social-links a:hover {
 @media (max-width: 767px) {
   .login .register-container form {
     width: 100%;
+  }
+}
+
+/* end login and register */
+/* --------------------------------------------------- */
+.services .contact-us-card {
+  border: 1px solid var(--gray-light-3);
+  padding: 30px 35px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 7px 0px rgba(21, 21, 21, 0.25);
+  overflow: hidden;
+  position: relative;
+  margin: 30px;
+  min-height: 200px;
+}
+
+.services .contact-us-card .comments-icon {
+  font-size: 36px;
+  color: var(--main-btn-hover);
+  margin-bottom: 15px;
+}
+
+.services .contact-us-card h3 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.services .contact-us-card p {
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.services .contact-us-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  height: 100%;
+  width: 100%;
+}
+
+.services .contact-us-card .overlay .flip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.services .contact-us-card:hover .overlay {
+  opacity: 1;
+}
+
+.services .contact-us-card .overlay .learn-more {
+  z-index: 1;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (max-width: 1400px) {
+  .services .contact-us-card {
+    margin: 25px;
+  }
+  .services .contact-us-card p {
+    font-size: 16px;
+  }
+  .services .contact-us-card .more {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1400px) {
+  .services .contact-us-card {
+    margin: 20px;
+    padding: 20px 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services .contact-us-card h3 {
+    font-size: 20px;
+  }
+}
+
+/* end-services */
+
+/* service-details */
+.service-details h3 {
+  font-size: 44px;
+}
+
+.service-details .main-img img {
+  border-radius: 10px;
+}
+
+.service-details .content {
+  font-size: 20px;
+}
+
+@media (max-width: 1400px) {
+  .service-details h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .service-details .content {
+    font-size: 18px;
+  }
+  .service-details h3 {
+    font-size: 34px;
+  }
+  .service-details .content {
+    font-size: 16px;
+  }
+}
+
+/* end-service-details */
+/* ------------------------------------------ */
+
+/* pricing-plans */
+.pricing-plans .pricing-top-sec {
+  background-image: url(../images/pricing-plans-bg.webp);
+  min-height: 65vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.pricing-plans .title-holder {
+  padding-top: 10%;
+}
+.pricing-plans .title-holder h2 {
+  font-size: 60px;
+  color: var(--white);
+}
+
+.pricing-plans .pricing-card-container .price-card {
+  background-color: var(--white);
+  width: 30%;
+  border-radius: 15px;
+}
+
+.pricing-plans .pricing-card-container .price-card .top-icon {
+  font-size: 18px;
+  padding: 8px;
+}
+
+.pricing-plans .pricing-card-container .price-card .top-icon,
+.pricing-plans .pricing-card-container .price-card ul .check-icon {
+  background-color: var(--gray-light-3);
+  border-radius: 50%;
+}
+
+.pricing-plans .pricing-card-container .price-card .plan-type {
+  font-size: 20px;
+}
+.pricing-plans .pricing-card-container .price-card h3 {
+  font-size: 38px;
+}
+
+.pricing-plans .pricing-card-container .price-card ul {
+  margin-top: 20px;
+}
+
+.pricing-plans .pricing-card-container .price-card ul .check-icon {
+  color: var(--main-btn-hover);
+  background-color: var(--gray-light-3);
+  padding: 7px;
+  margin-right: 10px;
+  font-size: 14px;
+  padding: 6px;
+}
+.pricing-plans .pricing-card-container .price-card ul li {
+  color: var(--gray-high);
+}
+
+.pricing-plans .pricing-card-container .price-card ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.pricing-plans .pricing-card-container .price-card .get-started {
+  background-color: var(--gray-light-4);
+  padding: 25px 10px;
+}
+
+.pricing-plans .pricing-card-container .price-card .card-p {
+    padding: 30px;
+}
+@media (max-width: 1200px) {
+  .pricing-plans .title-holder h2 {
+    font-size: 54px;
+  }
+}
+@media (max-width: 992px) {
+  .pricing-plans .title-holder h2 {
+    font-size: 48px;
+  }
+  .pricing-plans .title-holder div {
+    font-size: 14px;
   }
 }
