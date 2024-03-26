@@ -319,7 +319,7 @@ header nav .navbar-toggler .toggle-icon {
     max-height: 70px;
   }
 
-  .sidebar {
+  header nav .sidebar {
     background-color: rgb(243 255 253 / 65%);
     backdrop-filter: blur(10px);
   }
@@ -1121,7 +1121,7 @@ header nav .navbar-toggler .toggle-icon {
 /* end contact-sec */
 footer {
   background-image: url("../images/footer-bg.webp");
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1768,15 +1768,28 @@ footer .social-links a:hover {
 /* ------------------------------------------ */
 
 /* pricing-plans */
-.pricing-plans .pricing-top-sec {
+.pricing-plans .background-container {
+  position: relative;
+}
+.pricing-plans .background-container .background-img {
   background-image: url(../images/pricing-plans-bg.webp);
-  min-height: 65vh;
+  min-height: 64vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.pricing-plans .pricing-top-sec {
+  position: relative;
+  z-index: 2;
 }
 
 .pricing-plans .title-holder {
-  padding-top: 10%;
+  padding-top: 6%;
 }
 .pricing-plans .title-holder h2 {
   font-size: 60px;
@@ -1785,8 +1798,8 @@ footer .social-links a:hover {
 
 .pricing-plans .pricing-card-container .price-card {
   background-color: var(--white);
-  width: 30%;
   border-radius: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .pricing-plans .pricing-card-container .price-card .top-icon {
@@ -1828,15 +1841,46 @@ footer .social-links a:hover {
 }
 .pricing-plans .pricing-card-container .price-card .get-started {
   background-color: var(--gray-light-4);
-  padding: 25px 10px;
+  padding: 25px 30px;
+  border-radius: 0 0 15px 15px;
 }
 
 .pricing-plans .pricing-card-container .price-card .card-p {
-    padding: 30px;
+  padding: 30px;
+}
+
+.pricing-plans .pricing-card-container .price-card .get-started a {
+  width: 100%;
+  display: block;
+}
+.pricing-plans .user-type-title {
+  margin-left: 13%;
+  font-size: 26px;
+}
+@media (max-width: 1400px) {
+  .pricing-plans .pricing-card-container .price-card .card-p {
+    padding: 25px;
+  }
+  .pricing-plans .pricing-card-container .price-card .plan-type {
+    font-size: 18px;
+  }
+  .pricing-plans .pricing-card-container .price-card h3 {
+    font-size: 32px;
+  }
+  .pricing-plans .pricing-card-container .price-card .annual-plan {
+    font-size: 14px;
+  }
+  .pricing-plans .pricing-card-container .price-card ul li {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1200px) {
   .pricing-plans .title-holder h2 {
     font-size: 54px;
+  }
+  .pricing-plans .user-type-title {
+    margin-left: 0;
+    font-size: 24px;
   }
 }
 @media (max-width: 992px) {
@@ -1846,4 +1890,190 @@ footer .social-links a:hover {
   .pricing-plans .title-holder div {
     font-size: 14px;
   }
+  .pricing-plans .pricing-card-container .price-card {
+    margin-bottom: 23px;
+  }
+  .pricing-plans .pricing-card-container .price-card .plan-type {
+    font-size: 16px;
+  }
+  .pricing-plans .pricing-card-container .price-card h3 {
+    font-size: 28px;
+  }
+}
+
+/* end-pricing-plans */
+/* ---------------------------------------------------- */
+
+/* my-account */
+.my-account .sidebar aside {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 15px;
+  border-radius: 25px;
+  position: fixed;
+  min-width: 330px;
+  background-color: var(--white);
+}
+
+.my-account .sidebar aside .user-holder {
+  border-bottom: 1px solid var(--gray-light-3);
+  padding-bottom: 15px;
+}
+
+.my-account .sidebar aside .user-holder img {
+  max-height: 80px;
+}
+.my-account .sidebar aside .user-holder .user-name {
+  color: var(--green);
+  font-weight: 500;
+  font-size: 18px;
+}
+.my-account .sidebar aside .user-holder a {
+  color: var(--gray-middle);
+}
+
+.my-account .sidebar aside .user-holder a:hover {
+  color: var(--basic);
+}
+
+.my-account .sidebar aside .links li {
+  padding: 10px 15px;
+  color: var(--gray-high);
+  margin-bottom: 10px;
+  transition: var(--transition);
+}
+.my-account .sidebar aside .links li a {
+  color: var(--gray-high);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.my-account .sidebar aside .links li:hover,
+.my-account .sidebar aside .links li.active {
+  background-color: var(--gray-light-3);
+}
+
+@media (max-width: 1400px) {
+  .my-account .sidebar aside {
+    min-width: 270px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .my-account .sidebar aside {
+    min-width: 220px;
+  }
+  .my-account .sidebar aside .user-holder img {
+    max-height: 55px;
+  }
+  .my-account .sidebar aside .user-holder .user-name {
+    font-size: 16px;
+  }
+  .my-account .sidebar aside .user-holder a {
+    font-size: 12px;
+  }
+  .my-account .sidebar aside .links li {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .my-account .sidebar aside .user-holder img {
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .my-account .sidebar aside {
+    position: static !important;
+  }
+}
+
+/* end-account-side-bar */
+/* ------------------------------------------------ */
+
+.my-account .right-side-content .content-holder {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 30px 25px;
+  border-radius: 25px;
+}
+
+.my-account .right-side-content .content-holder .title h3 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.my-account .right-side-content .content-holder .sub-title {
+  font-size: 22px;
+}
+
+/* upload-input */
+.my-account .right-side-content .content-holder .upload-container {
+  position: relative;
+  display: inline-block;
+}
+
+.my-account .right-side-content .content-holder .upload-input {
+  display: none;
+}
+
+.my-account .right-side-content .content-holder .upload-label {
+  display: inline-block;
+  border: 2px dashed #ccc;
+  padding: 20px;
+  cursor: pointer;
+}
+.my-account .right-side-content .content-holder .upload-container p {
+  font-size: 14px;
+}
+.my-account .right-side-content .content-holder .upload-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: var(--gray-light);
+}
+
+.my-account .right-side-content .content-holder .upload-btn {
+  padding: 5px 10px;
+  transition: var(--transition);
+}
+
+/* Style the button when clicked */
+.my-account .right-side-content .content-holder .upload-label.clicked {
+  border-color: #999;
+}
+
+.my-account form label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.my-account form input,
+.my-account form textarea {
+  background-color: var(--gray-light-4);
+  border-color: var(--gray-light-2);
+  font-size: 14px;
+  color: var(--gray-middle);
+  padding: 9px 12px;
+}
+
+.my-account form input:focus,
+.my-account form textarea:focus {
+  background-color: var(--gray-light-4);
+  border-color: var(--gray-middle);
+}
+@media (max-width: 1200px) {
+  .my-account .right-side-content .content-holder .title h3 {
+    font-size: 20px;
+  }
+  .my-account .right-side-content .content-holder .sub-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .my-account form label {
+    font-size: 16px;
+  }
+  .my-account .right-side-content .content-holder .title h3, .my-account .right-side-content .content-holder .sub-title {
+    font-size: 18px;
+  }
+ 
 }
