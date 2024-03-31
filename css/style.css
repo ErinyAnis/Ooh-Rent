@@ -13,6 +13,7 @@
   --basic: #1d1b1b;
   --green: #395137;
   --orange: #e08e44;
+  --red: #cb3329;
   --orange-2: #dbbb7e;
   --gray-light: #a2a2a2;
   --gray-light-2: #c4c4c4;
@@ -108,7 +109,7 @@ h2 span {
 .secondary-btn {
   font-size: 18px;
   border-radius: var(--border-radius);
-  padding: 9px 30px;
+  padding: 8px 30px;
   font-weight: 500;
 }
 
@@ -153,13 +154,17 @@ h2 span {
   .main-btn,
   .secondary-btn {
     font-size: 16px;
-    padding: 9px 30px;
+    padding: 8px 30px;
   }
 }
 
 @media (max-width: 767px) {
   h2 {
     font-size: 26px;
+  }
+  .main-btn,
+  .secondary-btn {
+    font-size: 14px;
   }
 }
 
@@ -268,7 +273,7 @@ header nav .login-link:hover {
 
 header nav .sign-up-btn {
   background-color: var(--green);
-  padding: 9px 30px;
+  padding: 8px 30px;
   border-radius: var(--border-radius);
   font-size: 18px;
 }
@@ -1909,7 +1914,6 @@ footer .social-links a:hover {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 15px;
   border-radius: 25px;
-  position: fixed;
   min-width: 330px;
   background-color: var(--white);
 }
@@ -1920,7 +1924,7 @@ footer .social-links a:hover {
 }
 
 .my-account .sidebar aside .user-holder img {
-  max-height: 80px;
+  max-height: 75px;
 }
 .my-account .sidebar aside .user-holder .user-name {
   color: var(--green);
@@ -2060,6 +2064,11 @@ footer .social-links a:hover {
   background-color: var(--gray-light-4);
   border-color: var(--gray-middle);
 }
+
+.my-account hr {
+  margin: 0.5rem 0;
+}
+
 @media (max-width: 1200px) {
   .my-account .right-side-content .content-holder .title h3 {
     font-size: 20px;
@@ -2072,8 +2081,180 @@ footer .social-links a:hover {
   .my-account form label {
     font-size: 16px;
   }
-  .my-account .right-side-content .content-holder .title h3, .my-account .right-side-content .content-holder .sub-title {
+  .my-account .right-side-content .content-holder .title h3,
+  .my-account .right-side-content .content-holder .sub-title {
     font-size: 18px;
   }
+}
+
+/* my-properties */
+.my-account .my-property .main .property-title {
+  font-size: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.my-account .my-property .main .price {
+  font-size: 18px;
+}
+
+.my-account .my-property .edit-view-wrapper a:first-child {
+  border-right: 1px solid var(--green);
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.my-account .my-property .edit-view-wrapper a i {
+  transition: var(--transition);
+}
+
+.my-account .my-property .edit-view-wrapper a:hover i {
+  color: var(--main-btn-hover);
+}
+
+.my-account .my-property .status-control-buttons .pending-btn {
+  font-size: 18px;
+  padding: 8px 30px;
+  font-weight: 500;
+  background-color: var(--gray-light-2);
+  border-radius: var(--border-radius);
+  border: none;
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.my-account .my-property .status-control-buttons .pending-btn:hover {
+  background-color: var(--gray-middle);
+}
+
+.my-account .my-property .delete-btn i {
+  color: var(--gray-light);
+  font-size: 24px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.my-account .my-property .delete-btn i:hover {
+  color: var(--red);
+}
+
+.my-account .my-property .property-holder:not(:last-child) {
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--gray-middle);
+  padding-bottom: 25px;
+}
+
+@media (max-width: 992px) {
+  .my-account .my-property .main .property-title {
+    font-size: 18px;
+  }
+  .my-account .my-property .main .location,
+  .my-account .my-property .main .date {
+    font-size: 14px;
+  }
+  .my-account .my-property .main .price {
+    font-size: 16px;
+  }
+  .my-account .my-property .status-control-buttons .pending-btn {
+    font-size: 16px;
+    padding: 8px 30px;
+  }
+  .my-account .my-property .edit-view-wrapper {
+    font-size: 14px;
+  }
+  .my-account .my-property .delete-btn i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .my-account .my-property .status-control-buttons .pending-btn {
+    font-size: 14px;
+  }
+}
+
+/* ----------------------------------------- */
+/* Find technicians */
+.my-account .find-technicians .title h2 {
+  font-size: 46px;
+}
+.my-account .find-technicians .search-container form {
+  position: relative;
+}
+
+.my-account .find-technicians .search-container form input[type="search"] {
+  border: 1px solid var(--gray-light);
+  padding: 9px 9px 9px 50px;
+  border-radius: 5px;
+  color: var(--gray-light);
+  background-color: transparent;
+}
+.my-account
+  .find-technicians
+  .search-container
+  form
+  input[type="search"]::placeholder {
+  font-size: 14px;
+  color: var(--gray-light);
+}
+
+.my-account .find-technicians .search-container form button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background: transparent;
+  border: transparent;
+  font-size: 16px;
+  color: var(--gray-light);
+  cursor: pointer;
+  outline: 0;
+}
+
+.my-account .find-technicians .categories-container .categories-card {
+  background-color: var(--gray-light-4);
+  border-radius: 25px;
+  padding: 20px 25px;
+  box-shadow: -3px 0px var(--orange);
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+.my-account .find-technicians .categories-container .categories-card:hover {
+  border-color: var(--orange);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.my-account .find-technicians .categories-container .categories-card .category {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+@media (max-width: 1200px) {
+  .my-account .find-technicians .title h2 {
+    font-size: 38px;
+  }
+  .my-account .find-technicians .title div {
+    font-size: 14px;
+  }
+  .my-account .find-technicians .categories-container .categories-card .category {
+    font-size: 18px;
+}
+ .my-account
+    .find-technicians
+    .categories-container
+    .categories-card
+    .available-technicians {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .my-account .find-technicians .title h2 {
+    font-size: 30px;
+  }
+
  
 }
