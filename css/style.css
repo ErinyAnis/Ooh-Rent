@@ -134,6 +134,10 @@ h2 span {
   color: var(--white);
 }
 
+.transition {
+  transition: var(--transition);
+}
+
 @media (max-width: 1400px) {
   h2 {
     font-size: 52px;
@@ -1996,7 +2000,7 @@ footer .social-links a:hover {
 
 .my-account .right-side-content .content-holder {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 30px 25px;
+  padding: 30px 40px;
   border-radius: 25px;
 }
 
@@ -2070,6 +2074,9 @@ footer .social-links a:hover {
 }
 
 @media (max-width: 1200px) {
+  .my-account .right-side-content .content-holder {
+    padding: 30px;
+  }
   .my-account .right-side-content .content-holder .title h3 {
     font-size: 20px;
   }
@@ -2095,6 +2102,9 @@ footer .social-links a:hover {
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
+.my-account .my-property .title .secondary-btn {
+  font-size: 16px;
+}
 
 .my-account .my-property .main .price {
   font-size: 18px;
@@ -2114,8 +2124,12 @@ footer .social-links a:hover {
   color: var(--main-btn-hover);
 }
 
+.my-account .my-property .status-control-buttons .main-btn,
 .my-account .my-property .status-control-buttons .pending-btn {
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.my-account .my-property .status-control-buttons .pending-btn {
   padding: 8px 30px;
   font-weight: 500;
   background-color: var(--gray-light-2);
@@ -2131,7 +2145,7 @@ footer .social-links a:hover {
 
 .my-account .my-property .delete-btn i {
   color: var(--gray-light);
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -2239,10 +2253,14 @@ footer .social-links a:hover {
   .my-account .find-technicians .title div {
     font-size: 14px;
   }
-  .my-account .find-technicians .categories-container .categories-card .category {
+  .my-account
+    .find-technicians
+    .categories-container
+    .categories-card
+    .category {
     font-size: 18px;
-}
- .my-account
+  }
+  .my-account
     .find-technicians
     .categories-container
     .categories-card
@@ -2255,6 +2273,186 @@ footer .social-links a:hover {
   .my-account .find-technicians .title h2 {
     font-size: 30px;
   }
+}
 
- 
+/* cat-details */
+.my-account .title .back-icon {
+  position: absolute;
+  left: -25px;
+  font-size: 20px;
+  top: 0;
+}
+.my-account .cat-details .technicion-card-container .technicion-card {
+  background-color: var(--gray-light-4);
+  border-radius: 25px;
+  padding: 30px 25px;
+  transition: var(--transition);
+}
+.my-account .cat-details .technicion-card-container .technicion-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.my-account .cat-details .technicion-card .left-side {
+  border-right: 1px solid var(--gray-light);
+  padding-right: 15px;
+}
+
+.my-account .cat-details .technicion-card .left-side .technicion-img {
+  max-height: 80px;
+}
+.my-account .cat-details .technicion-card .left-side .name {
+  font-weight: 500;
+  font-size: 18px;
+}
+.my-account .cat-details .technicion-card .left-side .job-title {
+  color: var(--gray-middle);
+}
+.my-account .fa-star {
+  color: var(--gray-light-2);
+  font-size: 15px;
+}
+.my-account .fa-star.checked {
+  color: var(--orange);
+}
+
+.my-account .cat-details .technicion-card .left-side .num-of-reviews {
+  font-size: 14px;
+}
+
+.my-account .cat-details .technicion-card .left-side .secondary-btn {
+  font-size: 16px;
+}
+
+.my-account .cat-details .technicion-card .right-side {
+  padding-left: 15px;
+}
+
+.my-account .cat-details .technicion-card .right-side ul li {
+  font-size: 14px;
+  color: var(--gray-high);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.my-account .cat-details .technicion-card .right-side ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.my-account .cat-details .technicion-card .right-side ul li i {
+  color: var(--green);
+  font-size: 18px;
+}
+
+@media (max-width: 1400px) {
+  .my-account .cat-details .technicion-card .left-side .secondary-btn {
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .my-account .cat-details .title .back-icon {
+    font-size: 18px;
+    left: -20px;
+  }
+
+  .my-account .cat-details .title {
+    font-size: 14px;
+  }
+
+  .my-account .cat-details .technicion-card .right-side {
+    margin-top: 20px;
+  }
+
+  .my-account .cat-details .technicion-card .left-side {
+    border: none;
+    padding: 0;
+  }
+  .my-account .cat-details .technicion-card .right-side {
+    padding: 0 10px;
+  }
+}
+/* end-cat-details */
+/* --------------------------------------- */
+
+/* technicion-details */
+.my-account .technicion-details .cover-img {
+  border-radius: 25px;
+}
+
+.my-account .technicion-details .tech-container .info .technicion-img {
+  max-height: 140px;
+}
+.my-account .technicion-details .tech-container .info .name h3 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.my-account .technicion-details .tech-container .info .name span {
+  color: var(--gray-middle);
+  font-size: 18px;
+}
+
+.my-account .technicion-details .tech-container .rating .rating-title {
+  font-size: 18px;
+}
+
+.my-account .technicion-details .tech-container .rating .num-of-reviews {
+  font-size: 14px;
+}
+.my-account .technicion-details .main-title {
+  font-family: "Vollkorn", serif;
+  font-size: 30px;
+}
+.my-account .technicion-details .what-i-do ul {
+  list-style: disc;
+}
+.my-account .technicion-details .projects .project {
+  padding: 10px;
+}
+.my-account .technicion-details .projects figure {
+      max-height: 250px;
+      overflow: hidden;
+}
+.my-account .technicion-details .projects figure img {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .my-account .technicion-details .tech-container .info .name h3 {
+    font-size: 26px;
+  }
+  .my-account .technicion-details .tech-container .rating .rating-title {
+    font-size: 16px;
+  }
+  .my-account .technicion-details .tech-container .info .name span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .my-account .technicion-details .tech-container .info .technicion-img {
+    max-height: 120px;
+  }
+  .my-account .technicion-details .tech-container .info .name h3 {
+    font-size: 22px;
+  }
+  .my-account .technicion-details .tech-container .info .name span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .my-account .technicion-details .tech-container .info .technicion-img {
+    max-height: 100px;
+  }
+  .my-account .technicion-details .tech-container .info .name h3 {
+    font-size: 20px;
+  }
+  .my-account .technicion-details .tech-container .info .location {
+    font-size: 14px;
+  }
+  .my-account .technicion-details .overview div,
+  .my-account .technicion-details p,
+  .my-account .technicion-details .what-i-do ul {
+    font-size: 14px;
+  }
 }
