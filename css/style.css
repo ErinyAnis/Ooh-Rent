@@ -2409,13 +2409,158 @@ footer .social-links a:hover {
   padding: 10px;
 }
 .my-account .technicion-details .projects figure {
-      max-height: 250px;
-      overflow: hidden;
+  overflow: hidden;
+  position: relative;
+}
+
+.my-account .technicion-details .projects figure:before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    0deg,
+    rgb(10 10 10 / 73%) 0%,
+    rgb(167 167 167 / 3%) 100%
+  );
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--transition);
+}
+.my-account .technicion-details .projects figure:hover::before {
+  opacity: 1;
 }
 .my-account .technicion-details .projects figure img {
   height: 100%;
-  width: 100%;
+  max-height: 250px;
+  border-radius: 5px;
 }
+.my-account .technicion-details .projects figure figcaption {
+  position: absolute;
+  width: 100%;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%);
+  color: var(--white);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* slider-styling */
+.my-account .technicion-details .slick-next,
+.my-account .technicion-details .slick-prev {
+  z-index: 1;
+}
+.my-account .technicion-details .slick-next {
+  right: -19px;
+}
+.my-account .technicion-details .slick-prev {
+  left: -28px;
+}
+.my-account .technicion-details .slick-next:before,
+.my-account .technicion-details .slick-prev:before {
+  font-family: "Font Awesome 6 Pro";
+  color: var(--basic);
+  font-weight: 500;
+  border: 1px solid var(--basic);
+  padding: 4px 6px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.my-account .technicion-details .slick-next:before {
+  content: "\f061";
+}
+.my-account .technicion-details .slick-prev:before {
+  content: "\f060";
+}
+.my-account .technicion-details .slick-dots {
+  bottom: -10px;
+}
+
+.my-account .technicion-details .slick-dots li button:before {
+  font-size: 8px;
+  color: var(--green);
+}
+.my-account .technicion-details .slick-dots li {
+  margin: 0 3px;
+}
+
+@media (max-width: 1200px) {
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 16px;
+  }
+
+  .my-account .technicion-details .slick-next {
+    right: -16px;
+  }
+  .my-account .technicion-details .slick-prev {
+    left: -22px;
+  }
+  .my-account .technicion-details .slick-next:before,
+  .my-account .technicion-details .slick-prev:before {
+    padding: 4px 5px;
+  }
+}
+/* end-slider */
+
+/* ------------------------------------------ */
+/* sent-message */
+.my-account .technicion-details .sent-message p {
+  font-size: 18px;
+}
+
+/* client-reviews */
+.my-account
+  .technicion-details
+  .clients-reviews
+  .reviews-container
+  .review-card {
+  border: 1px solid var(--gray-light-2);
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 179px;
+}
+
+.my-account
+  .technicion-details
+  .clients-reviews
+  .reviews-container
+  .card-holder {
+  padding: 10px;
+  cursor: grab;
+}
+
+.my-account .technicion-details .clients-reviews .review-card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.my-account .technicion-details .clients-reviews .user .user-name {
+  font-size: 14px;
+}
+
+.my-account .technicion-details .clients-reviews .review-card h3 {
+  font-size: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* faqs */
+.my-account .technicion-details .faqs .faqs-container:not(:last-child) {
+  margin-bottom: 20px;
+}
+.my-account .technicion-details .faqs .faqs-container .question {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+.my-account .technicion-details .faqs .faqs-container .answer {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1400px) {
   .my-account .technicion-details .tech-container .info .name h3 {
     font-size: 26px;
@@ -2438,9 +2583,19 @@ footer .social-links a:hover {
   .my-account .technicion-details .tech-container .info .name span {
     font-size: 14px;
   }
+  .my-account
+    .technicion-details
+    .clients-reviews
+    .reviews-container
+    .review-card {
+    margin-bottom: 12px;
+  }
 }
 
 @media (max-width: 992px) {
+  .my-account .technicion-details .main-title {
+    font-size: 24px;
+  }
   .my-account .technicion-details .tech-container .info .technicion-img {
     max-height: 100px;
   }
@@ -2455,4 +2610,37 @@ footer .social-links a:hover {
   .my-account .technicion-details .what-i-do ul {
     font-size: 14px;
   }
+
+  .my-account .technicion-details .sent-message p,
+  .my-account .technicion-details .client-reviews p {
+    font-size: 14px;
+  }
+
+  .my-account .technicion-details .clients-reviews .review-card h3 {
+    font-size: 16px;
+  }
+  .my-account .technicion-details .clients-reviews .user .user-name {
+    font-size: 12px;
+  }
+
+  .my-account .technicion-details .clients-reviews .user .name {
+    font-size: 14px;
+  }
+
+  .my-account .technicion-details .clients-reviews .stars i {
+    font-size: 14px;
+  }
+  .my-account .technicion-details .faqs .faqs-container .question {
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+  .my-account .technicion-details .faqs .faqs-container .answer {
+    font-size: 14px;
+  }
+}
+/* ---------------------------------------------------------------- */
+
+/* edit-property */
+.my-account .edit-property .head-title {
+  font-size: 26px
 }
