@@ -114,6 +114,12 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="my-account-my-wallet.html">
+                                            <i class="fa-solid fa-wallet"></i>
+                                            <div>My Wallet</div>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="my-account-find-technicions.html">
                                             <i class="fa-solid fa-screwdriver-wrench"></i>
                                             <div>Find technicians</div>
@@ -135,19 +141,314 @@
                             <div class="content-holder">
                                 <h3 class="head-title orange fw-600 text-center">Edit Property</h3>
                                 <form action="#">
-                                    <div class="row mt-3">
+                                    <div class="row mt-4">
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label for="property_title" class="form-label">Property Title*</label>
-                                                <input type="text" class="form-control" id="property_title" name="property_title" placeholder="Property Title" required>
+                                                <input type="text" class="form-control" id="property_title"
+                                                    name="property_title" placeholder="Property Title" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label for="property_type" class="form-label">Property Type*</label>
-                                                <input type="text" class="form-control" name="property_type" id="property_type" placeholder="Property Type">
+                                                <select name="property_type" id="property_type" class="custom-select"
+                                                    placeholder="select property type" required>
+                                                    <option value="categoryOne">House 1</option>
+                                                    <option value="categoryTwo">House 2</option>
+                                                    <option value="categoryThree">House 3</option>
+                                                    <option value="categoryFour">House 4</option>
+
+                                                </select>
                                             </div>
                                         </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="living_space" class="form-label">Living Space*</label>
+                                                <input type="text" class="form-control" id="living_space"
+                                                    name="living_space" placeholder="living space" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="price" class="form-label">Price*</label>
+                                                <input type="number" class="form-control" id="price" name="price"
+                                                    placeholder="Price" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="rooms_number" class="form-label">Rooms Number*</label>
+                                                <select name="rooms_number" id="rooms_number" class="custom-select"
+                                                    placeholder="select rooms number" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="bathroom_number" class="form-label">Bathrooms
+                                                    Number*</label>
+                                                <select name="bathroom_number" id="bathroom_number"
+                                                    class="custom-select" placeholder="select bathrooms number"
+                                                    required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="date_available" class="form-label">Date Available*</label>
+                                                <select name="date_available" id="date_available" class="custom-select"
+                                                    placeholder="select bathrooms number" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="level" class="form-label">Level*</label>
+                                                <input type="number" class="form-control" id="level" name="level"
+                                                    placeholder="Enter flat floor" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="garage" class="form-label">Garage*</label>
+                                                <select name="garage" id="garage" class="custom-select"
+                                                    placeholder="select garage" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="parking" class="form-label">Parking*</label>
+                                                <input type="text" class="form-control" id="parking" name="parking"
+                                                    placeholder="Enter parking" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="parking" class="form-label">Description</label>
+                                                <textarea name="" id="" rows="3" class="form-control"
+                                                    placeholder="Lorem ipsum dolor sit amet consectetur. Orci ut in at dui nunc. Sed turpis habitant massa pellentesque ornare suspendisse tristique. Venenatis in est sodales amet eget. Tristique in tellus quis mattis tortor nam congue ut."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="mt-4 mb-4 mt-lg-5 mb-lg-5">
+                                    <div class="mb-4">
+                                        <div class="input-label fw-700">Main Photo</div>
+                                        <p class="input-desc">Lorem ipsum dolor sit amet consectetur. Sed magna platea
+                                            eget platea in semper in cras.</p>
+                                        <!-- upload-photo-input -->
+                                        <div class="upload-container">
+                                            <input type="file" id="upload-photo" class="upload-input" accept="image/*">
+                                            <label for="upload-photo" class="upload-label text-center">
+                                                <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                <p>Upload image</p>
+                                                <span class="main-btn upload-btn"><i
+                                                        class="fa-solid fa-plus"></i></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="input-label fw-700">Photo Gallery</div>
+                                        <p class="input-desc">*At least one image is for valid submission, minimum width
+                                            of 817px. <br>
+                                            *You can mark an image as featured by clicking the star icon, Otherwise
+                                            first image will be considered featured image.</p>
+                                        <div class="d-flex flex-wrap gap-3">
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
+                                            </div>
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
+                                            </div>
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
+                                            </div>
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="input-label fw-700">Floor Plans</div>
+                                        <p class="input-desc">Lorem ipsum dolor sit amet consectetur. Sed magna platea
+                                            eget platea in semper in cras.</p>
+                                        <!-- upload-photo-input -->
+                                        <div class="upload-container">
+                                            <input type="file" id="upload-photo" class="upload-input" accept="image/*">
+                                            <label for="upload-photo" class="upload-label text-center">
+                                                <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                <p>Upload image</p>
+                                                <span class="main-btn upload-btn"><i
+                                                        class="fa-solid fa-plus"></i></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="input-label fw-700">Master Plans</div>
+                                        <p class="input-desc">Lorem ipsum dolor sit amet consectetur. Sed magna platea
+                                            eget platea in semper in cras.</p>
+                                        <!-- upload-photo-input -->
+                                        <div class="upload-container">
+                                            <input type="file" id="upload-photo" class="upload-input" accept="image/*">
+                                            <label for="upload-photo" class="upload-label text-center">
+                                                <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                <p>Upload image</p>
+                                                <span class="main-btn upload-btn"><i
+                                                        class="fa-solid fa-plus"></i></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label class="input-label fw-700" for="video">Property Video</label>
+                                                <p class="input-desc">*Put URL from video sites like youtube, vimeo etc
+                                                </p>
+                                                <input type="text" class="form-control" id="video" name="video"
+                                                    placeholder="Video URL" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4 mb-4 mt-lg-5 mb-lg-5">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="address_1" class="form-label">Address line 1</label>
+                                                <select name="address_1" id="address_1" class="custom-select"
+                                                    placeholder="Choose address line 1" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="address_2" class="form-label">Address line 2</label>
+                                                <select name="address_2" id="address_2" class="custom-select"
+                                                    placeholder="Choose address line 2" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="states" class="form-label">States</label>
+                                                <select name="states" id="states" class="custom-select"
+                                                    placeholder="Choose property state" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="city" class="form-label">City</label>
+                                                <select name="city" id="city" class="custom-select"
+                                                    placeholder="Choose city" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-l2">
+                                            <div class="row">
+                                                <div class="col-7 col-md-8 col-xl-9">
+                                                    <label for="zip_code" class="form-label">ZIP Code</label>
+                                                    <input type="text" class="form-control" id="zip_code"
+                                                        name="zip_code" placeholder="Enter ZIP Code" required>
+                                                </div>
+                                                <div class="col-5 col-md-4 col-xl-3 mt-auto find-on-map">
+                                                    <button class="main-btn w-100">Find on map</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4 mb-4 mt-lg-5 mb-lg-5">
+                                    <div>
+                                        <label class="input-label fw-700" for="video">Amenities</label>
+                                        <p class="input-desc">Lorem ipsum dolor sit amet consectetur. Sed magna platea
+                                            eget platea in semper in cras.</p>
+                                        <div class="select-buttons">
+                                            <div class="menu">
+                                                <a class="button selected">Elevator</a>
+                                                <a class="button">Electric car charger</a>
+                                                <a class="button">Pets</a>
+                                                <a class="button">Waterfront</a>
+                                                <a class="button">Fenced yard</a>
+                                                <a class="button">55+</a>
+                                                <a class="button">Furnished</a>
+                                                <a class="button">Parking</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4 mb-4 mt-lg-5 mb-lg-5">
+                                    <div>
+                                        <label for="notes" class="form-label input-label">Add Private Notes</label>
+                                        <textarea name="notes" id="notes" rows="3" class="form-control"
+                                            placeholder="Lorem ipsum dolor sit amet consectetur. Orci ut in at dui nunc. Sed turpis habitant massa pellentesque ornare suspendisse tristique. Venenatis in est sodales amet eget. Tristique in tellus quis mattis tortor nam congue ut."></textarea>
+                                    </div>
+                                    <div class="text-center mt-5">
+                                        <button type="submit" class="main-btn">Save changes</button>
                                     </div>
                                 </form>
                             </div>
@@ -264,13 +565,6 @@
             });
             $('.upload-input').change(function () {
                 const file = this.files[0];
-                const img = new Image();
-                img.onload = function () {
-                    if (img.width < 200 || img.height < 200) {
-                        alert("Minimum dimensions required: 200px * 200px");
-                        $('.upload-input').val('');
-                    }
-                };
                 img.src = window.URL.createObjectURL(file);
             });
 
@@ -301,6 +595,55 @@
             $(".delete-btn").click(function () {
                 $(this).closest(".property-holder").remove();
             });
+
+            // style-select
+            $(".custom-select").each(function () {
+                var classes = $(this).attr("class"),
+                    id = $(this).attr("id"),
+                    name = $(this).attr("name");
+                var template = '<div class="' + classes + '">';
+                template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+                template += '<div class="custom-options">';
+                $(this).find("option").each(function () {
+                    template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                });
+                template += '</div></div>';
+
+                $(this).wrap('<div class="custom-select-wrapper"></div>');
+                $(this).hide();
+                $(this).after(template);
+            });
+            $(".custom-option:first-of-type").hover(function () {
+                $(this).parents(".custom-options").addClass("option-hover");
+            }, function () {
+                $(this).parents(".custom-options").removeClass("option-hover");
+            });
+            $(".custom-select-trigger").on("click", function () {
+                $('html').one('click', function () {
+                    $(".custom-select").removeClass("opened");
+                });
+                $(this).parents(".custom-select").toggleClass("opened");
+                event.stopPropagation();
+            });
+            $(".custom-option").on("click", function () {
+                $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+                $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+                $(this).addClass("selection");
+                $(this).parents(".custom-select").removeClass("opened");
+                $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+            });
+
+
+            // select-buttons
+            var menuButton = $(".select-buttons .menu .button");
+
+            function clickMenu() {
+                $(menuButton).removeClass('selected');
+                $(this).addClass('selected')
+            }
+
+            $(menuButton).on('click', clickMenu);
+
         });
     </script>
 

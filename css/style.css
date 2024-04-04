@@ -460,6 +460,7 @@ header nav .navbar-toggler .toggle-icon {
 .custom-select {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 
 .custom-select-trigger {
@@ -1228,6 +1229,11 @@ footer .social-links a:hover {
   }
   footer .social-links a {
     width: 30px;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer-logo {
+    max-height: 100px;
   }
 }
 /* end footer */
@@ -2642,5 +2648,144 @@ footer .social-links a:hover {
 
 /* edit-property */
 .my-account .edit-property .head-title {
-  font-size: 26px
+  font-size: 26px;
+}
+
+.my-account .edit-property .custom-select,
+.my-account .edit-property .custom-select-wrapper {
+  width: 100%;
+}
+
+.my-account .edit-property .custom-options {
+  margin-left: 1px;
+}
+
+.my-account .edit-property .custom-select-trigger {
+  font-size: 14px;
+  border-radius: 6px;
+  color: var(--gray-high);
+  background-color: var(--gray-light-4);
+  border-color: var(--gray-light-2);
+}
+
+.my-account .edit-property .input-label {
+  font-size: 18px;
+  font-weight: 700;
+}
+.my-account .edit-property .input-desc {
+  color: var(--gray-high);
+  margin-bottom: 8px;
+}
+
+/* .my-account .edit-property */
+
+/* buttons-select */
+.my-account .edit-property .select-buttons .menu {
+  margin-top: 20px;
+}
+
+.my-account .edit-property .select-buttons .menu .button {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 15px;
+  color: var(--gray-middle);
+  margin-right: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--gray-light-2);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+.my-account .edit-property .select-buttons .menu .button.selected {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+@media (max-width: 992px) {
+  .my-account .edit-property .input-label {
+    font-size: 16px;
+  }
+  .my-account .edit-property .input-desc {
+    font-size: 14px;
+  }
+  .my-account .edit-property .find-on-map button {
+    padding: 10px 15px;
+  }
+  .my-account .edit-property .head-title {
+    font-size: 22px;
+  }
+}
+
+/* end-edit-propetry */
+/* --------------------------------------------------- */
+
+/* my-wallet */
+.my-account .my-wallet .box-container {
+  border: 1px solid var(--gray-light);
+  background-color: var(--gray-light-4);
+  border-radius: 15px;
+  padding: 20px;
+}
+.my-account .my-wallet .box-container .head-title {
+  color: var(--gray-high);
+  font-weight: 700;
+  font-size: 18px;
+}
+.my-account .my-wallet .box-container .label {
+  font-weight: 500;
+}
+.my-account .my-wallet .box-container .value {
+  color: var(--gray-middle);
+  font-size: 18px;
+}
+.my-account .my-wallet .box-container .price {
+  font-size: 32px;
+}
+.my-account .my-wallet .box-container .secondary-btn {
+  background-color: transparent;
+  padding: 8px 25px;
+}
+.my-account .my-wallet .box-container .secondary-btn:hover {
+  background-color: var(--green);
+}
+.my-account .my-wallet .box-container .transaction:not(:last-child) {
+  border-bottom: 1px solid var(--gray-light);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.my-account .my-wallet .box-container .transaction .bank {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.my-account .my-wallet .box-container .transaction .amount {
+  font-size: 22px;
+}
+
+@media (max-width: 1400px) {
+  .my-account .my-wallet .box-container .head-title,
+  .my-account .my-wallet .box-container .value {
+    font-size: 16px;
+  }
+  .my-account .my-wallet .box-container .label {
+    font-size: 14px;
+  }
+  .my-account .my-wallet .box-container .secondary-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .my-account .my-wallet .box-container .price {
+    font-size: 24px;
+  }
+}
+@media (max-width: 992px) {
+  .my-account .my-wallet .box-container .transaction .bank {
+    font-size: 16px;
+  }
+  .my-account .my-wallet .box-container .transaction .amount {
+  font-size: 18px;
+}
 }
