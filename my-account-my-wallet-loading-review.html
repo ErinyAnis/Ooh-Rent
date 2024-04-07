@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.webp">
     <link rel="stylesheet" href="css/style.css">
-    <title>My-propreties | Ooh Rent</title>
+    <title>My-wallet-loading-review | Ooh Rent</title>
 
 </head>
 
@@ -95,7 +95,7 @@
                                             <div>My Account</div>
                                         </a>
                                     </li>
-                                    <li class="active">
+                                    <li>
                                         <a href="my-account-my-properties.html">
                                             <i class="fa-solid fa-house"></i>
                                             <div>My Properties</div>
@@ -113,7 +113,7 @@
                                             <div>Membership</div>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="active">
                                         <a href="my-account-my-wallet.html">
                                             <i class="fa-solid fa-wallet"></i>
                                             <div>My Wallet</div>
@@ -136,148 +136,46 @@
                             </aside>
                         </div>
                     </div>
-                    <div class="col-lg-9 my-property">
+                    <div class="col-lg-9 loading-review">
                         <div class="right-side-content">
                             <div class="content-holder">
-                                <div class="title">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h3>My Properties</h3>
-                                        <a href="my-account-add-new-property.html" class="secondary-btn"><i
-                                                class="fa-solid fa-plus"></i> Add New Property</a>
+                                <div class="title position-relative">
+                                    <a href="my-account-my-wallet-load-wallet.html" class="back-icon"><i
+                                            class="fa-solid fa-arrow-left"></i></a>
+                                    <h3>Loading Review</h3>
+                                    <p>You have requested to load</p>
+                                </div>
+                                <div class="mt-3 mt-xl-4 g-3">
+                                    <div class="review-holder">
+                                        <div class="label">Amount</div>
+                                        <div class="desc">$20.00</div>
                                     </div>
-                                    <hr>
+                                    <div class="review-holder">
+                                        <div class="label">To your wallet</div>
+                                        <div class="desc">000000000000</div>
+                                    </div>
+                                    <div class="review-holder">
+                                        <div class="label">Fees</div>
+                                        <div class="desc">$0.00</div>
+                                    </div>
+                                    <div class="review-holder">
+                                        <div class="label">Total transaction amount</div>
+                                        <div class="desc">$20.00</div>
+                                    </div>
+                                    <div class="review-holder">
+                                        <div class="label">Load your wallet through</div>
+                                        <div class="desc">Bank Name</div>
+                                    </div>
+                                    <div class="text-center mt-5">
+                                        <a href="#" class="main-btn">Confirm</a>
+                                    </div>
                                 </div>
-                                <div class="property-holder">
-                                    <form action="#">
-                                        <div
-                                            class="d-xl-flex align-items-center gap-4 justify-content-between mt-3 mt-lg-4">
-                                            <div class="main mb-4 mb-xl-0">
-                                                <div class="d-flex gap-4">
-                                                    <div>
-                                                        <img src="images/my-properties.png" alt="property-title">
-                                                    </div>
-                                                    <div>
-                                                        <div class="property-title fw-700 mb-1">Elegant studio flat
-                                                        </div>
-                                                        <div class="location gray-middle"><i
-                                                                class="fa-solid fa-location-dot"></i> The Village,
-                                                            Jersey
-                                                            City, NJ 07302, USA</div>
-                                                        <div class="price green fw-500 mt-1 mb-1">3,200 $ / Monthly
-                                                        </div>
-                                                        <div class="date gray-middle">Date: 27/2/2022</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
-                                                <div class="edit-view-wrapper d-flex">
-                                                    <a href="#" class="gray-middle"><i
-                                                            class="fa-solid fa-eye green me-1"></i>View</a>
-                                                    <a href="my-account-edit-property.html" class="gray-middle"><i
-                                                            class="fa-solid fa-pen-to-square green me-1"></i>Edit</a>
-                                                </div>
-                                                <div class="status-control-buttons d-flex gap-2">
-                                                    <button class="main-btn" type="submit">Publish</button>
-                                                    <button class="pending-btn">Pending</button>
-                                                </div>
-                                                <div class="delete-btn">
-                                                    <i class="fa-solid fa-trash-can"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                </div>
-                                <div class="property-holder">
-                                    <form action="#">
-                                        <div
-                                            class="d-xl-flex align-items-center gap-4 justify-content-between mt-3 mt-lg-4">
-                                            <div class="main mb-4 mb-xl-0">
-                                                <div class="d-flex gap-4">
-                                                    <div>
-                                                        <img src="images/my-properties.png" alt="property-title">
-                                                    </div>
-                                                    <div>
-                                                        <div class="property-title fw-700 mb-1">Elegant studio flat
-                                                        </div>
-                                                        <div class="location gray-middle"><i
-                                                                class="fa-solid fa-location-dot"></i> The Village,
-                                                            Jersey
-                                                            City, NJ 07302, USA</div>
-                                                        <div class="price green fw-500 mt-1 mb-1">3,200 $ / Monthly
-                                                        </div>
-                                                        <div class="date gray-middle">Date: 27/2/2022</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
-                                                <div class="edit-view-wrapper d-flex">
-                                                    <a href="#" class="gray-middle"><i
-                                                            class="fa-solid fa-eye green me-1"></i>View</a>
-                                                    <a href="my-account-edit-property.html" class="gray-middle"><i
-                                                            class="fa-solid fa-pen-to-square green me-1"></i>Edit</a>
-                                                </div>
-                                                <div class="status-control-buttons d-flex gap-2">
-                                                    <button class="main-btn" type="submit">Publish</button>
-                                                    <button class="pending-btn">Pending</button>
-                                                </div>
-                                                <div class="delete-btn">
-                                                    <i class="fa-solid fa-trash-can"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                </div>
-                                <div class="property-holder">
-                                    <form action="#">
-                                        <div
-                                            class="d-xl-flex align-items-center gap-4 justify-content-between mt-3 mt-lg-4">
-                                            <div class="main mb-4 mb-xl-0">
-                                                <div class="d-flex gap-4">
-                                                    <div>
-                                                        <img src="images/my-properties.png" alt="property-title">
-                                                    </div>
-                                                    <div>
-                                                        <div class="property-title fw-700 mb-1">Elegant studio flat
-                                                        </div>
-                                                        <div class="location gray-middle"><i
-                                                                class="fa-solid fa-location-dot"></i> The Village,
-                                                            Jersey
-                                                            City, NJ 07302, USA</div>
-                                                        <div class="price green fw-500 mt-1 mb-1">3,200 $ / Monthly
-                                                        </div>
-                                                        <div class="date gray-middle">Date: 27/2/2022</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
-                                                <div class="edit-view-wrapper d-flex">
-                                                    <a href="#" class="gray-middle"><i
-                                                            class="fa-solid fa-eye green me-1"></i>View</a>
-                                                    <a href="my-account-edit-property.html" class="gray-middle"><i
-                                                            class="fa-solid fa-pen-to-square green me-1"></i>Edit</a>
-                                                </div>
-                                                <div class="status-control-buttons d-flex gap-2">
-                                                    <button class="main-btn" type="submit">Publish</button>
-                                                    <button class="pending-btn">Pending</button>
-                                                </div>
-                                                <div class="delete-btn">
-                                                    <i class="fa-solid fa-trash-can"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                </div>
-
                             </div>
+
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -383,20 +281,44 @@
                     $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
                 }
             });
-            $('.upload-label').click(function () {
-                $(this).addClass('clicked');
+
+            // style-select
+            $(".custom-select").each(function () {
+                var classes = $(this).attr("class"),
+                    id = $(this).attr("id"),
+                    name = $(this).attr("name");
+                var template = '<div class="' + classes + '">';
+                template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+                template += '<div class="custom-options">';
+                $(this).find("option").each(function () {
+                    template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                });
+                template += '</div></div>';
+
+                $(this).wrap('<div class="custom-select-wrapper"></div>');
+                $(this).hide();
+                $(this).after(template);
             });
-            $('.upload-input').change(function () {
-                const file = this.files[0];
-                const img = new Image();
-                img.onload = function () {
-                    if (img.width < 200 || img.height < 200) {
-                        alert("Minimum dimensions required: 200px * 200px");
-                        $('.upload-input').val('');
-                    }
-                };
-                img.src = window.URL.createObjectURL(file);
+            $(".custom-option:first-of-type").hover(function () {
+                $(this).parents(".custom-options").addClass("option-hover");
+            }, function () {
+                $(this).parents(".custom-options").removeClass("option-hover");
             });
+            $(".custom-select-trigger").on("click", function () {
+                $('html').one('click', function () {
+                    $(".custom-select").removeClass("opened");
+                });
+                $(this).parents(".custom-select").toggleClass("opened");
+                event.stopPropagation();
+            });
+            $(".custom-option").on("click", function () {
+                $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+                $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+                $(this).addClass("selection");
+                $(this).parents(".custom-select").removeClass("opened");
+                $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+            });
+
 
 
             // footer-stop-fixed-position
@@ -419,11 +341,6 @@
                         bottom: 'auto'
                     });
                 }
-            });
-
-            // delete-btn -> delete property-row
-            $(".delete-btn").click(function () {
-                $(this).closest(".property-holder").remove();
             });
         });
     </script>

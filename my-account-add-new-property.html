@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="vendor/slick-carousel/css/slick.css">
+    <link rel="stylesheet" href="vendor/slick-carousel/css/slick-theme.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.webp">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Add-new-property | Ooh Rent</title>
+
+</head>
+
+<body class="overflow-x-hidden">
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <!-- logo -->
+                <a class="navbar-brand" href="index.html"><img src="images/logo.webp" alt="logo"></a>
+                <!-- toggle btn -->
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fas fa-bars toggle-icon"></i>
+                </button>
+
+                <!-- sidebar -->
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+                    <!-- sidebar header -->
+                    <div class="offcanvas-header border-bottom">
+                        <img class="sidebar-logo" src="images/logo.webp" alt="logo">
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- sidebar body -->
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                        <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-lg-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="properties.html">Properties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <!-- login / sign-up -->
+                        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
+                            <a href="my-account.html" class="sign-up-btn white-color">My Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="my-account">
+        <section class="top-sec section-padding">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="sidebar col-lg-3">
+                        <div class="position-relative">
+                            <aside>
+                                <div class="user-holder d-flex align-items-center gap-3">
+                                    <img src="images/account-img.png" alt="">
+                                    <div>
+                                        <div class="user-name mb-1">Olivia Rhye</div>
+                                        <a href="my-account-change-password.html"><u>Change Password</u></a>
+                                    </div>
+                                </div>
+                                <ul class="links mt-3">
+                                    <li>
+                                        <a href="my-account.html">
+                                            <i class="fa-solid fa-user"></i>
+                                            <div>My Account</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="my-account-my-properties.html">
+                                            <i class="fa-solid fa-house"></i>
+                                            <div>My Properties</div>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="my-account-add-new-property.html">
+                                            <i class="fa-solid fa-plus"></i>
+                                            <div>Add New Property</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-money-bill"></i>
+                                            <div>Membership</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="my-account-my-wallet.html">
+                                            <i class="fa-solid fa-wallet"></i>
+                                            <div>My Wallet</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="my-account-find-technicions.html">
+                                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                                            <div>Find technicians</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            <div>Logout</div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 add-property">
+                        <div class="right-side-content">
+                            <div class="content-holder" id="booking">
+                                <div class="head-title text-center mb-5">
+                                    <h3 class="orange fw-600">Add New Property</h3>
+                                </div>
+
+                                <form action="#">
+                                    <div id="booking" class="booking-container container white-background">
+                                        <div class="card">
+                                            <div id="msform">
+                                                <div class="d-block d-lg-flex align-items-center text-start">
+                                                    <!-- progressbar -->
+                                                    <ul id="progressbar">
+                                                        <li class="active" id="basic-info">
+                                                            <div class="progress-icon"><i
+                                                                    class="fa-solid fa-file-pen"></i></div>
+                                                            <div class="info">Basic Info</div>
+                                                        </li>
+                                                        <li id="photos">
+                                                            <div class="progress-icon"><i
+                                                                    class="fa-solid fa-photo-film"></i></div>
+                                                            <div class="info">Photos & EPC</div>
+                                                        </li>
+                                                        <li id="payment"></li>
+                                                        <li id="payment"></li>
+                                                        <li id="confirm"></li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- fieldsets -->
+
+                                                <fieldset>
+                                                    <div class="row mt-5 text-start mb-5 g-3">
+                                                        <div class="col-md-6">
+                                                            <label for="property_title" class="form-label">Property
+                                                                Title*</label>
+                                                            <input type="text" class="form-control" id="property_title"
+                                                                name="property_title" placeholder="Property Title"
+                                                                required>
+                                                        </div>
+                                                        <div class="col-md-6 edit-property">
+                                                            <label for="property_type" class="form-label">Property
+                                                                Type*</label>
+                                                            <select name="property_type" id="property_type"
+                                                                class="custom-select" placeholder="Select Property Type"
+                                                                required>
+                                                                <option value="1">House</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="living_space" class="form-label">Living
+                                                                Space*</label>
+                                                            <input type="text" class="form-control" id="living_space"
+                                                                name="living_space" placeholder="Living Space" required>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="price" class="form-label">Price*</label>
+                                                            <input type="number" class="form-control" id="price"
+                                                                name="price" placeholder="Enter price" required>
+                                                        </div>
+                                                        <div class="col-md-6 edit-property">
+                                                            <label for="rooms_number" class="form-label">Rooms
+                                                                Number*</label>
+                                                            <select name="rooms_number" id="rooms_number"
+                                                                class="custom-select" placeholder="Rooms Number"
+                                                                required>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6 edit-property">
+                                                            <label for="bathrooms_number" class="form-label">Bathrooms
+                                                                Number*</label>
+                                                            <select name="bathrooms_number" id="bathrooms_number"
+                                                                class="custom-select" placeholder="Bathrooms Number"
+                                                                required>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6 edit-property">
+                                                            <label for="date_available" class="form-label">Date
+                                                                Available*</label>
+                                                            <select name="date_available" id="date_available"
+                                                                class="custom-select" placeholder="Select Date"
+                                                                required>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="level" class="form-label">Level*</label>
+                                                            <input type="number" class="form-control" id="level"
+                                                                name="level" placeholder="Enter Level" required>
+                                                        </div>
+                                                        <div class="col-md-6 edit-property">
+                                                            <label for="garage" class="form-label">Garage*</label>
+                                                            <select name="garage" id="garage" class="custom-select"
+                                                                placeholder="garage" required>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="parking" class="form-label">Parking*</label>
+                                                            <input type="text" class="form-control" id="parking"
+                                                                name="parking" placeholder="Parking" required>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label for="description"
+                                                                class="form-label">Description</label>
+                                                            <textarea name="description" id="description"
+                                                                class="form-control" rows="3"
+                                                                placeholder="Lorem ipsum dolor sit amet consectetur. Orci ut in at dui nunc. Sed turpis habitant massa pellentesque ornare suspendisse tristique. Venenatis in est sodales amet eget. Tristique in tellus quis mattis tortor nam congue ut."></textarea>
+                                                        </div>
+
+                                                    </div>
+                                                    <input type="button" name="next" class="next action-button main-btn"
+                                                        value="Next" />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="row mt-5">
+                                                        
+
+                                                     
+                                                    </div>
+                                                   
+                                                    <input type="button" name="previous"
+                                                        class="previous action-button-previous" value="Previous" />
+                                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="row mt-5">
+                                                        <div class="side-bar col-lg-2 d-none d-xl-block">
+                                                            <button>Additional info</button>
+                                                            <button>Payment</button>
+                                                            <button class="active">Checkout</button>
+                                                        </div>
+
+                                                        <div class="col-lg-8 col-xl-6 ps-4 payment">
+                                                            <div
+                                                                class="d-block d-lg-flex align-items-center justify-content-between">
+                                                                <h3>Checkout</h3>
+                                                                <hr class="d-block d-lg-none">
+                                                            </div>
+                                                            <hr class="d-none d-lg-block">
+                                                            <div class="checkout add-info text-start">
+                                                                <h4>Additional info <span class="grey-color">( 3
+                                                                        )</span>
+                                                                </h4>
+                                                                <div class="info-card-container d-block d-lg-flex">
+                                                                    <div class="info-card d-flex ">
+                                                                        <div class="name">
+                                                                            <div>Eriny Anis</div>
+                                                                            <div class="text-truncate"
+                                                                                style="max-width: 130px;">
+                                                                                erinyanis455@gmail.com
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="data ms-auto">
+                                                                            <div>24 years old</div>
+                                                                            <div>012 345 625 76</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="info-card d-flex ">
+                                                                        <div class="name">
+                                                                            <div>Marina Adly</div>
+                                                                            <div class="text-truncate"
+                                                                                style="max-width: 130px;">
+                                                                                marinaadly455@gmail.com
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="data ms-auto">
+                                                                            <div>24 years old</div>
+                                                                            <div>012 345 625 76</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info-card-container d-flex ">
+                                                                    <div class="info-card discount-card d-flex">
+                                                                        <div class="name">
+                                                                            <div>Mokka Adel</div>
+                                                                            <div class="text-truncate"
+                                                                                style="max-width: 130px;">
+                                                                                mark.mkamk455@gmail.com
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="data ms-auto">
+                                                                            <div>12 years old</div>
+                                                                            <div>012 345 625 76</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <h4>Payment method</h4>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between grey-color">
+                                                                    <div>Credit card</div>
+                                                                    <div>**** **** **** **43</div>
+                                                                </div>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between grey-color mt-2">
+                                                                    <img src="images/credit-card-1.png" alt="visa">
+                                                                    <div>Eriny Anis</div>
+                                                                </div>
+                                                                <hr>
+                                                                <h4>Additional notes</h4>
+                                                                <p class="grey-color">Lorem ipsum dolor sit amet,
+                                                                    consectetur adipiscing elit, sed do
+                                                                    eiusmod tempor incididunt ut labore et dolore magna
+                                                                    aliqua. Ut enim ad minim veniam,
+                                                                    quis nostrud exercitation ullamco laboris nisi ut
+                                                                    aliquip ex ea commodo consequat.</p>
+                                                                <hr>
+                                                                <h4>Trip you’re heading to</h4>
+                                                                <p class="grey-color">Lorem ipsum dolor sit amet,
+                                                                    consectetur</p>
+
+                                                                <div class="card-holder mt-3">
+                                                                    <div class="d-flex">
+                                                                        <div class="img-container">
+                                                                            <img src="images/other-options-img.png"
+                                                                                alt="tour-img">
+                                                                        </div>
+                                                                        <div class="title">
+                                                                            <h3>3-Day Private Tour Best of Bavaria and
+                                                                                Tyrol
+                                                                            </h3>
+                                                                            <div>Minuch - Germany</div>
+                                                                        </div>
+                                                                        <div class="ms-auto">
+                                                                            <a href="tours-details.html"
+                                                                                class="d-none d-md-block">Tour
+                                                                                Details</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="info d-flex align-items-center justify-content-between flex-wrap">
+                                                                        <div class="date">12/10/2023</div>
+                                                                        <div class="period">3 Days - 2 nights</div>
+
+                                                                        <div class="price orange-color">$800</div>
+                                                                        <a href="tours-details.html"
+                                                                            class="d-block d-md-none">Details</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-xl-4">
+                                                            <div class="request-date d-flex align-items-center">
+                                                                <span class="me-1">Summary</span>
+                                                                <div class="grey-color">increases when adding passengers
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="summary-container grey-color">
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between mb-3">
+                                                                    <div class="name">Passengers</div>
+                                                                    <div class="number">3</div>
+                                                                </div>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between mb-3">
+                                                                    <div class="name">For each</div>
+                                                                    <div class="number">$800</div>
+                                                                </div>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between orange-color mb-3">
+                                                                    <div class="name">Child discount</div>
+                                                                    <div class="number">40%</div>
+                                                                </div>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between mb-3">
+                                                                    <div class="name">Discount count</div>
+                                                                    <div class="number">1</div>
+                                                                </div>
+                                                                <hr>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between mb-3">
+                                                                    <div class="name">Total</div>
+                                                                    <div class="number total">$2,400</div>
+                                                                </div>
+                                                                <button>Confirm trip<i
+                                                                        class="fa-solid fa-angle-right ms-2"></i></button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <input type="button" name="next" class="next action-button"
+                                                        value="Next" />
+                                                    <input type="button" name="previous"
+                                                        class="previous action-button-previous" value="Previous" />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="form-card">
+                                                        <div class="success text-center">
+                                                            <div class="celebrate d-flex justify-content-center mt-3">
+                                                                <img class="frame" src="images/Frame.png" alt="">
+                                                                <div class="bottle">
+                                                                    <img src="images/success.gif" alt="success">
+                                                                </div>
+                                                                <img class="frame" src="images/Frame.png" alt="">
+                                                            </div>
+                                                            <div class="succes-content mt-3">
+                                                                <div class="mb-1">Congratulations!</div>
+                                                                <h3 class="text-center">You have successfully booked
+                                                                    your
+                                                                    place in our trip!</h3>
+                                                                <p class="grey-color">just wait for our email to receive
+                                                                    more info about the trip movements
+                                                                    and timetable.. don’t miss it! </p>
+                                                                <a href="index.html">Back to homepage</a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="container section-padding">
+            <div class="subscribe text-center">
+                <h2>Subscribe Now</h2>
+                <div class="sub-title green">Stay up to date with our latest news.</div>
+                <form action="#">
+                    <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+                        <input type="email" class="form-control" name="email" id="email"
+                            placeholder="Your email address">
+                        <button type="submit" class="main-btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <div class="mt-5 links">
+                <div class="row g-3 row-cols-2 row-cols-lg-5">
+                    <div class="col-3 col-lg">
+                        <a href="index.html"><img class="footer-logo" src="images/footer-logo.webp" alt="Ooh-Rent"></a>
+                    </div>
+                    <div class="col-3 col-lg">
+                        <h3 class="fw-700 green mb-2">Quick Links</h3>
+                        <div class="footer-link"><a href="index.html">Home</a></div>
+                        <div class="footer-link"><a href="#">Search</a></div>
+                        <div class="footer-link"><a href="#">Blogs</a></div>
+                        <div class="footer-link"><a href="#">Find by Area</a></div>
+                        <div class="footer-link"><a href="#">FAQ</a></div>
+                        <div class="footer-link"><a href="#">Contact Us</a></div>
+                        <div class="footer-link"><a href="#">Subscription</a></div>
+                    </div>
+                    <div class="col-3 col-lg col-margin">
+                        <div class="footer-link"><a href="#">User profile</a></div>
+                        <div class="footer-link"><a href="#">Owner Profile</a></div>
+                        <div class="footer-link"><a href="#">Technician profile</a></div>
+                    </div>
+                    <div class="col-3 col-lg col-margin">
+                        <div class="footer-link"><a href="#">Pricing Plans</a></div>
+                        <div class="footer-link"><a href="#">Rent House</a></div>
+                        <div class="footer-link"><a href="#">Privacy Policy</a></div>
+                    </div>
+                    <div class="col-9 offset-3 offset-lg-0 col-lg">
+                        <h3 class="fw-700 green mb-3">Download APP</h3>
+                        <div class="download">
+                            <a href="#" class="download-btn d-flex align-items-center gap-2 mb-2">
+                                <i class="fa-brands fa-google-play"></i>
+                                <div class="text-start">
+                                    <div class="head-title">GET IT ON</div>
+                                    <div class="main-title">Google Play</div>
+                                </div>
+                            </a>
+                            <a href="#" class="download-btn d-flex align-items-center gap-2">
+                                <i class="fa-brands fa-apple"></i>
+                                <div class="text-start">
+                                    <div class="head-title">Download on the</div>
+                                    <div class="main-title">App Store</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                    <div class="copy-rights">
+                        © Copyright 2022, All Rights Reserved by <a class="green" href="#">Innovation Scope</a>
+                    </div>
+                    <div class="social-links d-flex align-items-center gap-2">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("header nav .nav-link").css("color", "#1D1B1B");
+            $("header nav .login-link").css("color", "#1D1B1B");
+            $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
+            $(window).on("scroll", function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 50) {
+                    $("header nav .nav-link").css("color", "#1D1B1B");
+                    $("header nav .login-link").css("color", "#1D1B1B");
+                    $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
+                } else {
+                    $("header nav .nav-link").css("color", "#1D1B1B");
+                    $("header nav .login-link").css("color", "#1D1B1B");
+                    $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
+                }
+            });
+
+            // style-select
+            $(".custom-select").each(function () {
+                var classes = $(this).attr("class"),
+                    id = $(this).attr("id"),
+                    name = $(this).attr("name");
+                var template = '<div class="' + classes + '">';
+                template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+                template += '<div class="custom-options">';
+                $(this).find("option").each(function () {
+                    template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                });
+                template += '</div></div>';
+
+                $(this).wrap('<div class="custom-select-wrapper"></div>');
+                $(this).hide();
+                $(this).after(template);
+            });
+            $(".custom-option:first-of-type").hover(function () {
+                $(this).parents(".custom-options").addClass("option-hover");
+            }, function () {
+                $(this).parents(".custom-options").removeClass("option-hover");
+            });
+            $(".custom-select-trigger").on("click", function () {
+                $('html').one('click', function () {
+                    $(".custom-select").removeClass("opened");
+                });
+                $(this).parents(".custom-select").toggleClass("opened");
+                event.stopPropagation();
+            });
+            $(".custom-option").on("click", function () {
+                $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+                $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+                $(this).addClass("selection");
+                $(this).parents(".custom-select").removeClass("opened");
+                $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+            });
+
+
+
+            // footer-stop-fixed-position
+            var fixedElement = $('.my-account .sidebar aside');
+            var footer = $('footer');
+            var footerOffset = footer.offset().top;
+
+            $(window).scroll(function () {
+                var scrollPos = $(window).scrollTop();
+                var windowHeight = $(window).height();
+
+                if (scrollPos + windowHeight >= footerOffset) {
+                    fixedElement.css({
+                        position: 'static',
+                        bottom: 0
+                    });
+                } else {
+                    fixedElement.css({
+                        position: 'fixed',
+                        bottom: 'auto'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

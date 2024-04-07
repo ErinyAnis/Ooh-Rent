@@ -2355,7 +2355,7 @@ footer .social-links a:hover {
   }
 }
 @media (max-width: 1200px) {
-  .my-account .cat-details .title .back-icon {
+  .my-account .title .back-icon {
     font-size: 18px;
     left: -20px;
   }
@@ -2763,6 +2763,30 @@ footer .social-links a:hover {
   font-size: 22px;
 }
 
+/* ----------------------------------------------------- */
+/* loading-review */
+
+.my-account .loading-review .review-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-account .loading-review .review-holder:not(:last-child) {
+  border-bottom: 1px solid var(--gray-light);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.my-account .loading-review .review-holder .label {
+  font-weight: 500;
+  font-size: 20px;
+}
+.my-account .loading-review .review-holder .desc {
+  color: var(--gray-middle);
+  font-size: 18px;
+}
+
 @media (max-width: 1400px) {
   .my-account .my-wallet .box-container .head-title,
   .my-account .my-wallet .box-container .value {
@@ -2786,6 +2810,162 @@ footer .social-links a:hover {
     font-size: 16px;
   }
   .my-account .my-wallet .box-container .transaction .amount {
+    font-size: 18px;
+  }
+  .my-account .load-wallet p {
+    font-size: 14px;
+  }
+  .my-account .loading-review .review-holder .label {
+    font-size: 16px;
+  }
+  .my-account .loading-review .review-holder .desc {
+    font-size: 14px;
+  }
+}
+
+/* ----------------------------------------------------------- */
+/* account => add-property */
+.my-account .add-property .head-title h3 {
+  font-size: 26px;
+}
+
+/* progreesbar */
+
+.my-account .add-property #msform {
+  text-align: center;
+  position: relative;
+}
+
+.my-account .add-property #msform fieldset {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.my-account .add-property #msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+.my-account .add-property #msform .action-button {
+  transition: var(--transition);
+  background-color: var(--green);
+  color: var(--white);
+  padding: 8px 20px;
   font-size: 18px;
 }
+
+.my-account .add-property #msform .action-button:hover {
+  background-color: var(--main-btn-hover);
+}
+
+.my-account .add-property #msform .action-button-previous:hover,
+.my-account .add-property #msform .action-button-previous:focus {
+  background-color: #000000;
+}
+.my-account .add-property .card {
+  z-index: 0;
+  border: none;
+  position: relative;
+}
+
+.my-account .add-property #progressbar {
+  width: 90%;
+  position: relative;
+  margin: auto;
+}
+.my-account .add-property #progressbar li:first-child .progress-icon i {
+  left: 11px;
+}
+
+.my-account .add-property #progressbar .progress-icon i {
+  position: absolute;
+  color: var(--gray-light-2);
+  top: -17px;
+  left: 7px;
+  font-size: 22px;
+}
+
+.my-account .add-property #progressbar li.active .progress-icon i {
+  color: var(--main-btn-hover);
+}
+.my-account .add-property #progressbar li .info {
+  color: var(--gray-light-2);
+  margin-top: -6px;
+  margin-left: -15px;
+  font-weight: 500;
+}
+.my-account .add-property #progressbar li.active .info {
+  color: var(--main-btn-hover);
+}
+.my-account .add-property #progressbar li {
+  width: 20%;
+  float: left;
+  position: relative;
+}
+
+#progressbar #photos:before {
+  content: "";
+}
+
+#progressbar #payment:before {
+  content: "";
+}
+
+#progressbar #confirm:before {
+  content: "";
+}
+
+#progressbar #success:before {
+  content: "";
+}
+
+#progressbar .active:after {
+  background-color: var(--main-btn-hover);
+}
+
+#progressbar li:before {
+  width: 18px;
+  height: 17px;
+  display: block;
+  background: var(--gray-light-2);
+  border-radius: 50%;
+  margin: 18px 12px;
+}
+
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--gray-light-2);
+  position: absolute;
+  top: 25px;
+  z-index: -1;
+  left: 24px;
+}
+
+#progressbar li.active:before {
+  background: var(--main-btn-hover);
+  content: "\f00c" !important;
+  font-family: "Font Awesome 6 Pro";
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  #progressbar {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .my-account .add-property .head-title h3 {
+    font-size: 22px;
+  }
+  .my-account .add-property #progressbar .progress-icon i {
+    font-size: 20px;
+  }
+  .my-account .add-property #progressbar li.active .info {
+    font-size: 14px;
+  }
 }
