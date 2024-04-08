@@ -158,7 +158,6 @@ h2 span {
   .main-btn,
   .secondary-btn {
     font-size: 16px;
-    padding: 8px 30px;
   }
 }
 
@@ -2066,7 +2065,7 @@ footer .social-links a:hover {
   border-color: var(--gray-light-2);
   font-size: 14px;
   color: var(--gray-middle);
-  padding: 9px 12px;
+  padding: 10px 12px;
 }
 
 .my-account form input:focus,
@@ -2098,6 +2097,11 @@ footer .social-links a:hover {
   .my-account .right-side-content .content-holder .sub-title {
     font-size: 18px;
   }
+  .my-account form input,
+.my-account form textarea, .my-account .edit-property .custom-select-trigger {
+  padding: 9px 12px;
+}
+
 }
 
 /* my-properties */
@@ -2666,6 +2670,7 @@ footer .social-links a:hover {
   color: var(--gray-high);
   background-color: var(--gray-light-4);
   border-color: var(--gray-light-2);
+  padding: 10px 12px;
 }
 
 .my-account .edit-property .input-label {
@@ -2847,21 +2852,30 @@ footer .social-links a:hover {
   display: none;
 }
 
+.my-account .add-property #msform .action-button, .my-account .add-property #msform .action-button-previous {
+  padding: 8px 30px;
+  font-size: 18px;
+   transition: var(--transition);
+}
+
 .my-account .add-property #msform .action-button {
-  transition: var(--transition);
   background-color: var(--green);
   color: var(--white);
-  padding: 8px 20px;
-  font-size: 18px;
+  border: 1px solid var(--green);
 }
 
 .my-account .add-property #msform .action-button:hover {
   background-color: var(--main-btn-hover);
+  border-color: var(--main-btn-hover);
 }
 
-.my-account .add-property #msform .action-button-previous:hover,
-.my-account .add-property #msform .action-button-previous:focus {
-  background-color: #000000;
+.my-account .add-property #msform .action-button-previous {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+.my-account .add-property #msform .action-button-previous:hover {
+  color: var(--white);
 }
 .my-account .add-property .card {
   z-index: 0;
@@ -2872,7 +2886,7 @@ footer .social-links a:hover {
 .my-account .add-property #progressbar {
   width: 90%;
   position: relative;
-  margin: auto;
+ margin-left: 12%;
 }
 .my-account .add-property #progressbar li:first-child .progress-icon i {
   left: 11px;
@@ -2882,7 +2896,7 @@ footer .social-links a:hover {
   position: absolute;
   color: var(--gray-light-2);
   top: -17px;
-  left: 7px;
+  left: 11px;
   font-size: 22px;
 }
 
@@ -2904,19 +2918,19 @@ footer .social-links a:hover {
   position: relative;
 }
 
-#progressbar #photos:before {
+.my-account .add-property #progressbar #photos:before {
   content: "";
 }
 
-#progressbar #payment:before {
+.my-account .add-property #progressbar #location:before {
   content: "";
 }
 
-#progressbar #confirm:before {
+.my-account .add-property #progressbar #amenities:before {
   content: "";
 }
 
-#progressbar #success:before {
+.my-account .add-property #progressbar #notes:before {
   content: "";
 }
 
@@ -2933,7 +2947,7 @@ footer .social-links a:hover {
   margin: 18px 12px;
 }
 
-#progressbar li:after {
+#progressbar li:not(:last-child):after {
   content: "";
   width: 100%;
   height: 2px;
@@ -2943,6 +2957,7 @@ footer .social-links a:hover {
   z-index: -1;
   left: 24px;
 }
+
 
 #progressbar li.active:before {
   background: var(--main-btn-hover);
@@ -2954,18 +2969,115 @@ footer .social-links a:hover {
   font-weight: 500;
 }
 
+/* end-progressbar */
+/* ------------------------------------------------------- */
+.my-account .add-property .add-img .main-title h3, .my-account .add-property .add-img label{
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.my-account .add-property .add-img .input-container {
+  margin-bottom: 35px;
+}
+.my-account .add-property .location .zip-code {
+  width: 80%;
+}
+
+/* amenities */
+.my-account .add-property .amenities .features .feature {
+  border: 1px solid var(--gray-light-2);
+  padding: 8px 20px;
+  color: var(--gray-middle);
+  font-size: 14px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.my-account .add-property .amenities .features .feature.selected {
+  background-color: var(--green);
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.success-add-property .main-img img {
+  max-height: 350px;
+}
+
+@media (max-width: 1400px) {
+  .my-account .add-property .location .zip-code {
+  width: 75%;
+}
+}
+@media (max-width: 1200px) {
+   .my-account .add-property .location .zip-code {
+  width: 70%;
+}
+}
+
 @media (max-width: 992px) {
-  #progressbar {
-    margin-left: 0;
+  .my-account .add-property #progressbar {
+    margin-left: 4%;
     margin-bottom: 10px;
+    width: 100%;
   }
+  .my-account .add-property #progressbar li:before {
+    width: 16px;
+    height: 16px;
+    margin: 18px 10px;
+  }
+
   .my-account .add-property .head-title h3 {
     font-size: 22px;
   }
   .my-account .add-property #progressbar .progress-icon i {
     font-size: 20px;
   }
-  .my-account .add-property #progressbar li.active .info {
+  .my-account .add-property #progressbar li .info {
+    font-size: 14px;
+    margin:0 4px 0 -5px;
+  }
+  
+  .my-account .add-property #msform .action-button, .my-account .add-property #msform .action-button-previous {
+    font-size: 16px;
+  }
+  .my-account .add-property .add-img .main-title h3,  .my-account .add-property .add-img label {
+    font-size: 16px;
+  }
+  .my-account .add-property .add-img .main-title p {
     font-size: 14px;
   }
+  .my-account .add-property .add-img .input-container {
+  margin-bottom: 30px;
+}
+.my-account .add-property .location .zip-code {
+  width: 72%;
+}
+.my-account .add-property .amenities .features .feature {
+  font-size: 12px;
+   padding: 8px 15px;
+}
+.success-add-property .main-img img {
+  max-height: 300px;
+}
+}
+@media (max-width: 767px) {
+  .my-account .add-property #progressbar li .info {
+    font-size: 11px;
+  }
+
+  .my-account .add-property .location .zip-code {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+ .my-account .add-property .location .zip-code-container button {
+    font-size: 16px;
+        padding: 8px 20px;
+        margin: auto;
+}
+.success-add-property .main-img img {
+  max-height: 250px;
+}
+
 }
