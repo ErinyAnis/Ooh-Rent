@@ -1919,6 +1919,9 @@ footer .social-links a:hover {
 /* ---------------------------------------------------- */
 
 /* my-account */
+.my-account {
+  background-color: var(--gray-light-4);
+}
 .my-account .sidebar aside {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 15px;
@@ -1926,6 +1929,7 @@ footer .social-links a:hover {
   min-width: 330px;
   background-color: var(--white);
 }
+
 
 .my-account .sidebar aside .user-holder {
   border-bottom: 1px solid var(--gray-light-3);
@@ -2007,6 +2011,7 @@ footer .social-links a:hover {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 30px 40px;
   border-radius: 25px;
+  background-color: var(--white);
 }
 
 .my-account .right-side-content .content-holder .title h3 {
@@ -3080,4 +3085,149 @@ footer .social-links a:hover {
   max-height: 250px;
 }
 
+}
+
+/* tanent-profile */
+
+.my-account .tanent-profile .cover-photo img {
+  border-radius: 15px;
+  width: 100%;
+  object-fit: cover;
+}
+.my-account .tanent-profile .cover-photo .edit-cover-photo {
+  position: absolute;
+    right: 2%;
+    bottom: 8%;
+}
+.my-account .tanent-profile .cover-photo .edit-cover-photo a {
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+      padding: 6px 11px;
+      font-size: 14px;
+}
+.my-account .tanent-profile .cover-photo .edit-cover-photo a:hover {
+  background-color: var(--gray-light-2);
+}
+.my-account .tanent-profile .user-img-holder {
+  margin-top: -35px;
+  margin-left: 4%;
+}
+
+.my-account .tanent-profile .user-img-holder .tanent-img {
+  border-radius: 50%;
+  border: 1px solid #D9D9D9;
+  padding: 3px;
+   max-height: 120px;
+   background-color: var(--white);
+}
+.my-account .tanent-profile .user-img-holder .change-img {
+    bottom: 9%;
+    right: -4%;
+    border-radius: 50%;
+    background-color: var(--white);
+    padding: 4px 9px;
+}
+.my-account .tanent-profile .user-img-holder .tanent-name {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1400px) {
+  .my-account .tanent-profile .cover-photo .edit-cover-photo {
+    bottom: 9%;
+  }
+  .my-account .tanent-profile .user-img-holder .tanent-img {
+    max-height: 100px;
+  }
+  .my-account .tanent-profile .user-img-holder .tanent-name {
+  font-size: 24px;
+}
+}
+@media (max-width: 1200px) {
+  .my-account .tanent-profile .user-img-holder .tanent-img {
+    max-height: 90px;
+  }
+  .my-account .tanent-profile .user-img-holder .change-img {
+    padding: 3px 7px;
+    font-size: 14px;
+  }
+  .my-account .tanent-profile .user-img-holder .tanent-name {
+  font-size: 20px;
+}
+.my-account .tanent-profile .user-img-holder {
+    margin-top: -32px;
+}
+}
+@media (max-width: 767px) {
+   .my-account .tanent-profile .cover-photo .edit-cover-photo {
+    bottom: 11%;
+  }
+   .my-account .tanent-profile .cover-photo .edit-cover-photo a {
+    font-size: 12px;
+  }
+    .my-account .tanent-profile .user-img-holder .tanent-img {
+    max-height: 80px;
+  }
+}
+
+/* tanent -> my billings */
+.my-account .tanent-profile .my-billings table {
+  margin-bottom: 0;
+}
+.my-account .tanent-profile .my-billings table thead tr {
+  --bs-table-bg: var(--gray-light-3);
+  font-size: 18px;
+}
+.my-account .tanent-profile .my-billings table tr:last-child td {
+  border-bottom-width: 0
+}
+.my-account .tanent-profile .my-billings table td , .my-account .tanent-profile .my-billings table th  {
+  padding: 15px 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.my-account .tanent-profile .my-billings table td a {
+  font-weight: 600;
+}
+
+.my-account .tanent-profile .my-billings table td a:hover {
+  color: var(--green);
+}
+
+.my-account .tanent-profile .my-billings .table-container::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.my-account .tanent-profile .my-billings .table-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.my-account .tanent-profile .my-billings .table-container::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.my-account .tanent-profile .my-billings .table-container::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* invoice */
+.my-account .tanent-profile .invoice .invoice-main-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+@media (max-width: 992px) {
+.my-account .tanent-profile .my-billings table thead tr {
+   font-size: 16px;
+}
+.my-account .tanent-profile .my-billings table td {
+  font-size: 14px;
+}
 }
