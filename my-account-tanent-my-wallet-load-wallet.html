@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.webp">
     <link rel="stylesheet" href="css/style.css">
-    <title>My-account-change-password | Ooh Rent</title>
+    <title>My-wallet-load-wallet | Ooh Rent</title>
 
 </head>
 
@@ -76,26 +76,7 @@
 
     <main class="my-account">
         <section class="top-sec section-padding">
-            <div class="container tanent-profile">
-                <div class="mb-5">
-                    <div class="cover-photo position-relative">
-                        <img src="images/technicion-details.png" alt="user-name">
-                        <div class="edit-cover-photo">
-                            <a href="#"><i class="fa-solid fa-camera me-2"></i>Edit Cover Photo</a>
-                        </div>
-                    </div>
-                    <div class="user-img-holder">
-                        <div class="d-flex gap-3 align-items-center">
-                            <div class="position-relative">
-                                <img src="images/tanent-profile-img.png" class="tanent-img" alt="tanent-name">
-                                <a href="#" class="change-img position-absolute"><i class="fa-solid fa-camera"></i></a>
-                            </div>
-                            <div>
-                                <h3 class="tanent-name fw-600">Olivia Rhye</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container">
                 <div class="row g-4">
                     <div class="sidebar col-lg-3">
                         <div class="position-relative">
@@ -107,7 +88,7 @@
                                             <div>My Account</div>
                                         </a>
                                     </li>
-                                    <li class="active">
+                                    <li>
                                         <a href="my-account-tanent-change-paswword.html">
                                             <i class="fa-solid fa-lock-keyhole-open"></i>
                                             <div>Change password</div>
@@ -125,7 +106,7 @@
                                             <div>My billings</div>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="active">
                                         <a href="my-account-tanent-my-wallet.html">
                                             <i class="fa-solid fa-wallet"></i>
                                             <div>My Wallet</div>
@@ -137,54 +118,49 @@
                                             <div>Logout</div>
                                         </a>
                                     </li>
-
+                    
                                 </ul>
                             </aside>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 load-wallet">
                         <div class="right-side-content">
-                            <form action="#">
-                                <div class="content-holder">
-                                    <div class="title mb-3">
-                                        <h3>Change Password</h3>
-                                        <hr>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="col-lg-6">
-                                                <div class="mb-3">
-                                                    <label for="current_password" class="form-label">Current Password</label>
-                                                    <input type="password" class="form-control" name="current_password" id="current_password"
-                                                        placeholder="current password" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="new_password" class="form-label">New Password</label>
-                                                <input type="password" class="form-control" name="new_password" id="new_password"
-                                                    placeholder="new password" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="confirm_password" class="form-label">Confirm New Password*</label>
-                                                <input type="password" class="form-control" name="confirm_password" id="confirm_password"
-                                                    placeholder="confirm new password" required>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="text-center mt-3">
-                                        <button type="submit" class="main-btn">Save changes</button>
-                                    </div>
+                            <div class="content-holder">
+                                <div class="title position-relative">
+                                    <a href="my-account-tanent-my-wallet.html" class="back-icon"><i
+                                            class="fa-solid fa-arrow-left"></i></a>
+                                    <h3>Load Wallet</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Nibh pharetra placerat blandit sed donec
+                                        mollis bibendum euismod.</p>
                                 </div>
-                           
-                            </form>
+                                <form action="#">
+                                    <div class="row mt-2 mt-xl-3 align-items-center g-3">
+                                        <div class="col-md-6 edit-property">
+                                            <label for="bank_name" class="form-label">Bank Name</label>
+                                            <select name="bank_name" id="city" class="custom-select"
+                                                placeholder="Bank Name" required>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="enter_amount" class="form-label">Enter Amount</label>
+                                            <input type="number" class="form-control" id="enter_amount"
+                                                name="enter_amount" placeholder="Enter Amount">
+                                        </div>
+                                        <div class="text-center mt-4">
+                                            <button type="submit" class="main-btn">Continue</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -268,6 +244,7 @@
     </footer>
 
 
+
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
     <script src="js/main.js"></script>
@@ -289,7 +266,67 @@
                     $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
                 }
             });
-            
+
+            // style-select
+            $(".custom-select").each(function () {
+                var classes = $(this).attr("class"),
+                    id = $(this).attr("id"),
+                    name = $(this).attr("name");
+                var template = '<div class="' + classes + '">';
+                template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+                template += '<div class="custom-options">';
+                $(this).find("option").each(function () {
+                    template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                });
+                template += '</div></div>';
+
+                $(this).wrap('<div class="custom-select-wrapper"></div>');
+                $(this).hide();
+                $(this).after(template);
+            });
+            $(".custom-option:first-of-type").hover(function () {
+                $(this).parents(".custom-options").addClass("option-hover");
+            }, function () {
+                $(this).parents(".custom-options").removeClass("option-hover");
+            });
+            $(".custom-select-trigger").on("click", function () {
+                $('html').one('click', function () {
+                    $(".custom-select").removeClass("opened");
+                });
+                $(this).parents(".custom-select").toggleClass("opened");
+                event.stopPropagation();
+            });
+            $(".custom-option").on("click", function () {
+                $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+                $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+                $(this).addClass("selection");
+                $(this).parents(".custom-select").removeClass("opened");
+                $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+            });
+
+
+
+            // footer-stop-fixed-position
+            var fixedElement = $('.my-account .sidebar aside');
+            var footer = $('footer');
+            var footerOffset = footer.offset().top;
+
+            $(window).scroll(function () {
+                var scrollPos = $(window).scrollTop();
+                var windowHeight = $(window).height();
+
+                if (scrollPos + windowHeight >= footerOffset) {
+                    fixedElement.css({
+                        position: 'static',
+                        bottom: 0
+                    });
+                } else {
+                    fixedElement.css({
+                        position: 'fixed',
+                        bottom: 'auto'
+                    });
+                }
+            });
         });
     </script>
 

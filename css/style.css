@@ -3221,8 +3221,52 @@ footer .social-links a:hover {
   font-size: 18px;
   font-weight: 700;
 }
+.my-account .tanent-profile .invoice .pay-online {
+  font-size: 14px;
+}
 
+.my-account .tanent-profile .invoice table {
+  text-wrap: nowrap;
+}
+.my-account .tanent-profile .invoice .gray-col td {
+  color: var(--gray-middle);
+}
+.my-account .tanent-profile .invoice table th, .my-account .tanent-profile .invoice table td{
+  font-weight: 500;
+}
+.my-account .tanent-profile .invoice table th:first-child, .my-account .tanent-profile .invoice table td:first-child {
+  padding-left: 0;
+}
+.my-account .tanent-profile .invoice table td:not(:first-child) {
+    padding-left: 15px;
+}
+.overflow-content-container::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.overflow-content-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.overflow-content-container::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
 
+.overflow-content-container::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 255, 255, 0.3);
+}
+.my-account .tanent-profile .invoice .billing-summary .billing-tilte {
+font-weight: 500;
+font-size: 18px;
+}
+.my-account .tanent-profile .invoice .billing-summary .total-amount,.my-account .tanent-profile .invoice .billing-summary .total-price {
+  font-weight: 700;
+  font-size: 18px;
+}
 @media (max-width: 992px) {
 .my-account .tanent-profile .my-billings table thead tr {
    font-size: 16px;
@@ -3230,4 +3274,42 @@ footer .social-links a:hover {
 .my-account .tanent-profile .my-billings table td {
   font-size: 14px;
 }
+.my-account .tanent-profile .invoice table {
+  font-size: 14px;
+}
+.my-account .tanent-profile .invoice .invoice-main-title {
+  font-size: 16px;
+}
+.my-account .tanent-profile .invoice .invoice-title ,.my-account .tanent-profile .invoice .invoice-info {
+  font-size: 14px
+}
+.my-account .tanent-profile .invoice .billing-summary .billing-tilte, .my-account .tanent-profile .invoice .billing-summary .total-amount,.my-account .tanent-profile .invoice .billing-summary .total-price {
+  font-size: 16px;
+}
+.my-account .tanent-profile .invoice .billing-summary .billing-price {
+  font-size: 14px;
+}
+}
+
+/* end-tanent-profile */
+/* ----------------------------------------------------------- */
+
+/* start-contractor-profile */
+.my-account .contractor-profile .select2-container {
+  display: block;
+  width: 100% !important;
+ 
+}
+
+.my-account .contractor-profile .select2-container--default .select2-selection--multiple {
+   background-color: var(--gray-light-4);
+    border-color: var(--gray-light-2);
+    font-size: 14px;
+    color: var(--gray-middle);
+    padding: 4px 12px 10px 8px;
+    vertical-align: middle;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background: var(--gray-light-3);
+    color: var(--gray-middle);
 }

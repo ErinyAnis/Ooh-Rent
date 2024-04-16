@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.webp">
     <link rel="stylesheet" href="css/style.css">
-    <title>My-account-change-password | Ooh Rent</title>
+    <title>My-wallet | Ooh Rent</title>
 
 </head>
 
@@ -76,26 +76,7 @@
 
     <main class="my-account">
         <section class="top-sec section-padding">
-            <div class="container tanent-profile">
-                <div class="mb-5">
-                    <div class="cover-photo position-relative">
-                        <img src="images/technicion-details.png" alt="user-name">
-                        <div class="edit-cover-photo">
-                            <a href="#"><i class="fa-solid fa-camera me-2"></i>Edit Cover Photo</a>
-                        </div>
-                    </div>
-                    <div class="user-img-holder">
-                        <div class="d-flex gap-3 align-items-center">
-                            <div class="position-relative">
-                                <img src="images/tanent-profile-img.png" class="tanent-img" alt="tanent-name">
-                                <a href="#" class="change-img position-absolute"><i class="fa-solid fa-camera"></i></a>
-                            </div>
-                            <div>
-                                <h3 class="tanent-name fw-600">Olivia Rhye</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container">
                 <div class="row g-4">
                     <div class="sidebar col-lg-3">
                         <div class="position-relative">
@@ -107,7 +88,7 @@
                                             <div>My Account</div>
                                         </a>
                                     </li>
-                                    <li class="active">
+                                    <li>
                                         <a href="my-account-tanent-change-paswword.html">
                                             <i class="fa-solid fa-lock-keyhole-open"></i>
                                             <div>Change password</div>
@@ -125,7 +106,7 @@
                                             <div>My billings</div>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="active">
                                         <a href="my-account-tanent-my-wallet.html">
                                             <i class="fa-solid fa-wallet"></i>
                                             <div>My Wallet</div>
@@ -137,51 +118,81 @@
                                             <div>Logout</div>
                                         </a>
                                     </li>
-
+                    
                                 </ul>
                             </aside>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 my-wallet">
                         <div class="right-side-content">
-                            <form action="#">
-                                <div class="content-holder">
-                                    <div class="title mb-3">
-                                        <h3>Change Password</h3>
-                                        <hr>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="col-lg-6">
-                                                <div class="mb-3">
-                                                    <label for="current_password" class="form-label">Current Password</label>
-                                                    <input type="password" class="form-control" name="current_password" id="current_password"
-                                                        placeholder="current password" required>
+                            <div class="content-holder">
+                                <div class="title">
+                                    <h3>My Wallet</h3>
+                                    <hr>
+                                </div>
+                                <div class="row mt-2 mt-xl-3 align-items-center g-3">
+                                    <div class="col-xl-7">
+                                        <div class="box-container">
+                                            <div class="head-title mb-2"><u>Debit Card Amount</u></div>
+                                            <div
+                                                class="d-flex flex-wrap gap-3 align-items-center justify-content-between">
+                                                <div>
+                                                    <div class="d-flex gap-1 align-items-center">
+                                                        <div class="label">Card Number:</div>
+                                                        <div class="value">1234 2546 2154 5986</div>
+                                                    </div>
+                                                    <div class="d-flex gap-1 align-items-center">
+                                                        <div class="label">Valid Thru</div>
+                                                        <div class="value">08/25</div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a href="my-account-tanent-my-wallet-add-new-card.html" class="secondary-btn">Add New Card</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="new_password" class="form-label">New Password</label>
-                                                <input type="password" class="form-control" name="new_password" id="new_password"
-                                                    placeholder="new password" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="confirm_password" class="form-label">Confirm New Password*</label>
-                                                <input type="password" class="form-control" name="confirm_password" id="confirm_password"
-                                                    placeholder="confirm new password" required>
-                                            </div>
-                                        </div>
-
                                     </div>
-                                    <div class="text-center mt-3">
-                                        <button type="submit" class="main-btn">Save changes</button>
+                                    <div class="col-xl-5">
+                                        <div class="box-container">
+                                            <div class="head-title mb-2"><u>Your Total Amount</u></div>
+                                            <div
+                                                class="d-md-flex align-items-center flex-wrap gap-2 justify-content-between mb-xxl-2">
+                                                <div class="price orange fw-500">$125,25</div>
+                                                <div class="mt-2 mt-mdadd-0">
+                                                    <a href="my-account-tanent-my-wallet-load-wallet.html" class="secondary-btn">Load Wallet</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                           
-                            </form>
+                                <div class="box-container mt-3">
+                                    <div class="head-title mb-2"><u>Recent Transactions</u></div>
+                                    <div class="transaction">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div><img src="images/my-wallet.png" alt=""></div>
+                                                <div>
+                                                    <div class="bank fw-500">QNB Bank - Received</div>
+                                                    <div class="date gray-middle">20 December 2020, 08:20 AM</div>
+                                                </div>
+                                            </div>
+                                            <div class="amount fw-600">$100</div>
+                                        </div>
+                                    </div>
+                                    <div class="transaction">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div><img src="images/my-wallet.png" alt=""></div>
+                                                <div>
+                                                    <div class="bank fw-500">QNB Bank - Received</div>
+                                                    <div class="date gray-middle">20 December 2020, 08:20 AM</div>
+                                                </div>
+                                            </div>
+                                            <div class="amount fw-600">$100</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -268,6 +279,7 @@
     </footer>
 
 
+
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
     <script src="js/main.js"></script>
@@ -289,7 +301,43 @@
                     $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
                 }
             });
-            
+            $('.upload-label').click(function () {
+                $(this).addClass('clicked');
+            });
+            $('.upload-input').change(function () {
+                const file = this.files[0];
+                const img = new Image();
+                img.onload = function () {
+                    if (img.width < 200 || img.height < 200) {
+                        alert("Minimum dimensions required: 200px * 200px");
+                        $('.upload-input').val('');
+                    }
+                };
+                img.src = window.URL.createObjectURL(file);
+            });
+
+
+            // footer-stop-fixed-position
+            var fixedElement = $('.my-account .sidebar aside');
+            var footer = $('footer');
+            var footerOffset = footer.offset().top;
+
+            $(window).scroll(function () {
+                var scrollPos = $(window).scrollTop();
+                var windowHeight = $(window).height();
+
+                if (scrollPos + windowHeight >= footerOffset) {
+                    fixedElement.css({
+                        position: 'static',
+                        bottom: 0
+                    });
+                } else {
+                    fixedElement.css({
+                        position: 'fixed',
+                        bottom: 'auto'
+                    });
+                }
+            });
         });
     </script>
 

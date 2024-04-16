@@ -126,7 +126,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="my-account-tanent-my-wallet.html">
                                             <i class="fa-solid fa-wallet"></i>
                                             <div>My Wallet</div>
                                         </a>
@@ -311,21 +311,7 @@
             var footer = $('footer');
             var footerOffset = footer.offset().top;
 
-            $(window).scroll(function () {
-                var scrollPos = $(window).scrollTop();
-                var windowHeight = $(window).height();
-
-                if (scrollPos + windowHeight >= footerOffset) {
-                    fixedElement.css({
-                        position: 'static',
-                    });
-                } else {
-                    fixedElement.css({
-                        position: 'fixed',
-                        bottom: 'auto'
-                    });
-                }
-            });
+    
 
         });
     </script>

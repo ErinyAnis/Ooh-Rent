@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.webp">
+    <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>My-account-change-password | Ooh Rent</title>
+    <title>My-account | Ooh Rent</title>
 
 </head>
 
@@ -76,7 +77,7 @@
 
     <main class="my-account">
         <section class="top-sec section-padding">
-            <div class="container tanent-profile">
+            <div class="container contractor-profile tanent-profile">
                 <div class="mb-5">
                     <div class="cover-photo position-relative">
                         <img src="images/technicion-details.png" alt="user-name">
@@ -101,13 +102,13 @@
                         <div class="position-relative">
                             <aside>
                                 <ul class="links mt-3">
-                                    <li>
+                                    <li class="active">
                                         <a href="my-account.html">
                                             <i class="fa-solid fa-user"></i>
                                             <div>My Account</div>
                                         </a>
                                     </li>
-                                    <li class="active">
+                                    <li>
                                         <a href="my-account-tanent-change-paswword.html">
                                             <i class="fa-solid fa-lock-keyhole-open"></i>
                                             <div>Change password</div>
@@ -116,19 +117,25 @@
                                     <li>
                                         <a href="my-account-tanent-my-properties.html">
                                             <i class="fa-solid fa-house"></i>
-                                            <div>My Properties</div>
+                                            <div>My services</div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="my-account-tanent-my-billings.html">
-                                            <i class="fa-solid fa-money-bill"></i>
-                                            <div>My billings</div>
+                                            <i class="fa-solid fa-plus"></i>
+                                            <div>Add new service</div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="my-account-tanent-my-wallet.html">
                                             <i class="fa-solid fa-wallet"></i>
                                             <div>My Wallet</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="my-account-tanent-my-wallet.html">
+                                            <i class="fa-solid fa-money-bill"></i>
+                                            <div>Membership</div>
                                         </a>
                                     </li>
                                     <li>
@@ -143,44 +150,137 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <div class="right-side-content">
+                        <div class="right-side-content edit-property">
                             <form action="#">
                                 <div class="content-holder">
-                                    <div class="title mb-3">
-                                        <h3>Change Password</h3>
-                                        <hr>
-                                    </div>
+                                    <div class="sub-title orange mb-3"><u>Edit my profile</u></div>
                                     <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="first_name" class="form-label">First name*</label>
+                                                <input type="text" class="form-control" name="first_name"
+                                                    id="first_name" placeholder="First name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="last_name" class="form-label">Last name*</label>
+                                                <input type="text" class="form-control" name="last_name" id="last_name"
+                                                    placeholder="Last name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="phone" class="form-label">Phone number*</label>
+                                                <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone number" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email*</label>
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Phone number" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="job_title" class="form-label">Job title*</label>
+                                                <select name="property_type" id="property_type" class="custom-select" placeholder="select Job title" required>
+                                                    <option value="categoryOne">1</option>
+                                                    <option value="categoryTwo">2</option>
+                                                    <option value="categoryThree">3</option>
+                                                    <option value="categoryFour">4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="years_of_experience" class="form-label">Years of experience*</label>
+                                                <input type="number" class="form-control" name="years_of_experience" id="years_of_experience" placeholder="Years of experience" required>
+                                            </div>
+                                        </div>
+                                        
                                         <div class="col-12">
-                                            <div class="col-lg-6">
-                                                <div class="mb-3">
-                                                    <label for="current_password" class="form-label">Current Password</label>
-                                                    <input type="password" class="form-control" name="current_password" id="current_password"
-                                                        placeholder="current password" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
                                             <div class="mb-3">
-                                                <label for="new_password" class="form-label">New Password</label>
-                                                <input type="password" class="form-control" name="new_password" id="new_password"
-                                                    placeholder="new password" required>
+                                                <label for="exampleFormControlTextarea1"
+                                                    class="form-label">Biography*</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    placeholder="Lorem ipsum dolor sit amet consectetur. Orci ut in at dui nunc. Sed turpis habitant massa pellentesque ornare suspendisse tristique. Venenatis in est sodales amet eget. Tristique in tellus quis mattis tortor nam congue ut."
+                                                    rows="3"></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-12">
                                             <div class="mb-3">
-                                                <label for="confirm_password" class="form-label">Confirm New Password*</label>
-                                                <input type="password" class="form-control" name="confirm_password" id="confirm_password"
-                                                    placeholder="confirm new password" required>
+                                                <label for="provided_services" class="form-label">What services do you provide?*</label>
+                                                <select class="services-select" name="provided_services" multiple="multiple">
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="WY">Wyoming</option>
+                                                    <option value="WY">tjygkjgk</option>
+                                                    <option value="WY">ruyikkyf</option>
+                                                </select>
                                             </div>
                                         </div>
-
-                                    </div>
-                                    <div class="text-center mt-3">
-                                        <button type="submit" class="main-btn">Save changes</button>
                                     </div>
                                 </div>
                            
+                                <div class="content-holder mt-5">
+                                    
+                                        <div class="sub-title orange mb-3"><u>Add Your Location</u></div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label for="address_1" class="form-label">Address line 1</label>
+                                                    <input type="text" class="form-control" name="address_1" id="address_1"
+                                                        placeholder="address line 1" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label for="address_2" class="form-label">Address line 2</label>
+                                                    <input type="text" class="form-control" name="address_2" id="address_2"
+                                                        placeholder="address line 2" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label for="states" class="form-label">States</label>
+                                                    <select name="states" id="states" class="custom-select" placeholder="select a states" required>
+                                                        <option value="categoryOne">1</option>
+                                                        <option value="categoryTwo">2</option>
+                                                        <option value="categoryThree">3</option>
+                                                        <option value="categoryFour">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label for="city" class="form-label">City</label>
+                                                    <select name="city" id="city" class="custom-select" placeholder="select a city" required>
+                                                        <option value="categoryOne">1</option>
+                                                        <option value="categoryTwo">2</option>
+                                                        <option value="categoryThree">3</option>
+                                                        <option value="categoryFour">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- zip-code -->
+                                            <div>
+                                                <div class="col-lg-7">
+                                                    <div class="mb-3">
+                                                        <label for="zip_code" class="form-label">ZIP Code</label>
+                                                        <input type="number" class="form-control" name="zip_code" id="zip_code" placeholder="ZIP Code" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-5">
+                                                    <button class="main-btn">Find on map</button>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <button type="submit" class="main-btn">Save changes</button>
+                                        </div>
+                               
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -270,6 +370,7 @@
 
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="vendor/select2/js/select2.min.js"></script>
     <script src="js/main.js"></script>
 
     <script>
@@ -288,6 +389,72 @@
                     $("header nav .login-link").css("color", "#1D1B1B");
                     $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
                 }
+            });
+
+            // footer-stop-fixed-position
+             var fixedElement = $('.my-account .sidebar aside');
+            var footer = $('footer');
+            var footerOffset = footer.offset().top;
+
+            $(window).scroll(function () {
+                var scrollPos = $(window).scrollTop();
+                var windowHeight = $(window).height();
+
+                if (scrollPos > 500) {
+                    fixedElement.css({
+                        position: 'fixed',
+                        bottom: '40%'
+                    })
+                } else if (scrollPos + windowHeight >= footerOffset) {
+                    fixedElement.css({
+                        position: 'static',
+                    });
+                } else {
+                    fixedElement.css({
+                        position: 'static',
+                    });
+                }
+            });
+
+            // style-select
+            $(".custom-select").each(function () {
+                var classes = $(this).attr("class"),
+                    id = $(this).attr("id"),
+                    name = $(this).attr("name");
+                var template = '<div class="' + classes + '">';
+                template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+                template += '<div class="custom-options">';
+                $(this).find("option").each(function () {
+                    template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                });
+                template += '</div></div>';
+
+                $(this).wrap('<div class="custom-select-wrapper"></div>');
+                $(this).hide();
+                $(this).after(template);
+            });
+            $(".custom-option:first-of-type").hover(function () {
+                $(this).parents(".custom-options").addClass("option-hover");
+            }, function () {
+                $(this).parents(".custom-options").removeClass("option-hover");
+            });
+            $(".custom-select-trigger").on("click", function () {
+                $('html').one('click', function () {
+                    $(".custom-select").removeClass("opened");
+                });
+                $(this).parents(".custom-select").toggleClass("opened");
+                event.stopPropagation();
+            });
+            $(".custom-option").on("click", function () {
+                $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+                $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+                $(this).addClass("selection");
+                $(this).parents(".custom-select").removeClass("opened");
+                $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+            });
+
+            $(document).ready(function () {
+                $('.services-select').select2();
             });
             
         });
