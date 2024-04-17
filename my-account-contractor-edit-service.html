@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.webp">
-    <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>My-account | Ooh Rent</title>
+    <title>Edit-service | Ooh Rent</title>
 
 </head>
 
@@ -77,32 +76,13 @@
 
     <main class="my-account">
         <section class="top-sec section-padding">
-            <div class="container contractor-profile tanent-profile">
-                <div class="mb-5">
-                    <div class="cover-photo position-relative">
-                        <img src="images/technicion-details.png" alt="user-name">
-                        <div class="edit-cover-photo">
-                            <a href="#"><i class="fa-solid fa-camera me-2"></i>Edit Cover Photo</a>
-                        </div>
-                    </div>
-                    <div class="user-img-holder">
-                        <div class="d-flex gap-3 align-items-center">
-                            <div class="position-relative">
-                                <img src="images/tanent-profile-img.png" class="tanent-img" alt="tanent-name">
-                                <a href="#" class="change-img position-absolute"><i class="fa-solid fa-camera"></i></a>
-                            </div>
-                            <div>
-                                <h3 class="tanent-name fw-600">Olivia Rhye</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container">
                 <div class="row g-4">
                     <div class="sidebar col-lg-3">
                         <div class="position-relative">
                             <aside>
                                 <ul class="links mt-3">
-                                    <li class="active">
+                                    <li>
                                         <a href="my-account-contractor.html">
                                             <i class="fa-solid fa-user"></i>
                                             <div>My Account</div>
@@ -114,7 +94,7 @@
                                             <div>Change password</div>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="active">
                                         <a href="my-account-contractor-services.html">
                                             <i class="fa-solid fa-house"></i>
                                             <div>My services</div>
@@ -144,181 +124,150 @@
                                             <div>Logout</div>
                                         </a>
                                     </li>
-
+                    
                                 </ul>
                             </aside>
                         </div>
                     </div>
-                    <div class="col-lg-9">
-                        <div class="right-side-content edit-property">
-                            <form action="#">
-                                <div class="content-holder">
-                                    <div class="sub-title orange mb-3"><u>Edit your profile</u></div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="first_name" class="form-label">First name*</label>
-                                                <input type="text" class="form-control" name="first_name"
-                                                    id="first_name" placeholder="First name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="last_name" class="form-label">Last name*</label>
-                                                <input type="text" class="form-control" name="last_name" id="last_name"
-                                                    placeholder="Last name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="phone" class="form-label">Phone number*</label>
-                                                <input type="number" class="form-control" name="phone" id="phone"
-                                                    placeholder="Phone number" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="email" class="form-label">Email*</label>
-                                                <input type="email" class="form-control" name="email" id="email"
-                                                    placeholder="Phone number" required>
-                                            </div>
-                                        </div>
+                    <div class="col-lg-9 edit-property">
+                        <div class="right-side-content">
+                            <div class="content-holder">
+                                <h3 class="head-title orange fw-600 text-center">Edit service</h3>
+                                <form action="#">
+                                    <div class="row mt-4">
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label for="job_title" class="form-label">Job title*</label>
+                                                <input type="text" class="form-control" id="job_title"
+                                                    name="job_title" placeholder="Job title" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="location" class="form-label">Location*</label>
+                                                <input type="text" class="form-control" id="location"
+                                                    name="location" placeholder="location" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="duration" class="form-label">Duration*</label>
+                                                <input type="number" class="form-control" id="duration"
+                                                    name="duration" placeholder="duration" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="property_type" class="form-label">Year*</label>
                                                 <select name="property_type" id="property_type" class="custom-select"
-                                                    placeholder="select Job title" required>
-                                                    <option value="categoryOne">1</option>
-                                                    <option value="categoryTwo">2</option>
-                                                    <option value="categoryThree">3</option>
-                                                    <option value="categoryFour">4</option>
+                                                    placeholder="select year" required>
+                                                    <option value="categoryOne">year 1</option>
+                                                    <option value="categoryTwo">year 2</option>
+                                                    <option value="categoryThree">year 3</option>
+                                                    <option value="categoryFour">year 4</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="years_of_experience" class="form-label">Years of
-                                                    experience*</label>
-                                                <input type="number" class="form-control" name="years_of_experience"
-                                                    id="years_of_experience" placeholder="Years of experience" required>
-                                            </div>
-                                        </div>
+                                        
+                                      
+                                    </div>
 
-                                        <div class="col-12">
-                                            <div class="mb-3">
-                                                <label for="exampleFormControlTextarea1"
-                                                    class="form-label">Biography*</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                    placeholder="Lorem ipsum dolor sit amet consectetur. Orci ut in at dui nunc. Sed turpis habitant massa pellentesque ornare suspendisse tristique. Venenatis in est sodales amet eget. Tristique in tellus quis mattis tortor nam congue ut."
-                                                    rows="3"></textarea>
-                                            </div>
+                                    <div class="mb-4 mt-3">
+                                        <div class="input-label fw-700">Main Photo</div>
+                                        <p class="input-desc">Lorem ipsum dolor sit amet consectetur. Sed magna platea
+                                            eget platea in semper in cras.</p>
+                                        <!-- upload-photo-input -->
+                                        <div class="upload-container">
+                                            <input type="file" id="upload-photo" class="upload-input" accept="image/*">
+                                            <label for="upload-photo" class="upload-label text-center">
+                                                <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                <p>Upload image</p>
+                                                <span class="main-btn upload-btn"><i
+                                                        class="fa-solid fa-plus"></i></span>
+                                            </label>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="mb-3">
-                                                <label for="provided_services" class="form-label">What services do you
-                                                    provide?*</label>
-                                                <select class="services-select" name="provided_services"
-                                                    multiple="multiple">
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="WY">Wyoming</option>
-                                                    <option value="WY">tjygkjgk</option>
-                                                    <option value="WY">ruyikkyf</option>
-                                                </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="input-label fw-700">Photos</div>
+                                        <p class="input-desc">*At least one image is for valid submission, minimum width
+                                            of 817px. <br>
+                                            *You can mark an image as featured by clicking the star icon, Otherwise
+                                            first image will be considered featured image.</p>
+                                        <div class="d-flex flex-wrap gap-3">
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
+                                            </div>
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
+                                            </div>
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
+                                            </div>
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
+                                            </div>
+                                            <!-- upload-photo-input -->
+                                            <div class="upload-container">
+                                                <input type="file" id="upload-photo" class="upload-input"
+                                                    accept="image/*">
+                                                <label for="upload-photo" class="upload-label text-center">
+                                                    <i class="fa-solid fa-cloud-arrow-up upload-icon "></i>
+                                                    <p>Upload image</p>
+                                                    <span class="main-btn upload-btn"><i
+                                                            class="fa-solid fa-plus"></i></span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="content-holder mt-5">
-                                    <div class="sub-title orange mb-3"><u>Add Your Location</u></div>
-                                    <div class="row">
+                    
+                                    <div class="mb-4">
                                         <div class="col-lg-6">
                                             <div class="mb-3">
-                                                <label for="address_1" class="form-label">Address line 1</label>
-                                                <input type="text" class="form-control" name="address_1" id="address_1"
-                                                    placeholder="address line 1" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="address_2" class="form-label">Address line 2</label>
-                                                <input type="text" class="form-control" name="address_2" id="address_2"
-                                                    placeholder="address line 2" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="states" class="form-label">States</label>
-                                                <select name="states" id="states" class="custom-select"
-                                                    placeholder="select a states" required>
-                                                    <option value="categoryOne">1</option>
-                                                    <option value="categoryTwo">2</option>
-                                                    <option value="categoryThree">3</option>
-                                                    <option value="categoryFour">4</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label for="city" class="form-label">City</label>
-                                                <select name="city" id="city" class="custom-select"
-                                                    placeholder="select a city" required>
-                                                    <option value="categoryOne">1</option>
-                                                    <option value="categoryTwo">2</option>
-                                                    <option value="categoryThree">3</option>
-                                                    <option value="categoryFour">4</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <!-- zip-code -->
-                                        <div class="col-12">
-                                            <div>
-                                                <div class="mb-3">
-                                                    <label for="zip_code" class="form-label">ZIP Code</label>
-                                                    <div class="d-flex align-items-center gap-3">
-                                                        <input type="number" class="form-control" name="zip_code"
-                                                            id="zip_code" placeholder="ZIP Code" required>
-                                                        <button class="main-btn">Find on map</button>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <div class="text-center mt-3">
-                                        <button type="submit" class="main-btn">Save changes</button>
-                                    </div>
-
-                                </div>
-
-                                <div class="content-holder mt-5">
-                                    <div class="sub-title orange mb-3"><u>Frequently Asked Question</u></div>
-                                    <div class="row">
-                                        <div class="questions-and-answers-container col-12">
-                                            <div class="question-and-answer">
-                                                <div class="mb-3">
-                                                    <label for="question" class="form-label">Question</label>
-                                                    <textarea class="form-control" id="question"
-                                                        placeholder="Lorem ipsum dolor sit amet consectetur. Orci ut in at dui nunc. Sed turpis habitant massa pellentesque ornare suspendisse tristique. Venenatis in est sodales amet eget. Tristique in tellus quis mattis tortor nam congue ut."
-                                                        rows="3"></textarea>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="answer" class="form-label">Answer</label>
-                                                    <textarea class="form-control" id="answer"
-                                                        placeholder="Lorem ipsum dolor sit amet consectetur. Orci ut in at dui nunc. Sed turpis habitant massa pellentesque ornare suspendisse tristique. Venenatis in est sodales amet eget. Tristique in tellus quis mattis tortor nam congue ut."
-                                                        rows="3" name="answer"></textarea>
-                                                </div>
+                                                <label class="input-label fw-700" for="video">Video</label>
+                                                <p class="input-desc">*Put URL from video sites like youtube, vimeo etc</p>
+                                                <input type="text" class="form-control" id="video" name="video"
+                                                    placeholder="Video URL" required>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-end">
-                                        <button class="secondary-btn" id="add-question-and-answer">Add another question</button>
+                                    
+                                    <div class="text-center mt-5">
+                                        <button type="submit" class="main-btn">Add service</button>
                                     </div>
-
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -405,9 +354,9 @@
     </footer>
 
 
+
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
-    <script src="vendor/select2/js/select2.min.js"></script>
     <script src="js/main.js"></script>
 
     <script>
@@ -427,6 +376,14 @@
                     $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
                 }
             });
+            $('.upload-label').click(function () {
+                $(this).addClass('clicked');
+            });
+            $('.upload-input').change(function () {
+                const file = this.files[0];
+                img.src = window.URL.createObjectURL(file);
+            });
+
 
             // footer-stop-fixed-position
             var fixedElement = $('.my-account .sidebar aside');
@@ -437,20 +394,22 @@
                 var scrollPos = $(window).scrollTop();
                 var windowHeight = $(window).height();
 
-                if (scrollPos > 500) {
-                    fixedElement.css({
-                        position: 'fixed',
-                        bottom: '40%'
-                    })
-                } else if (scrollPos + windowHeight >= footerOffset) {
+                if (scrollPos + windowHeight >= footerOffset) {
                     fixedElement.css({
                         position: 'static',
+                        bottom: 0
                     });
                 } else {
                     fixedElement.css({
-                        position: 'static',
+                        position: 'fixed',
+                        bottom: 'auto'
                     });
                 }
+            });
+
+            // delete-btn -> delete property-row
+            $(".delete-btn").click(function () {
+                $(this).closest(".property-holder").remove();
             });
 
             // style-select
@@ -490,15 +449,7 @@
                 $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
             });
 
-            $('#add-question-and-answer').click(function () {
-                $('div.question-and-answer:last').clone().insertAfter("div.question-and-answer:last");
-                 event.preventDefault();
-            });
 
-        });
-
-        $(document).ready(function () {
-            $('.services-select').select2();
         });
     </script>
 

@@ -237,7 +237,7 @@
                                     <h3 class="main-title text-center fw-500 green mb-3">Featured Projects</h3>
                                     <div class="projects-slider">
                                         <div class="project">
-                                            <a href="#">
+                                            <a href="#" id="myImg">
                                                 <figure>
                                                     <img src="images/featured-projects-1.png" alt="project-title">
                                                     <figcaption>Project title 1</figcaption>
@@ -279,6 +279,47 @@
 
 
                                     </div>
+
+                                    <!-- Image Modal -->
+                                    <div id="myModal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                                            <div class="d-lg-flex gap-4 position-relative">
+                                                <div class="slider">
+                                                    <div class="slide"><img src="images/technicion-modal-img.png" alt="Image 1"></div>
+                                                    <div class="slide"><img src="images/featured-projects-1.png" alt="Image 2"></div>
+                                                    <div class="slide"><img src="images/featured-projects-3.png" alt="Image 3"></div>
+                                                </div>
+
+                                                <button class="prev slick-prev">Previous</button>
+                                                <button class="next slick-next">Next</button>
+                                               
+                                                <div class="side-text mt-5">
+                                                    <h3 class="fw-600 mb-3">Title 1</h3>
+                                                   
+                                                       
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                                <div class="title">Job type</div>
+                                                                <div class="title">Location</div>
+                                                                <div class="title">Duration</div>
+                                                                <div class="title">Year</div>
+                                                           </div>
+                                                            <div>
+                                                                <div class="description">Closet and shelving system installation</div>
+                                                                <div class="description">Brooklyn, NY</div>
+                                                                <div class="description">2 days</div>
+                                                                <div class="description">2022</div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <hr>
                                 <!-- sent-message -->
@@ -556,6 +597,55 @@
                     },
                 ]
             });
+
+           
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+                // Open modal
+                $("#myImg").click(function () {
+                    $("#myModal").css("display", "block");
+                    $(".slider img:first-child").css("display", "block");
+                });
+
+                // Close modal
+                $(".close").click(function () {
+                    $("#myModal").css("display", "none");
+                });
+
+               var slideIndex = 0;
+           
+            showSlides();
+
+            function showSlides() {
+                var slides = $(".slide");
+                for (var i = 0; i < slides.length; i++) {
+                    $(slides[i]).css("display", "none");
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                $(slides[slideIndex - 1]).css("display", "block");
+               
+            }
+
+            $(".prev").click(function () {
+                autoSlide = false; // Stop automatic slideshow when manually navigating
+                slideIndex -= 2;
+                if (slideIndex < 0) {
+                    slideIndex = $(".slide").length - 1;
+                }
+                showSlides();
+            });
+             $(".next").click(function () {
+                autoSlide = false; // Stop automatic slideshow when manually navigating
+                if (slideIndex == $(".slide").length) {
+                    slideIndex = 0;
+                }
+                showSlides();
+            });
+
         });
     </script>
 
