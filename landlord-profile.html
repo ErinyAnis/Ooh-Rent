@@ -506,27 +506,17 @@
                 centerPadding: '400px',
                 slidesToShow: 1,
                 lazyLoad: 'ondemand',
-                // responsive: [
-                //     {
-                //         breakpoint: 1400,
-                //         settings: {
-                //             slidesToShow: 2.5,
-                //         }
-                //     },
-                //     {
-                //         breakpoint: 1200,
-                //         settings: {
-                //             slidesToShow: 1.5,
-                //         }
-                //     },
-                //     {
-                //         breakpoint: 767,
-                //         settings: {
-                //             slidesToShow: 1,
-                //             dots: true,
-                //         }
-                //     },
-                // ]
+                dots: true,
+                arrows:true,
+                responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                            slidesToShow: 1,
+                            centerMode: false,
+                        }
+                    }
+                ]
             });
 
         });
