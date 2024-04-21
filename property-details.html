@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="vendor/slick-carousel/css/slick.css">
+    <link rel="stylesheet" href="vendor/slick-carousel/css/slick-theme.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-5.3.0-dist/css/bootstrap.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.webp">
+    <link rel="stylesheet" href="css/style.css">
+    <title>property-details | Ooh Rent</title>
+
+</head>
+
+<body class="overflow-x-hidden">
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <!-- logo -->
+                <a class="navbar-brand" href="index.html"><img src="images/logo.webp" alt="logo"></a>
+                <!-- toggle btn -->
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fas fa-bars toggle-icon"></i>
+                </button>
+
+                <!-- sidebar -->
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+                    <!-- sidebar header -->
+                    <div class="offcanvas-header border-bottom">
+                        <img class="sidebar-logo" src="images/logo.webp" alt="logo">
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- sidebar body -->
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                        <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-lg-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active-nav" href="properties.html">Properties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <!-- login / sign-up -->
+                        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
+                            <div class="login-container">
+                                <a href="login.html" class="login-link transition white-color">Login</a>
+                            </div>
+                            <a href="sign-up.html" class="sign-up-btn white-color">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="property-details">
+        <section class="top-sec position-relative section-padding">
+            <div class="container">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="properties.html">New Cairo</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Mountain View ICity New Cairo</li>
+                    </ol>
+                </nav>
+                <h3 class="fw-700 mb-4 mt-3">Country Villa with panoramic sea view</h3>
+
+                <div class="accordion-holder">
+                    <div class="accordion-container">
+                        <div class="card">
+                            <img class="background" src="./images/property-details.png" alt="">
+
+
+                            <div class="backdrop"></div>
+                        </div>
+
+                        <div class="card active">
+                            <img class="background" src="./images/property-details.png" alt="">
+                            <div class="backdrop"></div>
+                        </div>
+
+                        <div class="card">
+                            <img class="background" src="./images/property-details.png" alt="">
+                            <div class="backdrop"></div>
+                        </div>
+
+                        <div class="card">
+                            <img class="background" src="./images/property-details.png" alt="">
+                            <div class="backdrop"></div>
+                        </div>
+
+                        <div class="card">
+                            <img class="background" src="./images/property-details.png" alt="">
+
+                            <div class="backdrop"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center gap-4 gap-lg-5 pb-4 links flex-wrap">
+                    <div>
+                        <a href="#" class="secondary-btn"><img src="images/floor-icon.webp" class="me-2"
+                                alt="Floor Plan">Floor Plan</a>
+                    </div>
+                    <div>
+                        <a href="#" class="secondary-btn"><img src="images/plan-icon.webp" class="me-2"
+                                alt="master plan">Master Plan</a>
+                    </div>
+                    <div>
+                        <a href="#" class="secondary-btn"><img src="images/location-icon.webp" class="me-2"
+                                alt="Property Location">Property Location</a>
+                    </div>
+                </div>
+                <hr>
+
+
+                <div class="details mt-5">
+                    <div class="row g-4 g-xl-5">
+                        <div class="col-xl-8 order-2 order-xl-1">
+                            <div class="d-flex gap-4 mb-5">
+                                <div class="main-title">Details</div>
+                                <div class="info">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="title"><i class="fa-solid fa-circle-dollar orange me-2"></i>Price:
+                                        </div>
+                                        <div class="description">50$ / monthly</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="title"><i class="fa-solid fa-location-dot orange me-2"></i>Location:
+                                        </div>
+                                        <div class="description">29 Waverley Road, M4L 3T2 Toronto, Canada</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="title"><i class="fa-solid fa-house orange me-2"></i>Property Type:
+                                        </div>
+                                        <div class="description">Villa</div>
+                                    </div>
+                                    <div class="property-info d-flex mt-4 gap-3 gap-lg-4 flex-wrap">
+                                        <div class="property">
+                                            <i class="fa-solid fa-bed-front green me-2 me-lg-3"></i>2 Rooms
+                                        </div>
+                                        <div class="property"><i class="fa-solid fa-bath green me-2 me-lg-3"></i>2
+                                            Bathroom
+                                        </div>
+                                        <div class="property"><i class="fa-solid fa-stairs green me-2 me-lg-3"></i>2
+                                            Floors
+                                        </div>
+                                        <div class="property"><i
+                                                class="fa-duotone fa-arrows-left-right-to-line green me-2 me-lg-3"></i>200
+                                            m
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="offers mt-5 mb-5">
+                                <div class="main-title">What this place offers</div>
+
+                            </div>
+                            <hr>
+                            <div class="description mt-5">
+                                <div class="main-title mb-3">Description</div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped align-middle">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Address</th>
+                                                <td>text</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">State</th>
+                                                <td>text</td>
+
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Categories</th>
+                                                <td>Apartment</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Property Type</th>
+                                                <td>Commercial</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Level</th>
+                                                <td>Ground floor</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Square Feet</th>
+                                                <td>200 m</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Rental Date</th>
+                                                <td>20-2-2024</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Minimum Lease Term</th>
+                                                <td>Weekly</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Garage Space</th>
+                                                <td>20 m</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Floors</th>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Required at signing</th>
+                                                <td>1st, last and deposit</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Garden Space</th>
+                                                <td>20 m</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile col-xl-4 order-1 order-xl-2">
+                            <div class="profile-card text-center">
+                                <img src="images/tanent-profile-img.png" alt="">
+                                <div class="name fw-700 mt-2">Olivia Rhye</div>
+                                <div class="type gray-middle">Landlord</div>
+                                <div class="reviews-container d-flex flex-wrap justify-content-center align-items-center gap-2 mt-2">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star checked"></i>
+                                        <i class="fa-solid fa-star checked"></i>
+                                        <i class="fa-solid fa-star checked"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="num-of-reviews">(14025)</div>
+                                </div>
+                                <div class="mt-4">
+                                    <a href="landlord-profile.html" class="secondary-btn">profile</a>
+                                </div>
+                                <div class="questions mt-4 mt-xl-5">
+                                    <h3 class="fw-500 green mb-2">Do You Have a question ?</h3>
+                                    <p>Let’s start to do something great together.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- recommended-sec -->
+                <div class="mt-5 mb-5 recommended-sec">
+                    <div class="main-title mb-3">Recommended For You</div>
+                    <div class="row gy-4">
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="main-card">
+                                <div class="card position-relative">
+                                    <img src="images/card-1-img.png" class="card-img-top" alt="Card title">
+                                    <div class="actions d-flex gap-1">
+                                        <i class="fa-regular fa-code-compare"></i>
+                                        <i class="fa-regular fa-arrow-up-right-from-square"></i>
+                                        <i class="fa-regular fa-heart heart-icon"></i>
+                                    </div>
+                                    <a href="property-details.html">
+                                        <div class="card-body">
+                                            <div class="card-title d-flex align-items-center justify-content-between gap-3">
+                                                <h3>Twin-house</h3>
+                                                <!-- Rating Stars Box -->
+                                                <div class='rating-stars text-center'>
+                                                    <ul id='stars'>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="location d-flex align-items-center gap-2 mt-2">
+                                                <i class="fa-solid fa-location-dot orange"></i>
+                                                <div class="gray-middle">123 St. New York, USA</div>
+                                            </div>
+                                            <div class="info d-flex justify-content-center flex-wrap gap-2">
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-bed-front"></i>
+                                                    <div class="fs-14 gray-high">2 Rooms</div>
+                                                </div>
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-bath"></i>
+                                                    <div class="fs-14 gray-high">2 Bathroom</div>
+                                                </div>
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-duotone fa-arrows-left-right-to-line"></i>
+                                                    <div class="fs-14 gray-high">200 m</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                                <div class="price green fw-700">3,200 $ / Monthly</div>
+                                                <button class="secondary-btn">More details</button>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="main-card">
+                                <div class="card position-relative">
+                                    <img src="images/card-1-img.png" class="card-img-top" alt="Card title">
+                                    <div class="actions d-flex gap-1">
+                                        <i class="fa-regular fa-code-compare"></i>
+                                        <i class="fa-regular fa-arrow-up-right-from-square"></i>
+                                        <i class="fa-regular fa-heart heart-icon"></i>
+                                    </div>
+                                    <a href="property-details.html">
+                                        <div class="card-body">
+                                            <div class="card-title d-flex align-items-center justify-content-between gap-3">
+                                                <h3>Twin-house</h3>
+                                                <!-- Rating Stars Box -->
+                                                <div class='rating-stars text-center'>
+                                                    <ul id='stars'>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="location d-flex align-items-center gap-2 mt-2">
+                                                <i class="fa-solid fa-location-dot orange"></i>
+                                                <div class="gray-middle">123 St. New York, USA</div>
+                                            </div>
+                                            <div class="info d-flex justify-content-center flex-wrap gap-2">
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-bed-front"></i>
+                                                    <div class="fs-14 gray-high">2 Rooms</div>
+                                                </div>
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-bath"></i>
+                                                    <div class="fs-14 gray-high">2 Bathroom</div>
+                                                </div>
+                    
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-duotone fa-arrows-left-right-to-line"></i>
+                                                    <div class="fs-14 gray-high">200 m</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                                <div class="price green fw-700">3,200 $ / Monthly</div>
+                                                <button class="secondary-btn">More details</button>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="main-card">
+                                <div class="card position-relative">
+                                    <img src="images/card-1-img.png" class="card-img-top" alt="Card title">
+                                    <div class="actions d-flex gap-1">
+                                        <i class="fa-regular fa-code-compare"></i>
+                                        <i class="fa-regular fa-arrow-up-right-from-square"></i>
+                                        <i class="fa-regular fa-heart heart-icon"></i>
+                                    </div>
+                                    <a href="property-details.html">
+                                        <div class="card-body">
+                                            <div class="card-title d-flex align-items-center justify-content-between gap-3">
+                                                <h3>Twin-house</h3>
+                                                <!-- Rating Stars Box -->
+                                                <div class='rating-stars text-center'>
+                                                    <ul id='stars'>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star active'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                        <li class='star'>
+                                                            <i class='fa fa-star fa-fw'></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="location d-flex align-items-center gap-2 mt-2">
+                                                <i class="fa-solid fa-location-dot orange"></i>
+                                                <div class="gray-middle">123 St. New York, USA</div>
+                                            </div>
+                                            <div class="info d-flex justify-content-center flex-wrap gap-2">
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-bed-front"></i>
+                                                    <div class="fs-14 gray-high">2 Rooms</div>
+                                                </div>
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-solid fa-bath"></i>
+                                                    <div class="fs-14 gray-high">2 Bathroom</div>
+                                                </div>
+                    
+                                                <div class="item d-flex align-items-center gap-2">
+                                                    <i class="fa-duotone fa-arrows-left-right-to-line"></i>
+                                                    <div class="fs-14 gray-high">200 m</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                                <div class="price green fw-700">3,200 $ / Monthly</div>
+                                                <button class="secondary-btn">More details</button>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="container section-padding">
+            <div class="subscribe text-center">
+                <h2>Subscribe Now</h2>
+                <div class="sub-title green">Stay up to date with our latest news.</div>
+                <form action="#">
+                    <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+                        <input type="email" class="form-control" name="email" id="email"
+                            placeholder="Your email address">
+                        <button type="submit" class="main-btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <div class="mt-5 links">
+                <div class="row g-3 row-cols-2 row-cols-lg-5">
+                    <div class="col-3 col-lg">
+                        <a href="index.html"><img class="footer-logo" src="images/footer-logo.webp" alt="Ooh-Rent"></a>
+                    </div>
+                    <div class="col-3 col-lg">
+                        <h3 class="fw-700 green mb-2">Quick Links</h3>
+                        <div class="footer-link"><a href="index.html">Home</a></div>
+                        <div class="footer-link"><a href="#">Search</a></div>
+                        <div class="footer-link"><a href="#">Blogs</a></div>
+                        <div class="footer-link"><a href="#">Find by Area</a></div>
+                        <div class="footer-link"><a href="#">FAQ</a></div>
+                        <div class="footer-link"><a href="#">Contact Us</a></div>
+                        <div class="footer-link"><a href="#">Subscription</a></div>
+                    </div>
+                    <div class="col-3 col-lg col-margin">
+                        <div class="footer-link"><a href="#">User profile</a></div>
+                        <div class="footer-link"><a href="#">Owner Profile</a></div>
+                        <div class="footer-link"><a href="#">Technician profile</a></div>
+                    </div>
+                    <div class="col-3 col-lg col-margin">
+                        <div class="footer-link"><a href="#">Pricing Plans</a></div>
+                        <div class="footer-link"><a href="#">Rent House</a></div>
+                        <div class="footer-link"><a href="#">Privacy Policy</a></div>
+                    </div>
+                    <div class="col-9 offset-3 offset-lg-0 col-lg">
+                        <h3 class="fw-700 green mb-3">Download APP</h3>
+                        <div class="download">
+                            <a href="#" class="download-btn d-flex align-items-center gap-2 mb-2">
+                                <i class="fa-brands fa-google-play"></i>
+                                <div class="text-start">
+                                    <div class="head-title">GET IT ON</div>
+                                    <div class="main-title">Google Play</div>
+                                </div>
+                            </a>
+                            <a href="#" class="download-btn d-flex align-items-center gap-2">
+                                <i class="fa-brands fa-apple"></i>
+                                <div class="text-start">
+                                    <div class="head-title">Download on the</div>
+                                    <div class="main-title">App Store</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                    <div class="copy-rights">
+                        © Copyright 2022, All Rights Reserved by <a class="green" href="#">Innovation Scope</a>
+                    </div>
+                    <div class="social-links d-flex align-items-center gap-2">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="vendor/slick-carousel/js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("header nav .nav-link").css("color", "#1D1B1B");
+            $("header nav .login-link").css("color", "#1D1B1B");
+            $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
+            $(window).on("scroll", function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 50) {
+                    $("header nav .nav-link").css("color", "#1D1B1B");
+                    $("header nav .login-link").css("color", "#1D1B1B");
+                    $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
+                } else {
+                    $("header nav .nav-link").css("color", "#1D1B1B");
+                    $("header nav .login-link").css("color", "#1D1B1B");
+                    $("header nav .navbar-toggler .toggle-icon").css("color", "#1D1B1B");
+                }
+            });
+
+
+            const cardsContainer = document.querySelector(".accordion-container");
+
+            cardsContainer.addEventListener("click", (e) => {
+                const target = e.target.closest(".card");
+
+                if (!target) return;
+
+                cardsContainer.querySelectorAll(".card").forEach((card) => {
+                    card.classList.remove("active");
+                });
+
+                target.classList.add("active");
+            });
+
+            // slider
+            // $('.accordion-container').slick({
+            //     slidesToShow: 5,
+            //     slidesToScroll: 1,
+            //     infinite: true,
+            //     arrows: true,
+            //     dots: false,
+            //     lazyLoad: 'ondemand',
+            //     responsive: [
+            //         {
+            //             breakpoint: 1400,
+            //             settings: {
+            //                 slidesToShow: 2.5,
+            //             }
+            //         },
+            //         {
+            //             breakpoint: 1200,
+            //             settings: {
+            //                 slidesToShow: 1.5,
+            //             }
+            //         },
+            //         {
+            //             breakpoint: 767,
+            //             settings: {
+            //                 slidesToShow: 1,
+            //                 dots: true,
+            //             }
+            //         },
+            //     ]
+            // });
+
+            $(".heart-icon").click(function () {
+                $(this).toggleClass("fa-solid");
+                $(this).toggleClass("fa-regular");
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

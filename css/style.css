@@ -872,6 +872,16 @@ header nav .navbar-toggler .toggle-icon {
   background-color: var(--main-btn-hover);
 }
 
+.main-card .card .card-img-top {
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .main-card .card .card-img-top {
+    max-height: 300px;
+  }
+}
+
 @media (max-width: 767px) {
   .main-card .card .card-body .card-title h3 {
     font-size: 20px;
@@ -1563,6 +1573,357 @@ footer .social-links a:hover {
 /* end properties */
 /* ----------------------------------------------------------- */
 
+/* property-setails */
+.property-details .breadcrumb {
+  font-size: 14px;
+}
+.property-details .breadcrumb .breadcrumb-item a {
+  color: var(--gray-middle);
+}
+
+.property-details .breadcrumb .breadcrumb-item a:hover {
+  color: var(--green);
+}
+
+.property-details .breadcrumb .breadcrumb-item.active {
+  color: var(--green);
+}
+.property-details h3 {
+  font-size: 42px;
+}
+
+/* accordion */
+.property-details .accordion-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-details .accordion-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.property-details .accordion-container {
+  width: 100%;
+  height: 430px;
+  display: flex;
+  gap: 10px;
+}
+
+.property-details .accordion-container .card {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  transition: flex-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-timing: 0.35s;
+}
+.property-details .accordion-container .card.active {
+  flex-grow: 5;
+}
+.property-details .accordion-container .card:hover {
+  flex-grow: 5;
+}
+
+.property-details .accordion-container .card > .background {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.4);
+  transition: var(--transition-timing) ease;
+}
+.property-details .accordion-container .card:hover > .background,
+.property-details .accordion-container .card.active > .background {
+  filter: brightness(1);
+}
+
+.property-details .accordion-container .card-content > * {
+  transition: var(--transition-timing);
+}
+
+.property-details .accordion-container .card-content > .profile-image {
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.property-details .accordion-container .card:hover .profile-image {
+  border: 1px solid rgb(110, 252, 205);
+}
+.property-details .profile-image > svg {
+  stroke: #fefefe;
+}
+.property-details .accordion-container .card:hover .profile-image > svg {
+  stroke: rgb(110, 252, 205);
+}
+
+.property-details .accordion-container .card:hover .title {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.property-details .accordion-container .card > .backdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+.property-details .accordion-holder {
+  margin-bottom: 70px;
+}
+/* end-accordion */
+
+.property-details .links img {
+  max-height: 24px;
+}
+
+.property-details .links .secondary-btn {
+  border-color: var(--gray-light-2);
+  color: var(--gray-high);
+}
+
+.property-details .links .secondary-btn:hover {
+  background-color: transparent;
+  border-color: var(--green);
+}
+
+/* details */
+.property-details .details .main-title, .property-details .recommended-sec .main-title {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.property-details .details .info {
+  border-left: 2px solid var(--gray-light);
+  padding-left: 20px;
+}
+
+.property-details .details .info .title {
+  font-weight: 700;
+  font-size: 20px;
+  text-wrap: nowrap;
+}
+
+.property-details .details .info .title i {
+  min-width: 25px;
+}
+
+.property-details .details .info .description {
+  font-size: 18px;
+  color: var(--gray-high);
+}
+
+.property-details .details .info .property-info .property {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--gray-high);
+}
+.property-details .details .info .property-info .property i {
+  font-size: 22px;
+}
+
+.property-details .details .info .property-info .property:not(:last-child) {
+  border-right: 2px solid var(--gray-light-2);
+  padding-right: 20px;
+}
+
+/* table */
+
+/* scrollbar */
+.property-details .details .description .table-responsive::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.property-details
+  .details
+  .description
+  .table-responsive::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.property-details
+  .details
+  .description
+  .table-responsive::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.property-details
+  .details
+  .description
+  .table-responsive::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.property-details .details .description .table-responsive table {
+  font-size: 18px;
+}
+.property-details .details .description .table-responsive table th {
+  font-weight: 700;
+}
+.property-details .details .description .table-responsive table td {
+  font-weight: 500;
+}
+
+/* profile */
+.property-details .details .profile-card {
+  border: 1px solid var(--green);
+  padding: 40px 30px;
+  border-radius: 15px;
+  background-color: var(--gray-light-4);
+}
+
+.property-details .details .profile-card img {
+  max-height: 150px;
+}
+
+.property-details .details .profile-card .name {
+  font-size: 30px;
+}
+
+.property-details .details .profile-card .type {
+  font-size: 20px;
+}
+
+.property-details .details .profile-card .reviews-container i {
+  color: var(--gray-light-2);
+}
+
+.property-details .details .profile-card .reviews-container i.checked {
+  color: var(--orange);
+}
+
+.property-details .details .questions h3 {
+  font-family: "Vollkorn", serif;
+  font-size: 30px;
+}
+
+.property-details .details .profile-card .secondary-btn {
+  font-size: 16px;
+}
+@media (max-width: 1400px) {
+  .property-details .details .profile-card img {
+    max-height: 120px;
+  }
+  .property-details .details .profile-card .name {
+    font-size: 26px;
+  }
+  .property-details .details .profile-card .type {
+    font-size: 18px;
+  }
+  .property-details .details .profile-card .reviews-container .num-of-reviews {
+    font-size: 14px;
+  }
+  .property-details .details .questions h3 {
+    font-size: 26px;
+  }
+  .property-details .details .questions p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .property-details h3 {
+    font-size: 36px;
+  }
+  .property-details .details .profile-card {
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .property-details .details .main-title, .property-details .recommended-sec .main-title  {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .property-details h3 {
+    font-size: 28px;
+  }
+  .property-details .details .main-title, .property-details .recommended-sec .main-title  {
+    font-size: 22px;
+  }
+  .property-details .details .info .title {
+    font-size: 16px;
+  }
+  .property-details .details .info .title i {
+    min-width: fit-content;
+  }
+  .property-details .details .info .description,
+  .property-details .details .info .property-info .property {
+    font-size: 14px;
+  }
+  .property-details .details .info .property-info .property i {
+    font-size: 18px;
+  }
+  .property-details .details .info .property-info .property:not(:last-child) {
+    padding-right: 15px;
+  }
+  .property-details .details .description .table-responsive table {
+    font-size: 16px;
+  }
+  .property-details .details .profile-card {
+    max-width: 70%;
+  }
+  .property-details .details .profile-card .secondary-btn {
+  font-size: 14px;
+}
+}
+
+@media (max-width: 767px) {
+  .property-details .card {
+    height: 80%;
+  }
+
+  .property-details .links img {
+    max-height: 17px;
+  }
+  .property-details .accordion-container {
+    height: 370px;
+  }
+  .property-details .accordion-holder {
+    margin-bottom: 0;
+    max-height: 340px;
+  }
+  .property-details .details .profile-card {
+    max-width: 100%;
+  }
+  .property-details .details .profile-card .name {
+    font-size: 24px;
+  }
+  .property-details .details .profile-card .type {
+    font-size: 16px;
+  }
+  .property-details .details .questions h3 {
+    font-size: 24px;
+  }
+  .property-details .details .questions p {
+    font-size: 14px;
+  }
+}
+/* end-property-details */
+/* ------------------------------------------------- */
+
 /* login & register */
 .register .register-container {
   background-image: url(../images/register.webp);
@@ -1931,7 +2292,6 @@ footer .social-links a:hover {
   background-color: var(--white);
 }
 
-
 .my-account .sidebar aside .user-holder {
   border-bottom: 1px solid var(--gray-light-3);
   padding-bottom: 15px;
@@ -2104,10 +2464,10 @@ footer .social-links a:hover {
     font-size: 18px;
   }
   .my-account form input,
-.my-account form textarea, .my-account .edit-property .custom-select-trigger {
-  padding: 9px 12px;
-}
-
+  .my-account form textarea,
+  .my-account .edit-property .custom-select-trigger {
+    padding: 9px 12px;
+  }
 }
 
 /* my-properties */
@@ -2141,7 +2501,8 @@ footer .social-links a:hover {
 }
 
 .my-account .my-property .status-control-buttons .main-btn,
-.my-account .my-property .status-control-buttons .pending-btn, .my-account .my-property .status-control-buttons .edit-btn {
+.my-account .my-property .status-control-buttons .pending-btn,
+.my-account .my-property .status-control-buttons .edit-btn {
   font-size: 16px;
 }
 .my-account .my-property .status-control-buttons .edit-btn {
@@ -2189,7 +2550,8 @@ footer .social-links a:hover {
   .my-account .my-property .main .price {
     font-size: 16px;
   }
-  .my-account .my-property .status-control-buttons .pending-btn, .my-account .my-property .status-control-buttons .edit-btn {
+  .my-account .my-property .status-control-buttons .pending-btn,
+  .my-account .my-property .status-control-buttons .edit-btn {
     font-size: 16px;
     padding: 8px 30px;
   }
@@ -2202,7 +2564,8 @@ footer .social-links a:hover {
 }
 
 @media (max-width: 767px) {
-  .my-account .my-property .status-control-buttons .pending-btn, .my-account .my-property .status-control-buttons .edit-btn {
+  .my-account .my-property .status-control-buttons .pending-btn,
+  .my-account .my-property .status-control-buttons .edit-btn {
     font-size: 14px;
   }
 }
@@ -2534,15 +2897,15 @@ footer .social-links a:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .my-account .technicion-details #myModal .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: 8% auto;
-    padding: 20px;
-    width: 80%;
+  position: relative;
+  background-color: #fefefe;
+  margin: 8% auto;
+  padding: 20px;
+  width: 80%;
 }
 
 .my-account .technicion-details #myModal .close {
@@ -2576,12 +2939,12 @@ footer .social-links a:hover {
 }
 
 .my-account .technicion-details #myModal .slick-next {
-    right: 53%;
-    transition: var(--transition);
+  right: 53%;
+  transition: var(--transition);
 }
 .my-account .technicion-details #myModal .slick-prev {
-    left: 2%;
-    transition: var(--transition);
+  left: 2%;
+  transition: var(--transition);
 }
 .my-account .technicion-details #myModal .side-text h3 {
   font-size: 28px;
@@ -2589,58 +2952,57 @@ footer .social-links a:hover {
 .my-account .technicion-details #myModal .side-text .title {
   font-size: 18px;
   font-weight: 500;
-   text-wrap: nowrap;
+  text-wrap: nowrap;
 }
 .my-account .technicion-details #myModal .side-text .description {
   color: var(--gray-high);
- 
 }
 @media (max-width: 1140px) {
   .my-account .technicion-details #myModal .slick-next {
     right: 52%;
-}
-.my-account .technicion-details #myModal .slick-prev {
+  }
+  .my-account .technicion-details #myModal .slick-prev {
     left: 10px;
-}
+  }
 }
 
 @media (max-width: 992px) {
   .my-account .technicion-details #myModal .side-text h3 {
-  font-size: 22px;
-}
-.my-account .technicion-details #myModal .side-text .title {
-  font-size: 16px;
-}
-.my-account .technicion-details #myModal .side-text .description {
-  font-size: 14px;
-} 
-.my-account .technicion-details #myModal .slider {
+    font-size: 22px;
+  }
+  .my-account .technicion-details #myModal .side-text .title {
+    font-size: 16px;
+  }
+  .my-account .technicion-details #myModal .side-text .description {
+    font-size: 14px;
+  }
+  .my-account .technicion-details #myModal .slider {
     width: 100%;
     max-width: 100%;
-}
-.my-account .technicion-details #myModal .close {
+  }
+  .my-account .technicion-details #myModal .close {
     top: 4px;
     right: 10px;
-        font-size: 18px;
-}
-.my-account .technicion-details #myModal .modal-content {
-  width: 70%;
-      padding: 25px;
-          margin: 16% auto;
-}
+    font-size: 18px;
+  }
+  .my-account .technicion-details #myModal .modal-content {
+    width: 70%;
+    padding: 25px;
+    margin: 16% auto;
+  }
 
-.my-account .technicion-details #myModal .slick-next {
+  .my-account .technicion-details #myModal .slick-next {
     right: 4%;
-}
-.my-account .technicion-details #myModal .slide img {
-      max-height: 350px;
-}
+  }
+  .my-account .technicion-details #myModal .slide img {
+    max-height: 350px;
+  }
 }
 
 @media (max-width: 767px) {
-.my-account .technicion-details #myModal .slick-next {
-        right: 6%;
-}
+  .my-account .technicion-details #myModal .slick-next {
+    right: 6%;
+  }
 }
 
 /* ------------------------------------------ */
@@ -2981,10 +3343,11 @@ footer .social-links a:hover {
   display: none;
 }
 
-.my-account .add-property #msform .action-button, .my-account .add-property #msform .action-button-previous {
+.my-account .add-property #msform .action-button,
+.my-account .add-property #msform .action-button-previous {
   padding: 8px 30px;
   font-size: 18px;
-   transition: var(--transition);
+  transition: var(--transition);
 }
 
 .my-account .add-property #msform .action-button {
@@ -3015,7 +3378,7 @@ footer .social-links a:hover {
 .my-account .add-property #progressbar {
   width: 90%;
   position: relative;
- margin-left: 12%;
+  margin-left: 12%;
 }
 .my-account .add-property #progressbar li:first-child .progress-icon i {
   left: 11px;
@@ -3087,7 +3450,6 @@ footer .social-links a:hover {
   left: 24px;
 }
 
-
 #progressbar li.active:before {
   background: var(--main-btn-hover);
   content: "\f00c" !important;
@@ -3100,7 +3462,8 @@ footer .social-links a:hover {
 
 /* end-progressbar */
 /* ------------------------------------------------------- */
-.my-account .add-property .add-img .main-title h3, .my-account .add-property .add-img label{
+.my-account .add-property .add-img .main-title h3,
+.my-account .add-property .add-img label {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 3px;
@@ -3135,13 +3498,13 @@ footer .social-links a:hover {
 
 @media (max-width: 1400px) {
   .my-account .add-property .location .zip-code {
-  width: 75%;
-}
+    width: 75%;
+  }
 }
 @media (max-width: 1200px) {
-   .my-account .add-property .location .zip-code {
-  width: 70%;
-}
+  .my-account .add-property .location .zip-code {
+    width: 70%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -3164,31 +3527,33 @@ footer .social-links a:hover {
   }
   .my-account .add-property #progressbar li .info {
     font-size: 14px;
-    margin:0 4px 0 -5px;
+    margin: 0 4px 0 -5px;
   }
-  
-  .my-account .add-property #msform .action-button, .my-account .add-property #msform .action-button-previous {
+
+  .my-account .add-property #msform .action-button,
+  .my-account .add-property #msform .action-button-previous {
     font-size: 16px;
   }
-  .my-account .add-property .add-img .main-title h3,  .my-account .add-property .add-img label {
+  .my-account .add-property .add-img .main-title h3,
+  .my-account .add-property .add-img label {
     font-size: 16px;
   }
   .my-account .add-property .add-img .main-title p {
     font-size: 14px;
   }
   .my-account .add-property .add-img .input-container {
-  margin-bottom: 30px;
-}
-.my-account .add-property .location .zip-code {
-  width: 72%;
-}
-.my-account .add-property .amenities .features .feature {
-  font-size: 12px;
-   padding: 8px 15px;
-}
-.success-add-property .main-img img {
-  max-height: 300px;
-}
+    margin-bottom: 30px;
+  }
+  .my-account .add-property .location .zip-code {
+    width: 72%;
+  }
+  .my-account .add-property .amenities .features .feature {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+  .success-add-property .main-img img {
+    max-height: 300px;
+  }
 }
 @media (max-width: 767px) {
   .my-account .add-property #progressbar li .info {
@@ -3196,19 +3561,18 @@ footer .social-links a:hover {
   }
 
   .my-account .add-property .location .zip-code {
-  width: 100%;
-  margin-bottom: 5px;
-}
+    width: 100%;
+    margin-bottom: 5px;
+  }
 
- .my-account .add-property .location .zip-code-container button {
+  .my-account .add-property .location .zip-code-container button {
     font-size: 16px;
-        padding: 8px 20px;
-        margin: auto;
-}
-.success-add-property .main-img img {
-  max-height: 250px;
-}
-
+    padding: 8px 20px;
+    margin: auto;
+  }
+  .success-add-property .main-img img {
+    max-height: 250px;
+  }
 }
 
 /* tanent-profile */
@@ -3220,14 +3584,14 @@ footer .social-links a:hover {
 }
 .my-account .tanent-profile .cover-photo .edit-cover-photo {
   position: absolute;
-    right: 2%;
-    bottom: 8%;
+  right: 2%;
+  bottom: 8%;
 }
 .my-account .tanent-profile .cover-photo .edit-cover-photo a {
   border-radius: var(--border-radius);
   background-color: var(--white);
-      padding: 6px 11px;
-      font-size: 14px;
+  padding: 6px 11px;
+  font-size: 14px;
 }
 .my-account .tanent-profile .cover-photo .edit-cover-photo a:hover {
   background-color: var(--gray-light-2);
@@ -3239,17 +3603,17 @@ footer .social-links a:hover {
 
 .my-account .tanent-profile .user-img-holder .tanent-img {
   border-radius: 50%;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   padding: 3px;
-   max-height: 120px;
-   background-color: var(--white);
+  max-height: 120px;
+  background-color: var(--white);
 }
 .my-account .tanent-profile .user-img-holder .change-img {
-    bottom: 9%;
-    right: -4%;
-    border-radius: 50%;
-    background-color: var(--white);
-    padding: 4px 9px;
+  bottom: 9%;
+  right: -4%;
+  border-radius: 50%;
+  background-color: var(--white);
+  padding: 4px 9px;
 }
 .my-account .tanent-profile .user-img-holder .tanent-name {
   font-size: 30px;
@@ -3264,8 +3628,8 @@ footer .social-links a:hover {
     max-height: 100px;
   }
   .my-account .tanent-profile .user-img-holder .tanent-name {
-  font-size: 24px;
-}
+    font-size: 24px;
+  }
 }
 @media (max-width: 1200px) {
   .my-account .tanent-profile .user-img-holder .tanent-img {
@@ -3276,20 +3640,20 @@ footer .social-links a:hover {
     font-size: 14px;
   }
   .my-account .tanent-profile .user-img-holder .tanent-name {
-  font-size: 20px;
-}
-.my-account .tanent-profile .user-img-holder {
+    font-size: 20px;
+  }
+  .my-account .tanent-profile .user-img-holder {
     margin-top: -32px;
-}
+  }
 }
 @media (max-width: 767px) {
-   .my-account .tanent-profile .cover-photo .edit-cover-photo {
+  .my-account .tanent-profile .cover-photo .edit-cover-photo {
     bottom: 11%;
   }
-   .my-account .tanent-profile .cover-photo .edit-cover-photo a {
+  .my-account .tanent-profile .cover-photo .edit-cover-photo a {
     font-size: 12px;
   }
-    .my-account .tanent-profile .user-img-holder .tanent-img {
+  .my-account .tanent-profile .user-img-holder .tanent-img {
     max-height: 80px;
   }
 }
@@ -3303,9 +3667,10 @@ footer .social-links a:hover {
   font-size: 18px;
 }
 .my-account .tanent-profile .my-billings table tr:last-child td {
-  border-bottom-width: 0
+  border-bottom-width: 0;
 }
-.my-account .tanent-profile .my-billings table td , .my-account .tanent-profile .my-billings table th  {
+.my-account .tanent-profile .my-billings table td,
+.my-account .tanent-profile .my-billings table th {
   padding: 15px 10px;
   vertical-align: middle;
   white-space: nowrap;
@@ -3323,20 +3688,29 @@ footer .social-links a:hover {
   height: 5px;
 }
 
-.my-account .tanent-profile .my-billings .table-container::-webkit-scrollbar-track {
+.my-account
+  .tanent-profile
+  .my-billings
+  .table-container::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
 
-.my-account .tanent-profile .my-billings .table-container::-webkit-scrollbar-thumb {
+.my-account
+  .tanent-profile
+  .my-billings
+  .table-container::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-.my-account .tanent-profile .my-billings .table-container::-webkit-scrollbar-thumb:window-inactive {
+.my-account
+  .tanent-profile
+  .my-billings
+  .table-container::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -3355,14 +3729,16 @@ footer .social-links a:hover {
 .my-account .tanent-profile .invoice .gray-col td {
   color: var(--gray-middle);
 }
-.my-account .tanent-profile .invoice table th, .my-account .tanent-profile .invoice table td{
+.my-account .tanent-profile .invoice table th,
+.my-account .tanent-profile .invoice table td {
   font-weight: 500;
 }
-.my-account .tanent-profile .invoice table th:first-child, .my-account .tanent-profile .invoice table td:first-child {
+.my-account .tanent-profile .invoice table th:first-child,
+.my-account .tanent-profile .invoice table td:first-child {
   padding-left: 0;
 }
 .my-account .tanent-profile .invoice table td:not(:first-child) {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 .overflow-content-container::-webkit-scrollbar {
   width: 5px;
@@ -3384,35 +3760,39 @@ footer .social-links a:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 .my-account .tanent-profile .invoice .billing-summary .billing-tilte {
-font-weight: 500;
-font-size: 18px;
+  font-weight: 500;
+  font-size: 18px;
 }
-.my-account .tanent-profile .invoice .billing-summary .total-amount,.my-account .tanent-profile .invoice .billing-summary .total-price {
+.my-account .tanent-profile .invoice .billing-summary .total-amount,
+.my-account .tanent-profile .invoice .billing-summary .total-price {
   font-weight: 700;
   font-size: 18px;
 }
 @media (max-width: 992px) {
-.my-account .tanent-profile .my-billings table thead tr {
-   font-size: 16px;
-}
-.my-account .tanent-profile .my-billings table td {
-  font-size: 14px;
-}
-.my-account .tanent-profile .invoice table {
-  font-size: 14px;
-}
-.my-account .tanent-profile .invoice .invoice-main-title {
-  font-size: 16px;
-}
-.my-account .tanent-profile .invoice .invoice-title ,.my-account .tanent-profile .invoice .invoice-info {
-  font-size: 14px
-}
-.my-account .tanent-profile .invoice .billing-summary .billing-tilte, .my-account .tanent-profile .invoice .billing-summary .total-amount,.my-account .tanent-profile .invoice .billing-summary .total-price {
-  font-size: 16px;
-}
-.my-account .tanent-profile .invoice .billing-summary .billing-price {
-  font-size: 14px;
-}
+  .my-account .tanent-profile .my-billings table thead tr {
+    font-size: 16px;
+  }
+  .my-account .tanent-profile .my-billings table td {
+    font-size: 14px;
+  }
+  .my-account .tanent-profile .invoice table {
+    font-size: 14px;
+  }
+  .my-account .tanent-profile .invoice .invoice-main-title {
+    font-size: 16px;
+  }
+  .my-account .tanent-profile .invoice .invoice-title,
+  .my-account .tanent-profile .invoice .invoice-info {
+    font-size: 14px;
+  }
+  .my-account .tanent-profile .invoice .billing-summary .billing-tilte,
+  .my-account .tanent-profile .invoice .billing-summary .total-amount,
+  .my-account .tanent-profile .invoice .billing-summary .total-price {
+    font-size: 16px;
+  }
+  .my-account .tanent-profile .invoice .billing-summary .billing-price {
+    font-size: 14px;
+  }
 }
 
 /* end-tanent-profile */
@@ -3422,22 +3802,97 @@ font-size: 18px;
 .my-account .contractor-profile .select2-container {
   display: block;
   width: 100% !important;
- 
 }
 
-.my-account .contractor-profile .select2-container--default .select2-selection--multiple {
-   background-color: var(--gray-light-4);
-    border-color: var(--gray-light-2);
-    font-size: 14px;
-    color: var(--gray-middle);
-    padding: 4px 12px 10px 8px;
-    vertical-align: middle;
+.my-account
+  .contractor-profile
+  .select2-container--default
+  .select2-selection--multiple {
+  background-color: var(--gray-light-4);
+  border-color: var(--gray-light-2);
+  font-size: 14px;
+  color: var(--gray-middle);
+  padding: 4px 12px 10px 8px;
+  vertical-align: middle;
 }
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-    background: var(--gray-light-3);
-    color: var(--gray-middle);
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background: var(--gray-light-3);
+  color: var(--gray-middle);
 }
 
-.my-account .contractor-profile button{
-text-wrap: nowrap;
+.my-account .contractor-profile button {
+  text-wrap: nowrap;
+}
+
+/* landlord-profile */
+.landlord-profile .profile .name {
+  font-size: 32px;
+}
+
+.landlord-profile .profile .type {
+  font-size: 24px;
+}
+
+.landlord-profile .profile .reviews-container i {
+  color: var(--gray-light-2);
+}
+
+.landlord-profile .profile .reviews-container i.checked {
+  color: var(--orange);
+}
+.landlord-profile .profile .reviews-container .num-of-reviews {
+  font-size: 14px;
+}
+
+
+.landlord-profile .head-title .top {
+  color: var(--gray-high);
+  border-top: 2px solid var(--orange);
+  margin: auto;
+  width: fit-content;
+  padding-top: 5px;
+}
+
+.landlord-profile .head-title h3 {
+   font-family: "Vollkorn", serif;
+   font-size: 50px;
+}
+
+/* clients-reviews */
+.landlord-profile {
+  background-color: var(--gray-light-4);
+}
+
+.landlord-profile .reviews-cards-container .review-card {
+  padding: 15px;
+}
+.landlord-profile .reviews-cards-container .review-card .bg-img {
+  opacity: 0.7;
+  border-radius: 20px;
+}
+
+.landlord-profile .reviews-cards-container .review-card .review {
+  border-radius: 10px;
+  background-color: var(--white);
+  padding: 20px;
+}
+
+.landlord-profile .reviews-cards-container .review-card .review h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.landlord-profile .reviews-cards-container .review-card .review p {
+  margin-bottom: 0;
+}
+
+.landlord-profile .reviews-cards-container .review-card .review .username {
+  color: var(--gray-high);
+}
+.landlord-profile .reviews-cards-container .review-card .review .stars i {
+  color: var(--gray-light-2);
+}
+.landlord-profile .reviews-cards-container .review-card .review .stars i.checked {
+  color: var(--orange);
 }
