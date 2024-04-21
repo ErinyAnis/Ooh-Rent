@@ -3876,6 +3876,10 @@ footer .social-links a:hover {
   border-radius: 10px;
   background-color: var(--white);
   padding: 20px;
+  position: absolute;
+    bottom: -40%;
+    width: 80%;
+    left: 10%;
 }
 
 .landlord-profile .reviews-cards-container .review-card .review h3 {
@@ -3895,4 +3899,7 @@ footer .social-links a:hover {
 }
 .landlord-profile .reviews-cards-container .review-card .review .stars i.checked {
   color: var(--orange);
+}
+.landlord-profile .slick-slider .slick-track {
+  min-height: 55vh;
 }
