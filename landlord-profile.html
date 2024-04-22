@@ -81,7 +81,7 @@
         <section class="top-sec position-relative section-padding">
             <div class="container">
                 <div class="profile text-center">
-                    <img src="images/tanent-profile-img.png" alt="">
+                    <img src="images/tanent-profile-img.png" alt="name" class="profile-img">
                     <div class="name fw-700 mt-2">Olivia Rhye</div>
                     <div class="type gray-middle fw-500">Landlord</div>
                     <div class="reviews-container d-flex flex-wrap justify-content-center align-items-center gap-2 mt-2">
@@ -311,7 +311,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur. Pulvinar sed vulputate elit at enim scelerisque porttitor fringilla bibendum.
                             Nulla nisl nec eget ipsum nulla aliquam nulla scelerisque tincidunt. Et facilisis tortor faucibus quis id at habitasse
                             a.</p>
-                            <div class="user mt-3 d-flex align-items-center justify-content-between">
+                            <div class="user mt-3 d-flex align-items-center justify-content-between flex-wrap">
                                 <div class="d-flex align-items-center gap-2">
                                     <img src="images/client-img.png" alt="client-name">
                                     <div>
@@ -340,7 +340,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur. Pulvinar sed vulputate elit at enim scelerisque porttitor fringilla bibendum.
                             Nulla nisl nec eget ipsum nulla aliquam nulla scelerisque tincidunt. Et facilisis tortor faucibus quis id at habitasse
                             a.</p>
-                            <div class="user mt-3 d-flex align-items-center justify-content-between">
+                            <div class="user mt-3 d-flex align-items-center justify-content-between flex-wrap">
                                 <div class="d-flex align-items-center gap-2">
                                     <img src="images/client-img.png" alt="client-name">
                                     <div>
@@ -369,7 +369,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur. Pulvinar sed vulputate elit at enim scelerisque porttitor fringilla bibendum.
                             Nulla nisl nec eget ipsum nulla aliquam nulla scelerisque tincidunt. Et facilisis tortor faucibus quis id at habitasse
                             a.</p>
-                            <div class="user mt-3 d-flex align-items-center justify-content-between">
+                            <div class="user mt-3 d-flex align-items-center justify-content-between flex-wrap">
                                 <div class="d-flex align-items-center gap-2">
                                     <img src="images/client-img.png" alt="client-name">
                                     <div>
@@ -390,6 +390,17 @@
                         </div>
                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- questions -->
+        <section class="questions section-padding mb-4">
+            <div class="container text-center">
+                <h3 class="green mb-2 fw-500">Do You Have a question ?</h3>
+                <p class="">Let’s start to do something great together.</p>
+                <div class="mt-4">
+                    <a href="#" class="main-btn">Send message</a>
                 </div>
             </div>
         </section>
@@ -507,7 +518,7 @@
                 slidesToShow: 1,
                 lazyLoad: 'ondemand',
                 dots: true,
-                arrows:true,
+                arrows:false,
                 responsive: [
                     {
                         breakpoint: 1400,

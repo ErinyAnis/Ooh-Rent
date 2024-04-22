@@ -1702,7 +1702,8 @@ footer .social-links a:hover {
 }
 
 /* details */
-.property-details .details .main-title, .property-details .recommended-sec .main-title {
+.property-details .details .main-title,
+.property-details .recommended-sec .main-title {
   font-weight: 700;
   font-size: 28px;
 }
@@ -1851,7 +1852,8 @@ footer .social-links a:hover {
     margin-bottom: 20px;
   }
 
-  .property-details .details .main-title, .property-details .recommended-sec .main-title  {
+  .property-details .details .main-title,
+  .property-details .recommended-sec .main-title {
     font-size: 24px;
   }
 }
@@ -1860,7 +1862,8 @@ footer .social-links a:hover {
   .property-details h3 {
     font-size: 28px;
   }
-  .property-details .details .main-title, .property-details .recommended-sec .main-title  {
+  .property-details .details .main-title,
+  .property-details .recommended-sec .main-title {
     font-size: 22px;
   }
   .property-details .details .info .title {
@@ -1886,8 +1889,8 @@ footer .social-links a:hover {
     max-width: 70%;
   }
   .property-details .details .profile-card .secondary-btn {
-  font-size: 14px;
-}
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3845,7 +3848,6 @@ footer .social-links a:hover {
   font-size: 14px;
 }
 
-
 .landlord-profile .head-title .top {
   color: var(--gray-high);
   border-top: 2px solid var(--orange);
@@ -3855,8 +3857,8 @@ footer .social-links a:hover {
 }
 
 .landlord-profile .head-title h3 {
-   font-family: "Vollkorn", serif;
-   font-size: 50px;
+  font-family: "Vollkorn", serif;
+  font-size: 50px;
 }
 
 /* clients-reviews */
@@ -3866,6 +3868,7 @@ footer .social-links a:hover {
 
 .landlord-profile .reviews-cards-container .review-card {
   padding: 15px;
+  cursor: grab;
 }
 .landlord-profile .reviews-cards-container .review-card .bg-img {
   opacity: 0.7;
@@ -3876,19 +3879,27 @@ footer .social-links a:hover {
   border-radius: 10px;
   background-color: var(--white);
   padding: 20px;
-  position: absolute;
-    bottom: -40%;
-    width: 80%;
-    left: 10%;
+  width: 80%;
+  margin: auto;
+    margin-top: -17%;
+    z-index: 1;
+    position: relative;
 }
 
 .landlord-profile .reviews-cards-container .review-card .review h3 {
   font-weight: 500;
   font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .landlord-profile .reviews-cards-container .review-card .review p {
   margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .landlord-profile .reviews-cards-container .review-card .review .username {
@@ -3897,9 +3908,116 @@ footer .social-links a:hover {
 .landlord-profile .reviews-cards-container .review-card .review .stars i {
   color: var(--gray-light-2);
 }
-.landlord-profile .reviews-cards-container .review-card .review .stars i.checked {
+.landlord-profile
+  .reviews-cards-container
+  .review-card
+  .review
+  .stars
+  i.checked {
   color: var(--orange);
 }
-.landlord-profile .slick-slider .slick-track {
-  min-height: 55vh;
+
+.landlord-profile .reviews-cards-container .slick-dots {
+  bottom: -27px;
 }
+.landlord-profile .reviews-cards-container .slick-dots li button:before {
+  font-size: 12px;
+}
+.landlord-profile .reviews-cards-container .slick-dots li {
+  margin: 0 3px;
+}
+
+.landlord-profile .questions h3 {
+  font-size: 30px;
+  font-family: "Vollkorn", serif;
+}
+
+.landlord-profile .questions p {
+  font-size: 20px;
+}
+
+.landlord-profile
+  .reviews-cards-container
+  .slick-dots
+  li.slick-active
+  button:before {
+  color: var(--green);
+}
+@media (min-width: 1401px) {
+.landlord-profile .reviews-cards-container .review-card .review {
+  min-height: 200px;
+}
+}
+    
+
+@media (max-width: 1400px) {
+  .landlord-profile .reviews-cards-container .review-card .bg-img {
+    margin: auto;
+    max-height: 400px;
+  }
+  .landlord-profile .reviews-cards-container .review-card .review {
+    width: 62%;
+            margin: -9% auto 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landlord-profile .profile .profile-img {
+    max-height: 150px;
+  }
+  .landlord-profile .head-title h3 {
+    font-size: 40px;
+  }
+  .landlord-profile .profile .name {
+    font-size: 28px;
+  }
+  .landlord-profile .profile .type {
+    font-size: 22px;
+  }
+
+  .landlord-profile .reviews-cards-container .review-card .bg-img {
+    max-height: 370px;
+  }
+  .landlord-profile .reviews-cards-container .review-card .review h3 {
+    font-size: 18px;
+  }
+  .landlord-profile .reviews-cards-container .review-card .review p {
+    font-size: 14px;
+  }
+  .landlord-profile .reviews-cards-container .review-card .review .username {
+    font-size: 14px;
+  }
+  .landlord-profile .reviews-cards-container .review-card .review .stars i {
+    font-size: 14px;
+  }
+  .landlord-profile .reviews-cards-container .slick-dots li button:before {
+    font-size: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .landlord-profile .head-title h3 {
+    font-size: 34px;
+  }
+  .landlord-profile .reviews-cards-container .review-card .review {
+    width: 80%;
+  }
+   .landlord-profile .profile .name {
+        font-size: 24px;
+    }
+    .landlord-profile .questions h3 {
+  font-size: 26px;
+}
+
+.landlord-profile .questions p {
+  font-size: 16px;
+}
+}
+
+@media (max-width: 767px) {
+  
+  .landlord-profile .reviews-cards-container .review-card .review {
+    width: 90%;
+  }
+ 
+}
+
