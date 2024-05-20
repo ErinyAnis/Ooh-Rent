@@ -167,7 +167,7 @@
                                             <div class="rating mt-3 mt-xl-0">
                                                 <div class="rating-title mb-1 fw-700">Rating</div>
                                                 <div
-                                                    class="reviews-container d-flex flex-wrap justify-content-xl-center align-items-center gap-2">
+                                                    class="reviews-num d-flex flex-wrap justify-content-xl-center align-items-center gap-2">
                                                     <div class="stars">
                                                         <i class="fa-solid fa-star checked"></i>
                                                         <i class="fa-solid fa-star checked"></i>
@@ -591,6 +591,24 @@
                         breakpoint: 768,
                         settings: {
                             slidesToShow: 2,
+                            arrows: false,
+                            dots: true,
+                        }
+                    },
+                ]
+            });
+
+            $('.reviews-container').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 1,
                             arrows: false,
                             dots: true,
                         }
